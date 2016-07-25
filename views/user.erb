@@ -1,1 +1,35 @@
+<% if @user.photo.nil? %>
+  <img src="/img/images.jpeg" alt="generic user photo" />
+  <% else%>
+    <img src="/img/<%= @user.photo %>" alt="user photo" />
+  <% end %>
+
 <h1>Hello,  <%= @user.first_name %> <%= @user.last_name%></h1>
+<h4>Bio:</h4>
+<% if @user.bio %>
+  <p><%= @user.bio %></p>
+  <% else%>
+  <p>Your profile is missing a bio.<a href="/user/edit">Add one</a></p>
+<% end %>
+<% if @user.rating.nil? %>
+<% else %>
+  <% (@user.rating).times do %>
+    <span class="glyphicon glyphicon-star"></span>
+  <% end %>
+<% end %>
+<h4>Skills</h4>
+<% if @user.skills.any? %>
+  <ul>
+    <% @user.skills.each do |skill| %>
+    <li><%= skill.description %>
+      <ul>
+        <% skill.tags.each do |tag| %>
+        <li><%= tag.name %></li>
+        <% end %>
+      </ul>
+    </li>
+  </ul>
+  <% end %>
+  <% else %>
+    <p>It looks like you haven't added any skills to trade. <a href="/skill/new">Get started</a></p>
+<% end %>

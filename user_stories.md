@@ -1,4 +1,4 @@
-* As a user, I want to be able to create a new account
+<!-- * As a user, I want to be able to create a new account -->
 
 * As a user, I want to be able to add profile details
 
