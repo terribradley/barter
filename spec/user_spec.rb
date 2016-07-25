@@ -46,4 +46,16 @@ describe(User) do
     user = User.new({:first_name => "bob", :last_name => "smith", :email => "test@gmail.com", :password => "caNaRy45", :zipcode => "1234a"})
     expect(user.save).to(eq(false))
   end
+  it('will return skills associated with a user') do
+    user = User.create({:first_name => "bob", :last_name => "smith", :email => "test@gmail.com", :password => "caNaRy45", :zipcode => "12345"})
+    skill = Skill.create({:description => "kite boarding really fast...so fast", :user_id => user.id })
+    expect(user.skills).to(eq([skill]))
+  end
+  it('will return tags associated with the user') do
+    user7 = User.create({:first_name => "bob", :last_name => "smith", :email => "test@gmail.com", :password => "caNaRy45", :zipcode => "12345"})
+    skill = Skill.create({:description => "kite boarding really fast...so fast", :user_id => user7.id })
+    tag = Tag.create({:name => "sport"})
+    skill.tags.push(tag)
+    expect(skill.tags).to(eq([tag]))
+  end
 end
