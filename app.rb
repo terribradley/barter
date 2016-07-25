@@ -24,7 +24,12 @@ post('/user/new') do
   end
 end
 
-  get('/user/:id') do
-    @user = User.find(params.fetch('id').to_i)
-    erb(:user)
-  end
+get('/user/:id') do
+  @user = User.find(params.fetch('id').to_i)
+  erb(:user)
+end
+
+get('/user/:id/edit') do
+  @user = User.find(params.fetch('id').to_i)
+  erb(:user_edit)
+end
