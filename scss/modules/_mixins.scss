@@ -7,11 +7,11 @@
 
 
 %lists {
-  text-decoration: none;
-  list-style-type: none;
-  color: black;
-  background-color: cyan;
-  padding: 3px;
-  border-radius: 4px;
-
+  li {
+    list-style-type: none;
+    a {
+      text-decoration: none;
+      color: $color-two;
+    }
+  }
 }
