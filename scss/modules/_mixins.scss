@@ -7,11 +7,19 @@
 
 
 %lists {
-  li {
-    list-style-type: none;
-    a {
-      text-decoration: none;
-      color: $color-two;
+  ul {
+    display: flex;
+    padding: 0;
+    li {
+      list-style-type: none;
+      a {
+        text-decoration: none;
+        color: $color-two;
+        &:hover {
+          color: $color-four;
+        }
+      }
     }
+
   }
 }

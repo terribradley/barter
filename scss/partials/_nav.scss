@@ -2,8 +2,8 @@
   text-decoration: none;
   font-size: 2em;
   position: fixed;
-  top: 30px;
-  right: 10px;
+  top: 10px;
+  right: 15px;
   transition: all .3s linear;
   z-index: 1;
   color: $color-three;
@@ -13,7 +13,7 @@
 }
 .sidebar {
   z-index: 0;
-  position: absolute;
+  position: fixed;
   top: 0px;
   right: -250px;
   bottom: 0px;
@@ -21,10 +21,14 @@
   width: 230px;
   color: white;
   background: $color-one;
+    @extend %lists;
     ul {
-      display: flex;
       flex-direction: column;
-      @extend %lists;
+      li {
+        margin-top: 10%;
+        padding: 5px 0 5px 30px;
+        border-bottom: 1px solid grey;
+      }
     }
   @media screen and (min-width: $mediumbreak) {
     display: none;
