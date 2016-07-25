@@ -1,0 +1,6 @@
+development:
+  adapter: postgresql
+  database: barter
+test:
+  adapter: postgresql
+  database: barter_test
