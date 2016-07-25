@@ -1,0 +1,17 @@
+@each $image-name, $image-value in $images {
+  .#{$image-name} {
+    background-image: #{$image-value};
+
+  }
+}
+
+
+%lists {
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
+  background-color: cyan;
+  padding: 3px;
+  border-radius: 4px;
+
+}
