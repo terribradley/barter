@@ -10,10 +10,8 @@ class User < ActiveRecord::Base
   before_save(:capitalize_name)
 
   private
-
   define_method(:capitalize_name) do
     self.first_name = first_name.capitalize
     self.last_name = last_name.capitalize
-
   end
 end
