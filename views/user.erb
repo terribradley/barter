@@ -5,6 +5,7 @@
   <% end %>
 
 <h1>Hello,  <%= @user.first_name %> <%= @user.last_name%></h1>
+
 <h4>Bio:</h4>
 <% if @user.bio %>
   <p><%= @user.bio %></p>
@@ -17,7 +18,8 @@
     <span class="glyphicon glyphicon-star"></span>
   <% end %>
 <% end %>
-<h4>Skills</h4>
+
+<h4>My skills</h4>
 <% if @user.skills.any? %>
   <ul>
     <% @user.skills.each do |skill| %>
@@ -33,3 +35,6 @@
   <% else %>
     <p>It looks like you haven't added any skills to trade. <a href="/skill/new">Get started</a></p>
 <% end %>
+
+<h4>Stuff I'm interested in:</h4>
+<% if %>
