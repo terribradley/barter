@@ -2,8 +2,11 @@ section {
   margin: 5%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   height: 900px;
+  @media screen and (min-width: $mediumbreak) {
+    flex-direction: row;
+  }
 }
 form {
   width: 350px;
@@ -12,6 +15,9 @@ form {
   flex-direction: column;
   background-color: lighten($color-five, 10%);
   border: 1px solid $color-one;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  border-radius: 5px;
   input {
     width: 300px;
     height: 30px;
@@ -28,16 +34,19 @@ form {
     align-self: flex-end;
   }
 }
-ul {
-  display: flex;
-  flex-wrap: wrap;
-  width: 700px;
-  margin-bottom: 20px;
-  margin-right: 0;
-  li {
-    width: 287px;
-  }
+.error-message {
+  padding: 0;
+  height: 250px;
+  background-color: transparentize($color-eight, .9);
+  border-radius: 5px;
+  ul, h3 {
+  margin: 10px;
 }
+
+}
+
+
+
 
 .form-header {
   height: 30vh;

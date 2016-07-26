@@ -11,19 +11,9 @@
        <a href="#">Login</a>
      </div>
    </nav>
-   <header class="head-three form-header">
+   <header class="head-two form-header">
    </header>
     <section>
-      <div class="error-massage">
-        <% if @user %>
-        <h3>Oops! Please fix these errors:</h3>
-        <ul>
-          <% @user.errors().full_messages().each do |message| %>
-          <li><%= message %></li>
-          <% end %>
-        </ul>
-        <% end %>
-      </div>
       <form action="/users/new" method="post">
         <h4>User Details:</h4>
         <label for="first_name">First Name</label>
@@ -38,6 +28,16 @@
         <input type="text" name="zipcode" id="zipcode">
         <button  id="myBtn" type="submit">Create Account</button>
       </form>
+      <div class="error-message">
+        <% if @user %>
+        <h3>Oops! Please fix these errors:</h3>
+        <ul>
+          <% @user.errors().full_messages().each do |message| %>
+          <li><%= message %></li>
+          <% end %>
+        </ul>
+        <% end %>
+      </div>
     </section>
     <div class="sidebar">
       <ul>

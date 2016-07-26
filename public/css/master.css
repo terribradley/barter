@@ -670,8 +670,11 @@ section {
   margin: 5%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   height: 900px; }
+  @media screen and (min-width: 700px) {
+    section {
+      flex-direction: row; } }
 
 form {
   width: 350px;
@@ -679,7 +682,10 @@ form {
   display: flex;
   flex-direction: column;
   background-color: #c7a667;
-  border: 1px solid #001a54; }
+  border: 1px solid #001a54;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  border-radius: 5px; }
   form input {
     width: 300px;
     height: 30px;
@@ -692,14 +698,13 @@ form {
     margin-right: 25px;
     align-self: flex-end; }
 
-ul {
-  display: flex;
-  flex-wrap: wrap;
-  width: 700px;
-  margin-bottom: 20px;
-  margin-right: 0; }
-  ul li {
-    width: 287px; }
+.error-message {
+  padding: 0;
+  height: 250px;
+  background-color: rgba(97, 12, 36, 0.1);
+  border-radius: 5px; }
+  .error-message ul, .error-message h3 {
+    margin: 10px; }
 
 .form-header {
   height: 30vh; }
