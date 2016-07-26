@@ -153,6 +153,11 @@ get('/user/profile/:id') do
   erb(:user_profile)
 end
 
+# USER PROPOSE TRADE
+get('/trades/new') do
+
+end
+
 
 # CLEAR OUT DATABASE
 get('/clear') do

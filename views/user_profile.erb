@@ -54,15 +54,16 @@
 </ul>
 <% end %>
 
-<!-- GRIDDED USER SKILLS -->
+<!-- GRIDDED USER SKILLS (title and description are inside picture divs)-->
 
 <section id="featured">
   <% if @user.skills.any? %>
       <% @user.skills.each do |skill| %>
         <div class="featured-image main">
-          <p><a href="#"><%= skill.title %></a></p>
+          <p><%= skill.title %></p>
           <p><%= skill.description %></p>
         </div>
+        <a href="/"><button type="submit">Propose Trade</button></a>
       <% end %>
   <% end %>
 </section>
