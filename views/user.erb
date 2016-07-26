@@ -1,54 +1,80 @@
-<% if @user.photo.nil? %>
-  <img src="/img/images.jpeg" alt="generic user photo" />
-  <% else%>
-    <img src="/img/<%= @user.photo %>" alt="user photo" />
-  <% end %>
-
-<h1>Hello,  <%= @user.first_name %> <%= @user.last_name%></h1>
-
-<h4>My Rating:</h4>
-<% if @user.rating.nil? %>
-<% (5).times do %>
-<span id="grey_star" class="glyphicon glyphicon-star"></span>
-<% end %>
-<% else %>
-<% (@user.rating).times do %>
-<span class="glyphicon glyphicon-star"></span>
-<% end %>
-<% end %>
-
-<h4>Bio:</h4>
-<% if @user.bio %>
-  <p><%= @user.bio %></p>
-  <% else%>
-  <p>Your profile is missing a bio. <a href="/users/<%= @user.id %>/edit">Add one</a></p>
-<% end %>
-
-
-<h4>Stuff I'm interested in:</h4>
-<% if @user.tags.any? %>
-  <ul>
-    <% @user.tags.each do |tag| %>
-    <li><%= tag.name %></li>
-  </ul>
-  <% end %>
-<% else %>
-  <p>What are you interested in trading for? <a href="/users/<%= @user.id %>/edit">Add Interests</a></p>
-<% end %>
-
-<h4>My skills</h4>
-<% if @user.skills.any? %>
-<ul>
-  <% @user.skills.each do |skill| %>
-  <li><%= skill.description %>
-    <ul>
-      <% skill.tags.each do |tag| %>
-      <li><%= tag.name %></li>
+<input type="checkbox" id="sidebar-toggler">
+<div class="wrapper">
+ <label for="sidebar-toggler" class="toggle">☰</label>
+ <div class="all-content">
+   <nav>
+     <img src="/img/logo.png" alt="tent" />
+     <h1><a href="/">Bazaar</a></h1>
+     <div class="nav-links">
+       <a href="/users/new">Signup</a>
+       <a href="#">Browse Market</a>
+       <a href="#">Login</a>
+     </div>
+   </nav>
+   <header class="head-two form-header">
+   </header>
+    <section>
+    <div class="avatar">
+      <% if @user.photo.nil? %>
+      <img src="/img/images.jpeg" alt="generic user photo" />
+      <% else%>
+        <img src="/img/<%= @user.photo %>" alt="user photo" />
       <% end %>
-    </ul>
-  </li>
-</ul>
-<% end %>
-<% else %>
-<p>It looks like you haven't added any skills to trade. <a href="/skills/new">Get started</a></p>
-<% end %>
+    <h1>Hello,  <%= @user.first_name %> <%= @user.last_name%></h1>
+    <div class="stars">
+      <h4>My Rating:</h4>
+      <% if @user.rating.nil? %>
+      <% (5).times do %>
+      <span id="grey_star" class="glyphicon glyphicon-star"></span>
+      <% end %>
+      <% else %>
+      <% (@user.rating).times do %>
+      <span class="glyphicon glyphicon-star"></span>
+      <% end %>
+      <% end %>
+    </div>
+    <h4>Bio:</h4>
+    <% if @user.bio %>
+      <p><%= @user.bio %></p>
+      <% else%>
+      <p>Your profile is missing a bio. <a href="/users/<%= @user.id %>/edit">Add one</a></p>
+    <% end %>
+    </div>
+    <div class="edit-info">
+      <h4>Stuff I'm interested in:</h4>
+      <% if @user.tags.any? %>
+      <ul>
+        <% @user.tags.each do |tag| %>
+        <li><%= tag.name %></li>
+      </ul>
+      <% end %>
+      <% else %>
+      <p>What are you interested in trading for? <a href="/users/<%= @user.id %>/edit">Add Interests</a></p>
+      <% end %>
+      <h4>My skills</h4>
+      <% if @user.skills.any? %>
+      <ul>
+        <% @user.skills.each do |skill| %>
+        <li><%= skill.description %>
+          <ul>
+            <% skill.tags.each do |tag| %>
+            <li><%= tag.name %></li>
+            <% end %>
+          </ul>
+        </li>
+      </ul>
+      <% end %>
+      <% else %>
+      <p>It looks like you haven't added any skills to trade. <a href="/skills/new">Get started</a></p>
+      <% end %>
+    </div>
+    </section>
+    <div class="sidebar">
+      <ul>
+        <li><a href="#">Browse Market</a></li>
+        <li><a href="/users/new">Create account</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

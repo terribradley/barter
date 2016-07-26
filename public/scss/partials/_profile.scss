@@ -1,0 +1,41 @@
+section {
+  width: 75vw;
+  margin: 5% auto;
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width:$mediumbreak) {
+    flex-direction: row;
+  }
+  .avatar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    p {
+      width: 90px;
+      margin: 10px;
+    }
+    .stars {
+      display: flex;
+      align-items: center;
+      h4 {
+        margin-right: 10px;
+      }
+    }
+    @media screen and (min-width:$mediumbreak) {
+      align-items: flex-end;
+      }
+
+  }
+  .edit-info {
+    .profile-form {
+      width: 100%;
+      margin: 5% auto;
+      background-color: none;
+
+    }
+
+    @media screen and (min-width:$mediumbreak) {
+      order: -1;
+    }
+  }
+}

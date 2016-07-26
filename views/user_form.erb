@@ -3,18 +3,18 @@
  <label for="sidebar-toggler" class="toggle">☰</label>
  <div class="all-content">
    <nav>
-     <img src="../img/logo.png" alt="" />
-     <h1>Bazaar</h1>
+     <img src="../img/logo.png" alt="tent" />
+     <h1><a href="/">Bazaar</a></h1>
      <div class="nav-links">
-       <a href="/user/new">Signup</a>
+       <a href="/users/new">Signup</a>
        <a href="#">Browse Market</a>
        <a href="#">Login</a>
      </div>
    </nav>
-   <header class=" main form-header">
+   <header class="head-two form-header">
    </header>
     <section>
-      <form class="signup" action="/users/new" method="post">
+      <form class="signup-form" action="/users/new" method="post">
         <h4>User Details:</h4>
         <label for="first_name">First Name</label>
         <input type="text" name="first_name" id="first_name">
@@ -26,21 +26,23 @@
         <input type="password" name="password" id="password">
         <label for="zipcode">Zipcode</label>
         <input type="text" name="zipcode" id="zipcode">
-        <button type="submit">Create Account</button>
+        <button  id="myBtn" type="submit">Create Account</button>
       </form>
-      <% if @user %>
+      <div class="error-message">
+        <% if @user %>
         <h3>Oops! Please fix these errors:</h3>
         <ul>
           <% @user.errors().full_messages().each do |message| %>
           <li><%= message %></li>
           <% end %>
         </ul>
-      <% end %>
+        <% end %>
+      </div>
     </section>
     <div class="sidebar">
       <ul>
         <li><a href="#">Browse Market</a></li>
-        <li><a href="/user/new">Create account</a></li>
+        <li><a href="/users/new">Create account</a></li>
         <li><a href="#">Login</a></li>
       </ul>
     </div>
