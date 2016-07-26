@@ -57,6 +57,24 @@ patch('/users/edit/tags/want') do
   redirect("/users/#{user.id}/edit")
 end
 
+# SKILL ADD
+post('/skills/add') do
+  user_id = params.fetch('user_id').to_i
+  user = User.find(user_id)
+  description = params.fetch('skill_description')
+  title = params.fetch("skill_title")
+  Skill.create({:description => description, :user_id => user_id, :title => title})
+  redirect("/users/#{user.id}")
+end
+
+#SKILL DELETE
+delete('/skills/delete') do
+  skill = Skill.find(params.fetch('skill_delete'))
+  skill.destroy
+  user = User.find(params.fetch('user_id').to_i)
+  redirect("/users/#{user.id}")
+end
+
 #USER DELETE TAGS WANT
 delete('/users/delete/tags/want') do
   user = User.find(params.fetch('user_id').to_i)
@@ -109,6 +127,12 @@ end
 get('/clear') do
   User.all.each do |user|
     user.destroy
+  end
+  Tag.all.each do |tag|
+    tag.destroy
+  end
+  Skill.all.each do |skill|
+    skill.destroy
   end
   redirect("/")
 end
