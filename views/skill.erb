@@ -1,4 +1,5 @@
 <h1>SKILLS PAGE</h1>
+<h5><%= @tag.name.upcase %></h5>
 <% if @skills.any? %>
   <ul>
     <% @skills.each do |skill| %>
@@ -7,3 +8,16 @@
     <% end %>
   </ul>
 <% end %>
+
+<!-- GRIDDED SKILLS -->
+<section id="featured">
+  <% if @skills.any? %>
+      <% @skills.each do |skill| %>
+        <div class="featured-image main">
+          <div class="overlay">
+            <p><a href="/user/profile/<%=skill.user.id %>"><%= skill.title %></a></p>
+            </div>
+          </div>
+      <% end %>
+  <% end %>
+</section>

@@ -42,6 +42,8 @@
 <ul>
   <% @user.skills.each do |skill| %>
   <li><%= skill.title %>
+    <br>
+    <%= skill.description %>
     <ul>
       <% skill.tags.each do |tag| %>
       <li><%= tag.name %></li>
@@ -51,3 +53,16 @@
   <% end %>
 </ul>
 <% end %>
+
+<!-- GRIDDED USER SKILLS -->
+
+<section id="featured">
+  <% if @user.skills.any? %>
+      <% @user.skills.each do |skill| %>
+        <div class="featured-image main">
+          <p><a href="#"><%= skill.title %></a></p>
+          <p><%= skill.description %></p>
+        </div>
+      <% end %>
+  <% end %>
+</section>

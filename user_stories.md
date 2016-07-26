@@ -4,7 +4,7 @@
 
 <!-- * As a user, I want to be able to edit my profile details -->
 
-* As a user, I want to be able to view possible trades by theme
+<!-- * As a user, I want to be able to view possible trades by theme -->
 
 * As a user, I want to be able to sort trades by value
 

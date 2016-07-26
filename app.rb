@@ -142,8 +142,8 @@ end
 
 # SEE SKILL PAGE
 get('/tags/:id') do
-  tag = Tag.find(params.fetch('id').to_i)
-  @skills = tag.skills
+  @tag = Tag.find(params.fetch('id').to_i)
+  @skills = @tag.skills
   erb(:skill)
 end
 
