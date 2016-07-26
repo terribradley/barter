@@ -20,10 +20,15 @@
 <h4>Bio:</h4>
 <% if @user.bio %>
   <p><%= @user.bio %></p>
-  <% else%>
-  <p>Your profile is missing a bio. <a href="/user/<%= @user.id %>/edit">Add one</a></p>
 <% end %>
-
+<h5>Edit Your Bio:</h5>
+<form class="" action="/user/edit/bio" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input type="hidden" name="user_id" value="<%= @user.id %>">
+  <label for="bio">Details:</label>
+  <textarea name="bio" id="bio" rows="8" cols="40"></textarea>
+  <button type="submit">Update Bio</button>
+</form>
 
 <h4>Stuff I'm interested in:</h4>
 <% if @user.tags.any? %>
@@ -32,9 +37,15 @@
     <li><%= tag.name %></li>
   </ul>
   <% end %>
-<% else %>
-  <p>What are you interested in trading for? <a href="/user/<%= @user.id %>/edit">Add Interests</a></p>
 <% end %>
+<form class="" action="/user/edit/interests" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input type="hidden" name="user_id" value="<%= @user.id %>">
+  <label for="tags_want">What type of trades interest you?</label>
+  <select class="" name="tags_want">
+    <option value="option">option</option>
+  </select>
+</form>
 
 <h4>My skills</h4>
 <% if @user.skills.any? %>
