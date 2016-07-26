@@ -1,1 +1,29 @@
 <h1>Welcome Admin</h1>
+
+<form class="" action="/tags/new" method="post">
+  <label for="tags">Add a tag:</label>
+  <input type="text" name="tag" id="tag">
+  <button type="submit">Add tag</button>
+</form>
+<% if @tags %>
+<h4>Tags:</h4>
+<ul>
+  <% @tags.each do |tag| %>
+  <li><%= tag.name %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<form class="" action="/tags/delete" method="post">
+<% if @tags %>
+<h4>Delete Tags</h4>
+  <input type="hidden" name="_method" value="delete">
+  <label for="delete_tags">Select Tag:</label>
+  <select class="" name="tag_id" id="tag_id">
+    <% @tags.each do |tag| %>
+    <option value="<%= tag.id %>"><%= tag.name %></option>
+    <% end %>
+  </select>
+  <button type="submit" name="button">Delete</button>
+  <% end %>
+</form>
