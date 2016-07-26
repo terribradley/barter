@@ -1,18 +1,57 @@
 section {
+  margin: 5%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 600px;
+  height: 900px;
+}
+form {
+  width: 350px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: lighten($color-five, 10%);
+  border: 1px solid $color-one;
+  input {
+    width: 300px;
+    height: 30px;
+    margin: 0 auto;
+  }
+  label, h4 {
+    margin-top: 8px;
+    margin-left: 25px;
+  }
+  button {
+    margin-top: 15px;
+      margin-right: 25px;
+    @extend %buttons;
+    align-self: flex-end;
+  }
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 700px;
+  margin-bottom: 20px;
+  margin-right: 0;
+  li {
+    width: 287px;
+  }
 }
 
-label, input {
-  margin-top: 7px;
-}
-
-button {
-  margin-top: 15px;
-}
 .form-header {
   height: 30vh;
 }
+nav h1 a {
+  color: $color-four;
+  &:hover {
+    text-decoration: none;
+  }
+  @media screen and (min-width:$largebreak) {
+    color: $color-three;
+  }
+}
+
+// .error-message {
+//   background-color:
+// }

@@ -14,8 +14,13 @@ $color-nine: #fafdf9;
 
 
 
-$img-main: url(../img/market.jpg);
+$img-head-one: url(../img/market.jpg);
+$img-head-two: url(../img/street-market.jpeg);
+$img-head-three: url(../img/hands.jpg);
+
 
 $images: (
-  main: $img-main,
+  head-one: $img-head-one,
+  head-two: $img-head-two,
+  head-three: $img-head-three
 );

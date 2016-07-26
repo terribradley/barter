@@ -27,11 +27,7 @@
   align-items: center;
   width: 100%;
   button {
-    color: $color-three;
-    background-color: $color-one;
-    border: 2px solid $color-one;
-    border-radius: 3px;
-    padding: 10px 40px;
+    @extend %buttons; 
     &:hover {
       color: $color-one;
       background-color: $color-three;

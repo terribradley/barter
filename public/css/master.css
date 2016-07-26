@@ -4,8 +4,14 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-.main {
+.head-one {
   background-image: url(../img/market.jpg); }
+
+.head-two {
+  background-image: url(../img/street-market.jpeg); }
+
+.head-three {
+  background-image: url(../img/hands.jpg); }
 
 .sidebar-list ul, .sidebar ul {
   display: flex;
@@ -17,6 +23,13 @@ html {
       font-size: 1.1em; }
       .sidebar-list ul li a:hover, .sidebar ul li a:hover {
         color: #8e1235; }
+
+.signup button, form button {
+  color: white;
+  background-color: #001a54;
+  border: 2px solid #001a54;
+  border-radius: 3px;
+  padding: 10px 40px; }
 
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -410,15 +423,9 @@ textarea {
   justify-content: center;
   align-items: center;
   width: 100%; }
-  .signup button {
-    color: white;
-    background-color: #001a54;
-    border: 2px solid #001a54;
-    border-radius: 3px;
-    padding: 10px 40px; }
-    .signup button:hover {
-      color: #001a54;
-      background-color: white; }
+  .signup button:hover {
+    color: #001a54;
+    background-color: white; }
 
 #intro {
   display: flex;
@@ -660,19 +667,92 @@ nav {
       margin-left: 5%; } }
 
 section {
+  margin: 5%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 600px; }
+  height: 900px; }
 
-label, input {
-  margin-top: 7px; }
+form {
+  width: 350px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: #c7a667;
+  border: 1px solid #001a54; }
+  form input {
+    width: 300px;
+    height: 30px;
+    margin: 0 auto; }
+  form label, form h4 {
+    margin-top: 8px;
+    margin-left: 25px; }
+  form button {
+    margin-top: 15px;
+    margin-right: 25px;
+    align-self: flex-end; }
 
-button {
-  margin-top: 15px; }
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 700px;
+  margin-bottom: 20px;
+  margin-right: 0; }
+  ul li {
+    width: 287px; }
 
 .form-header {
   height: 30vh; }
+
+nav h1 a {
+  color: #1c3873; }
+  nav h1 a:hover {
+    text-decoration: none; }
+  @media screen and (min-width: 1200px) {
+    nav h1 a {
+      color: white; } }
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */ }
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */ }
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold; }
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer; }
 
 /*# sourceMappingURL=master.css.map */
