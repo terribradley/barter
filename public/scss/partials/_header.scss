@@ -2,7 +2,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 60vh;
+  height: 45vh;
   background-position: center;
   background-size: cover;
   h1 {
@@ -12,7 +12,7 @@ header {
     text-shadow: 3px 0 0 $color-two;
   }
   @media screen and (min-width: $mediumbreak) {
-    height: 90vh;
+    height: 75vh;
     h1 {
       font-size: 6em;
     }
