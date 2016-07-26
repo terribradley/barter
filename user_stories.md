@@ -1,8 +1,8 @@
 <!-- * As a user, I want to be able to create a new account -->
 
-* As a user, I want to be able to add profile details
+<!-- * As a user, I want to be able to add profile details -->
 
-* As a user, I want to be able to edit my profile details
+<!-- * As a user, I want to be able to edit my profile details -->
 
 * As a user, I want to be able to view possible trades by theme
 
@@ -16,7 +16,7 @@
 
 * As a user, I want to be able to rate the user I traded with
 
-* As an admin, I want to be able to delete accounts
+<!-- * As an admin, I want to be able to delete accounts -->
 
 * As a user, I want to be able to sort my trades by deadline
 

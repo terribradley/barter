@@ -20,6 +20,7 @@
 <h4>Bio:</h4>
 <% if @user.bio %>
   <p><%= @user.bio %></p>
+  <p><a href="/users/<%= @user.id %>/edit">Edit bio</a></p>
   <% else%>
   <p>Your profile is missing a bio. <a href="/users/<%= @user.id %>/edit">Add one</a></p>
 <% end %>
@@ -30,8 +31,9 @@
   <ul>
     <% @user.tags.each do |tag| %>
     <li><%= tag.name %></li>
+    <% end %>
   </ul>
-  <% end %>
+  <p><a href="/users/<%= @user.id %>/edit">Edit my interests</a></p>
 <% else %>
   <p>What are you interested in trading for? <a href="/users/<%= @user.id %>/edit">Add Interests</a></p>
 <% end %>

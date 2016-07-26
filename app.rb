@@ -37,14 +37,31 @@ end
 # USER PROFILE EDIT
 get('/users/:id/edit') do
   @user = User.find(params.fetch('id').to_i)
+  @tags = Tag.all
   erb(:user_edit)
 end
 
-# UPDATE BIO
+# USER UPDATE BIO
 patch('/users/edit/bio') do
   user = User.find(params.fetch('user_id').to_i)
   bio = params.fetch('bio')
   user.update({:bio => bio})
+  redirect("/users/#{user.id}/edit")
+end
+
+# USER UPDATE TAGS WANT
+patch('/users/edit/tags/want') do
+  tag = Tag.find(params.fetch('tag_want').to_i)
+  user = User.find(params.fetch('user_id').to_i)
+  user.tags.push(tag)
+  redirect("/users/#{user.id}/edit")
+end
+
+#USER DELETE TAGS WANT
+delete('/users/delete/tags/want') do
+  user = User.find(params.fetch('user_id').to_i)
+  tag = Tag.find(params.fetch('tag_want_delete').to_i)
+  user.tags.destroy(tag)
   redirect("/users/#{user.id}/edit")
 end
 
