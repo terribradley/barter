@@ -21,7 +21,7 @@
 <% if @user.bio %>
   <p><%= @user.bio %></p>
   <% else%>
-  <p>Your profile is missing a bio. <a href="/user/<%= @user.id %>/edit">Add one</a></p>
+  <p>Your profile is missing a bio. <a href="/users/<%= @user.id %>/edit">Add one</a></p>
 <% end %>
 
 
@@ -33,7 +33,7 @@
   </ul>
   <% end %>
 <% else %>
-  <p>What are you interested in trading for? <a href="/user/<%= @user.id %>/edit">Add Interests</a></p>
+  <p>What are you interested in trading for? <a href="/users/<%= @user.id %>/edit">Add Interests</a></p>
 <% end %>
 
 <h4>My skills</h4>
@@ -50,5 +50,5 @@
 </ul>
 <% end %>
 <% else %>
-<p>It looks like you haven't added any skills to trade. <a href="/skill/new">Get started</a></p>
+<p>It looks like you haven't added any skills to trade. <a href="/skills/new">Get started</a></p>
 <% end %>

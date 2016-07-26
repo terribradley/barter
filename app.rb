@@ -6,11 +6,11 @@ get '/' do
   erb(:index)
 end
 
-get('/user/new') do
+get('/users/new') do
   erb(:user_form)
 end
 
-post('/user/new') do
+post('/users/new') do
   first_name = params.fetch('first_name')
   last_name = params.fetch('last_name')
   email = params.fetch('email')
@@ -18,18 +18,42 @@ post('/user/new') do
   zipcode = params.fetch('zipcode')
   @user = User.new({:first_name => first_name, :last_name => last_name, :email => email, :password => password, :zipcode => zipcode})
   if @user.save
-    redirect("/user/#{@user.id}")
+    redirect("/users/#{@user.id}")
   else
-    erb(:user_errors)
+    erb(:user_form)
   end
 end
 
-get('/user/:id') do
+get('/users/:id') do
   @user = User.find(params.fetch('id').to_i)
   erb(:user)
 end
 
-get('/user/:id/edit') do
+get('/users/:id/edit') do
   @user = User.find(params.fetch('id').to_i)
   erb(:user_edit)
+end
+
+patch('/users/edit/bio') do
+  user = User.find(params.fetch('user_id').to_i)
+  bio = params.fetch('bio')
+  user.update({:bio => bio})
+  redirect("/users/#{user.id}/edit")
+end
+
+post('/users/login') do
+  password = params.fetch('password')
+  @user = User.find_by({:password => password})
+  if @user.first_name = "admin"
+    erb(:admin)
+  else
+    redirect("/users/#{@user.id}")
+  end
+end
+
+get('/clear') do
+  User.all.each do |user|
+    user.destroy
+  end
+  redirect("/")
 end

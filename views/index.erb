@@ -7,7 +7,7 @@
      <img src="img/logo.png" alt="" />
      <h1>Bazaar</h1>
      <div class="nav-links">
-       <a href="/user/new">Signup</a>
+       <a href="/users/new">Signup</a>
        <a href="#">Browse Market</a>
        <a href="#">Login</a>
      </div>
@@ -111,9 +111,17 @@
  <div class="sidebar">
    <ul>
      <li><a href="#">Browse Market</a></li>
-     <li><a href="/user/new">Create account</a></li>
+     <li><a href="/users/new">Create account</a></li>
      <li><a href="#">Login</a></li>
    </ul>
  </div>
 </div>
 </div>
+<form class="" action="/users/login" method="post">
+  <label for="email">Email:</label>
+  <input type="text" name="email" id="email">
+  <label for="password">Password:</label>
+  <input type="password" name="password" id= "password">
+  <button type="submit" name="button">Login</button>
+  <p>Don't have an Account? Create one <a href="/users/new">here</a></p>
+</form>
