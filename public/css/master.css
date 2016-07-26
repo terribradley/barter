@@ -24,7 +24,7 @@ html {
       .sidebar-list ul li a:hover, .sidebar ul li a:hover {
         color: #8e1235; }
 
-.signup button, form button {
+.signup button, .signup-form button {
   color: white;
   background-color: #001a54;
   border: 2px solid #001a54;
@@ -397,10 +397,10 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-.wrapper {
+body {
   background-color: #fafdf9;
   color: #1c3873;
-  height: 100vh; }
+  height: 100%; }
 
 .all-content {
   position: relative;
@@ -676,7 +676,7 @@ section {
     section {
       flex-direction: row; } }
 
-form {
+.signup-form {
   width: 350px;
   height: 500px;
   display: flex;
@@ -686,14 +686,14 @@ form {
   margin-right: 30px;
   margin-bottom: 10px;
   border-radius: 5px; }
-  form input {
+  .signup-form input {
     width: 300px;
     height: 30px;
     margin: 0 auto; }
-  form label, form h4 {
+  .signup-form label, .signup-form h4 {
     margin-top: 8px;
     margin-left: 25px; }
-  form button {
+  .signup-form button {
     margin-top: 15px;
     margin-right: 25px;
     align-self: flex-end; }
@@ -759,5 +759,36 @@ nav h1 a {
   color: black;
   text-decoration: none;
   cursor: pointer; }
+
+section {
+  width: 75vw;
+  margin: 5% auto;
+  display: flex;
+  flex-direction: column; }
+  @media screen and (min-width: 700px) {
+    section {
+      flex-direction: row; } }
+  section .avatar {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
+    section .avatar p {
+      width: 90px;
+      margin: 10px; }
+    section .avatar .stars {
+      display: flex;
+      align-items: center; }
+      section .avatar .stars h4 {
+        margin-right: 10px; }
+    @media screen and (min-width: 700px) {
+      section .avatar {
+        align-items: flex-end; } }
+  section .edit-info .profile-form {
+    width: 100%;
+    margin: 5% auto;
+    background-color: none; }
+  @media screen and (min-width: 700px) {
+    section .edit-info {
+      order: -1; } }
 
 /*# sourceMappingURL=master.css.map */

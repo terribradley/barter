@@ -1,7 +1,7 @@
-.wrapper {
+body {
   background-color: $color-nine;
   color: $color-four;
-  height: 100vh;
+  height: 100%;
 }
 
 .all-content {
@@ -27,7 +27,7 @@
   align-items: center;
   width: 100%;
   button {
-    @extend %buttons; 
+    @extend %buttons;
     &:hover {
       color: $color-one;
       background-color: $color-three;
