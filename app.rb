@@ -53,28 +53,40 @@ post('/users/login') do
   password = params.fetch('password')
   @user = User.find_by({:password => password})
   if @user.first_name == "Admin"
-    @tags = Tag.all
-    erb(:admin)
+    redirect("/admin")
   else
     redirect("/users/#{@user.id}")
   end
+end
+
+# ADMIN
+get('/admin') do
+  @tags = Tag.all
+  @users = User.all
+  erb(:admin)
 end
 
 # ADMIN TAGS ADD
 post('/tags/new') do
   name = params.fetch('tag')
   Tag.create({:name => name})
-  @tags = Tag.all
-  erb(:admin)
+  redirect("/admin")
 end
 
 #ADMIN TAGS DELETE
 delete('/tags/delete') do
   tag = Tag.find(params.fetch('tag_id').to_i)
   tag.destroy
-  @tags = Tag.all
-  erb(:admin)
+  redirect("/admin")
 end
+
+#ADMIN USER DELETE
+delete('/users/delete') do
+  user = User.find(params.fetch('user_id').to_i)
+  user.destroy
+  redirect("/admin")
+end
+
 
 # CLEAR OUT DATABASE
 get('/clear') do

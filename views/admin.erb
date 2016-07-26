@@ -1,5 +1,5 @@
 <h1>Welcome Admin</h1>
-
+<!-- LIST OF ALL TAGS -->
 <form class="" action="/tags/new" method="post">
   <label for="tags">Add a tag:</label>
   <input type="text" name="tag" id="tag">
@@ -13,7 +13,7 @@
   <% end %>
 </ul>
 <% end %>
-
+<!-- DELETE TAGS FORM -->
 <form class="" action="/tags/delete" method="post">
 <% if @tags %>
 <h4>Delete Tags</h4>
@@ -26,4 +26,19 @@
   </select>
   <button type="submit" name="button">Delete</button>
   <% end %>
+</form>
+
+<!-- DELETE AN ACCOUNT -->
+<form class="" action="/users/delete" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <% if @users.any? %>
+    <h4>Close an account</h4>
+    <label for="users">Users</label>
+    <select class="" name="user_id" id="user_id">
+      <% @users.each do |user| %>
+        <option value="<%= user.id %>"><%= user.first_name %> <%= user.last_name %></option>
+        <% end %>
+    </select>
+    <% end %>
+    <button type="submit">Close account</button>
 </form>
