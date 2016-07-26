@@ -384,12 +384,15 @@ textarea {
   font: inherit;
   /* 2 */ }
 
+.wrapper {
+  background-color: #fafdf9;
+  color: #1c3873;
+  height: 100vh; }
+
 .all-content {
   position: relative;
   z-index: 0;
-  transition: all .3s linear;
-  background-color: #fafdf9;
-  color: #1c3873; }
+  transition: all .3s linear; }
 
 .main-content {
   display: flex;
@@ -447,7 +450,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 60vh;
+  height: 45vh;
   background-position: center;
   background-size: cover; }
   header h1 {
@@ -457,7 +460,7 @@ header {
     text-shadow: 3px 0 0 black; }
   @media screen and (min-width: 700px) {
     header {
-      height: 90vh; }
+      height: 75vh; }
       header h1 {
         font-size: 6em; } }
 
@@ -517,19 +520,19 @@ nav {
       display: flex;
       flex-direction: column;
       align-items: center;
-      height: 15%;
+      height: 200px;
       padding: 2% 2%; }
       nav img {
         height: 5rem; }
       nav .nav-links {
         display: flex;
-        width: 100%;
-        justify-content: center; }
+        width: 40%;
+        justify-content: space-between; }
         nav .nav-links a {
           text-decoration: none;
           color: #001a54;
           font-size: 1.1em;
-          margin: 0 5%; }
+          margin: 1% 0; }
           nav .nav-links a:hover {
             border-bottom: 1px solid #610c24; } }
   @media screen and (min-width: 1200px) {
@@ -655,5 +658,21 @@ nav {
       width: 20%;
       height: 250px;
       margin-left: 5%; } }
+
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 600px; }
+
+label, input {
+  margin-top: 7px; }
+
+button {
+  margin-top: 15px; }
+
+.form-header {
+  height: 30vh; }
 
 /*# sourceMappingURL=master.css.map */

@@ -1,0 +1,18 @@
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+label, input {
+  margin-top: 7px;
+}
+
+button {
+  margin-top: 15px;
+}
+.form-header {
+  height: 30vh;
+}
