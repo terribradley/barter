@@ -20,7 +20,7 @@ post('/user/new') do
   if @user.save
     redirect("/user/#{@user.id}")
   else
-    erb(:user_errors)
+    erb(:user_form)
   end
 end
 

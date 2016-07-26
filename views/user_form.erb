@@ -7,8 +7,18 @@
   <label for="email">Email</label>
   <input type="text" name="email" id="email">
   <label for="password">Password (minimum of 8 characters)</label>
-  <input type="text" name="password" id="password">
+  <input type="password" name="password" id="password">
   <label for="zipcode">Zipcode</label>
   <input type="text" name="zipcode" id="zipcode">
   <button type="submit">Create Account</button>
 </form>
+
+<% if @user %>
+  <h3>Oops! Please fix these errors:</h3>
+  <ul>
+    <% @user.errors().full_messages().each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+  <p>Try Again</p>
+<% end %>
