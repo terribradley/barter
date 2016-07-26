@@ -65,7 +65,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 15%;
+    height: 17vh;
     padding: 2% 2%;
       & img {
         height: 5rem;
@@ -78,7 +78,7 @@ nav {
           text-decoration: none;
           color: $color-one;
           font-size: 1.1em;
-          margin: 0 5%;
+          margin: 0 3%;
           &:hover {
             border-bottom: 1px solid $color-eight
           }
