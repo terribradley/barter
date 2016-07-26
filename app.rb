@@ -105,7 +105,9 @@ end
 post('/users/login') do
   password = params.fetch('password')
   @user = User.find_by({:password => password})
-  if @user.first_name == "Admin"
+  if @user.nil?
+    erb(:no_account)
+  elsif @user.first_name == "Admin"
     redirect("/admin")
   else
     redirect("/users/#{@user.id}")
