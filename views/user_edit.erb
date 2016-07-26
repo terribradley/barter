@@ -22,7 +22,7 @@
   <p><%= @user.bio %></p>
 <% end %>
 <h5>Edit Your Bio:</h5>
-<form class="" action="/user/edit/bio" method="post">
+<form class="" action="/users/edit/bio" method="post">
   <input type="hidden" name="_method" value="patch">
   <input type="hidden" name="user_id" value="<%= @user.id %>">
   <label for="bio">Details:</label>
@@ -38,7 +38,7 @@
   </ul>
   <% end %>
 <% end %>
-<form class="" action="/user/edit/interests" method="post">
+<form class="" action="/users/edit/interests" method="post">
   <input type="hidden" name="_method" value="patch">
   <input type="hidden" name="user_id" value="<%= @user.id %>">
   <label for="tags_want">What type of trades interest you?</label>
