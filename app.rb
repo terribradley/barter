@@ -44,5 +44,16 @@ end
 post('/users/login') do
   password = params.fetch('password')
   @user = User.find_by({:password => password})
-  redirect("/users/#{@user.id}")
+  if @user.first_name = "admin"
+    erb(:admin)
+  else
+    redirect("/users/#{@user.id}")
+  end
+end
+
+get('/clear') do
+  User.all.each do |user|
+    user.destroy
+  end
+  redirect("/")
 end
