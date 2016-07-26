@@ -14,9 +14,9 @@
       list-style-type: none;
       a {
         text-decoration: none;
-        color: $color-two;
+        font-size: 1.1em;
         &:hover {
-          color: $color-four;
+          color: lighten($color-eight, 10%);
         }
       }
     }

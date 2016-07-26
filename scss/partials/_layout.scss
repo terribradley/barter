@@ -2,25 +2,8 @@
   position: relative;
   z-index: 0;
   transition: all .3s linear;
-  background-color: lighten($color-five, 45%);
+  background-color: $color-nine;
   color: $color-four;
-}
-header {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 60vh;
-  background-position: center;
-  background-size: cover;
-  h1 {
-    color: $color-five;
-    font-size: 5em;
-    text-decoration: overline;
-    text-shadow: 3px 0 0 $color-two;
-  }
-  @media screen and (min-width: $mediumbreak) {
-    height: 75vh;
-  }
 }
 .main-content {
   display: flex;
@@ -30,7 +13,6 @@ header {
   @media screen and (min-width: $mediumbreak) {
     flex-direction: row;
     flex-wrap: wrap;
-
   }
 }
 .signup {
@@ -39,7 +21,6 @@ header {
   justify-content: center;
   align-items: center;
   width: 100%;
-
   button {
     color: $color-three;
     background-color: $color-one;
@@ -69,43 +50,21 @@ header {
    & ul {
      justify-content: space-between;
      flex-wrap: wrap;
+      transition: transform 2s ease-in-out;
      li {
        border:2px solid $color-eight;
-       border-radius: 2px;
-       padding: 10px 30px;
+       border-radius: 4px;
+       padding: 5px 20px;
        margin-bottom: 5px;
+       @media screen and (min-width: $mediumbreak) {
+         &:hover {
+           transform: scale(1.1);
+         }
+        }
+      }
        a {
         color: $color-eight;
        }
      }
-   }
 
-}
-
-#featured {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  h2 {
-    width: 100%;
-  }
-  @media screen and (min-width: $mediumbreak) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-.featured-image {
-  width: 100%;
-  height: 300px;
-  margin-bottom: 5%;
-  @media screen and (min-width: $mediumbreak) {
-    width: 45%;
-    margin-left: 5%;
-  }
-    @media screen and (min-width: $largebreak) {
-      width: 20%;
-      height: 250px;
-      margin-left: 5%;
-    }
 }

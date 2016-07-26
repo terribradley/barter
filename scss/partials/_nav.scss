@@ -6,7 +6,7 @@
   right: 15px;
   transition: all .3s linear;
   z-index: 1;
-  color: $color-three;
+  color: $color-eight;
   @media screen and (min-width: $mediumbreak) {
     display: none;
   }
@@ -15,19 +15,26 @@
   z-index: 0;
   position: fixed;
   top: 0px;
-  right: -250px;
+  right: -190px;
   bottom: 0px;
   transition: all .3s linear;
-  width: 230px;
-  color: white;
+  width: 180px;
   background: $color-one;
     @extend %lists;
     ul {
+      display: flex;
+      align-items: flex-end;;
       flex-direction: column;
+      margin: 20px 10px 0 10px;
       li {
         margin-top: 10%;
         padding: 5px 0 5px 30px;
-        border-bottom: 1px solid grey;
+      }
+      a {
+        color: $color-nine;
+        &:hover {
+          border-bottom: 1px solid lighten($color-eight, 10%);
+        }
       }
     }
   @media screen and (min-width: $mediumbreak) {
@@ -41,7 +48,7 @@
       right: 0px;
     }
     .toggle {
-      right: 280px;
+      right: 190px;
     }
     .all-content {
       padding-right: 100px;
@@ -49,31 +56,50 @@
   }
 }
 
-.nav-links {
-  display: none;
-  @media screen and (min-width: $mediumbreak) {
-    display: flex;
-  }
-}
 nav {
   display: none;
+  .nav-links {
+    display: none;
+  }
   @media screen and (min-width: $mediumbreak) {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 20%;
-    padding-bottom: 2rem;
+    height: 15%;
+    padding: 2% 2%;
       & img {
         height: 5rem;
       }
       .nav-links {
         display: flex;
-        justify-content: space-between;
-        width: 50%;
-        & a{
+        width: 100%;
+        justify-content: center;
+        a {
           text-decoration: none;
-          color: $color-two;
+          color: $color-one;
+          font-size: 1.1em;
+          margin: 0 5%;
+          &:hover {
+            border-bottom: 1px solid $color-eight
+          }
         }
       }
+    }
+    @media screen and (min-width: $largebreak) {
+      flex-direction: row;
+      justify-content: space-between;
+      height: 8vh;
+      background-color: $color-four;
+        h1 {
+          margin-right: auto;
+          padding-left: 10px;
+          color: $color-nine;
+          }
+         .nav-links {
+           width: 30%;
+           a {
+            color: $color-three;
+            }
+          }
     }
 }
