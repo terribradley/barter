@@ -666,14 +666,17 @@ nav {
       height: 250px;
       margin-left: 5%; } }
 
-section {
-  margin: 5%;
+.form-intro {
+  padding: 5% 20%; }
+
+.form-content {
+  margin: 1%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 900px; }
   @media screen and (min-width: 700px) {
-    section {
+    .form-content {
       flex-direction: row; } }
 
 .signup-form {
@@ -681,7 +684,6 @@ section {
   height: 500px;
   display: flex;
   flex-direction: column;
-  background-color: #c7a667;
   border: 1px solid #001a54;
   margin-right: 30px;
   margin-bottom: 10px;
@@ -702,6 +704,7 @@ section {
   padding: 0;
   height: 250px;
   background-color: rgba(97, 12, 36, 0.1);
+  box-shadow: 10px 10px 5px #888888;
   border-radius: 5px; }
   .error-message ul, .error-message h3 {
     margin: 10px; }
@@ -760,35 +763,49 @@ nav h1 a {
   text-decoration: none;
   cursor: pointer; }
 
-section {
+.profile-content {
   width: 75vw;
   margin: 5% auto;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #7a879b;
+  padding: 2%; }
   @media screen and (min-width: 700px) {
-    section {
-      flex-direction: row; } }
-  section .avatar {
+    .profile-content {
+      flex-direction: row;
+      width: 700px; } }
+  .profile-content .avatar {
     display: flex;
     flex-direction: column;
     width: 100%; }
-    section .avatar p {
-      width: 90px;
-      margin: 10px; }
-    section .avatar .stars {
+    .profile-content .avatar p {
+      align-self: flex-end;
+      width: 50%;
+      color: black; }
+    .profile-content .avatar img {
+      width: 250px;
+      height: 250px;
+      margin: 0 auto; }
+      @media screen and (min-width: 700px) {
+        .profile-content .avatar img {
+          margin: 0; } }
+    .profile-content .avatar h4 {
+      margin-right: 138px; }
+    .profile-content .avatar .stars {
       display: flex;
       align-items: center; }
-      section .avatar .stars h4 {
+      .profile-content .avatar .stars h4 {
         margin-right: 10px; }
     @media screen and (min-width: 700px) {
-      section .avatar {
+      .profile-content .avatar {
         align-items: flex-end; } }
-  section .edit-info .profile-form {
+  .profile-content .edit-info .profile-form {
     width: 100%;
     margin: 5% auto;
     background-color: none; }
   @media screen and (min-width: 700px) {
-    section .edit-info {
+    .profile-content .edit-info {
       order: -1; } }
 
 /*# sourceMappingURL=master.css.map */
