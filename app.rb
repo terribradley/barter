@@ -33,3 +33,10 @@ get('/user/:id/edit') do
   @user = User.find(params.fetch('id').to_i)
   erb(:user_edit)
 end
+
+patch('/user/edit/bio') do
+  user = User.find(params.fetch('user_id').to_i)
+  bio = params.fetch('bio')
+  user.update({:bio => bio})
+  redirect("/user/#{user.id}/edit")
+end
