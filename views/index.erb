@@ -24,11 +24,12 @@
      </section>
      <section id="featured">
        <aside class="sidebar-list">
+         <% if @tags.any? %>
          <ul>
-           <li><a href="#">Trade Skills</a></li>
-           <li><a href="#">Craft</a></li>
-           <li><a href="#">Tech</a></li>
-           <li><a href="#">Goods</a></li>
+           <% @tags[0..3].each do |tag| %>
+           <li><a href="/tags/<%= tag.id %>"><%= tag.name %></a></li>
+           <% end %>
+           <% end %>
          </ul>
        </aside>
        <h2>Post things you have to trade of things you can do...</h2>

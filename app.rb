@@ -5,6 +5,7 @@ require('pry')
 
 # HOME
 get '/' do
+  @tags = Tag.all
   erb(:index)
 end
 
@@ -137,6 +138,13 @@ delete('/users/delete') do
   user = User.find(params.fetch('user_id').to_i)
   user.destroy
   redirect("/admin")
+end
+
+# SEE SKILL PAGE
+get('/tags/:id') do
+  tag = Tag.find(params.fetch('id').to_i)
+  @skills = tag.skills
+  erb(:skill)
 end
 
 

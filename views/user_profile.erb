@@ -1,0 +1,47 @@
+<% if @user.photo.nil? %>
+  <img src="/img/images.jpeg" alt="generic user photo" />
+  <% else%>
+    <img src="/img/<%= @user.photo %>" alt="user photo" />
+  <% end %>
+
+<h1><%= @user.first_name %> <%= @user.last_name%></h1>
+
+<h4>Rating:</h4>
+<% if @user.rating.nil? %>
+<% (5).times do %>
+<span id="grey_star" class="glyphicon glyphicon-star"></span>
+<% end %>
+<% else %>
+<% (@user.rating).times do %>
+<span class="glyphicon glyphicon-star"></span>
+<% end %>
+<% end %>
+
+<h4>Bio:</h4>
+<% if @user.bio %>
+  <p><%= @user.bio %></p>
+<% end %>
+
+<h4><%= @user.first_name %> is interested in trades involving:</h4>
+<% if @user.tags.any? %>
+  <ul>
+    <% @user.tags.each do |tag| %>
+    <li><%= tag.name %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h4><%= @user.first_name %>'s skills</h4>
+<% if @user.skills.any? %>
+<ul>
+  <% @user.skills.each do |skill| %>
+  <li><%= skill.title %>
+    <ul>
+      <% skill.tags.each do |tag| %>
+      <li><%= tag.name %></li>
+      <% end %>
+    </ul>
+  </li>
+  <% end %>
+</ul>
+<% end %>

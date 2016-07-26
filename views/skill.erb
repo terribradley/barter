@@ -1,0 +1,8 @@
+<h1>SKILLS PAGE</h1>
+<% if @skills.any? %>
+  <ul>
+    <% @skills.each do |skill| %>
+    <li><%= skill.title %></li>
+    <% end %>
+  </ul>
+<% end %>
