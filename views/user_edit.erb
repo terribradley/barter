@@ -1,11 +1,14 @@
+<!-- USER PHOTO -->
 <% if @user.photo.nil? %>
   <img src="/img/images.jpeg" alt="generic user photo" />
   <% else%>
     <img src="/img/<%= @user.photo %>" alt="user photo" />
   <% end %>
 
+<!-- GREETING -->
 <h1>Hello,  <%= @user.first_name %> <%= @user.last_name%></h1>
 
+<!-- USER RATING -->
 <h4>My Rating:</h4>
 <% if @user.rating.nil? %>
 <% (5).times do %>
@@ -17,10 +20,12 @@
 <% end %>
 <% end %>
 
+<!-- USER BIO -->
 <h4>Bio:</h4>
 <% if @user.bio %>
   <p><%= @user.bio %></p>
 <% end %>
+<!-- EDIT USER BIO -->
 <h5>Edit Your Bio:</h5>
 <form class="" action="/users/edit/bio" method="post">
   <input type="hidden" name="_method" value="patch">
@@ -30,6 +35,7 @@
   <button type="submit">Update Bio</button>
 </form>
 
+<!-- USER INTERESTS -->
 <h4>Stuff I'm interested in:</h4>
 <% if @user.tags.any? %>
   <ul>
@@ -38,6 +44,8 @@
   <% end %>
   </ul>
 <% end %>
+
+<!-- ADD USER INTERESTS -->
 <form class="" action="/users/edit/tags/want" method="post">
   <input type="hidden" name="_method" value="patch">
   <input type="hidden" name="user_id" value="<%= @user.id %>">
@@ -52,6 +60,7 @@
   <button type="submit">Add interest</button>
 </form>
 
+<!-- DELETE INTERESTS -->
 <form class="" action="/users/delete/tags/want" method="post">
   <input type="hidden" name="_method" value="delete">
   <input type="hidden" name="user_id" value="<%= @user.id %>">
@@ -66,6 +75,7 @@
   <button type="submit">Delete</button>
 </form>
 
+<!-- LIST OF SKILLS -->
 <h4>My skills</h4>
 <% if @user.skills.any? %>
 <ul>

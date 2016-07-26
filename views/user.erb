@@ -1,11 +1,14 @@
+<!-- USER PHOTO -->
 <% if @user.photo.nil? %>
   <img src="/img/images.jpeg" alt="generic user photo" />
   <% else%>
     <img src="/img/<%= @user.photo %>" alt="user photo" />
   <% end %>
 
+<!-- GREETING -->
 <h1>Hello,  <%= @user.first_name %> <%= @user.last_name%></h1>
 
+<!-- USER RATING -->
 <h4>My Rating:</h4>
 <% if @user.rating.nil? %>
 <% (5).times do %>
@@ -17,6 +20,7 @@
 <% end %>
 <% end %>
 
+<!-- USER BIO -->
 <h4>Bio:</h4>
 <% if @user.bio %>
   <p><%= @user.bio %></p>
@@ -25,7 +29,7 @@
   <p>Your profile is missing a bio. <a href="/users/<%= @user.id %>/edit">Add one</a></p>
 <% end %>
 
-
+<!-- USER INTERESTS -->
 <h4>Stuff I'm interested in:</h4>
 <% if @user.tags.any? %>
   <ul>
@@ -38,6 +42,7 @@
   <p>What are you interested in trading for? <a href="/users/<%= @user.id %>/edit">Add Interests</a></p>
 <% end %>
 
+<!-- LIST OF SKILLS -->
 <h4>My skills</h4>
 <% if @user.skills.any? %>
 <ul>

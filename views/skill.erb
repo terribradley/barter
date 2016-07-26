@@ -2,7 +2,8 @@
 <% if @skills.any? %>
   <ul>
     <% @skills.each do |skill| %>
-    <li><%= skill.title %></li>
+    <li><a href="/user/profile/<%=skill.user.id %>"><%= skill.title %></a><br>
+    <%= skill.description %></li>
     <% end %>
   </ul>
 <% end %>

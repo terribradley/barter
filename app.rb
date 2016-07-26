@@ -147,6 +147,12 @@ get('/tags/:id') do
   erb(:skill)
 end
 
+#SEE PROFILE PAGE
+get('/user/profile/:id') do
+  @user = User.find(params.fetch('id').to_i)
+  erb(:user_profile)
+end
+
 
 # CLEAR OUT DATABASE
 get('/clear') do
