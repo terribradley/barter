@@ -1,23 +1,47 @@
-<form class="" action="/users/new" method="post">
-  <h4>User Details:</h4>
-  <label for="first_name">First Name</label>
-  <input type="text" name="first_name" id="first_name">
-  <label for="last_name">Last Name</label>
-  <input type="text" name="last_name" id="last_name">
-  <label for="email">Email</label>
-  <input type="text" name="email" id="email">
-  <label for="password">Password (minimum of 8 characters)</label>
-  <input type="password" name="password" id="password">
-  <label for="zipcode">Zipcode</label>
-  <input type="text" name="zipcode" id="zipcode">
-  <button type="submit">Create Account</button>
-</form>
-
-<% if @user %>
-  <h3>Oops! Please fix these errors:</h3>
-  <ul>
-    <% @user.errors().full_messages().each do |message| %>
-    <li><%= message %></li>
-    <% end %>
-  </ul>
-<% end %>
+<input type="checkbox" id="sidebar-toggler">
+<div class="wrapper">
+ <label for="sidebar-toggler" class="toggle">☰</label>
+ <div class="all-content">
+   <nav>
+     <img src="../img/logo.png" alt="" />
+     <h1>Bazaar</h1>
+     <div class="nav-links">
+       <a href="/user/new">Signup</a>
+       <a href="#">Browse Market</a>
+       <a href="#">Login</a>
+     </div>
+   </nav>
+   <header class=" main form-header">
+   </header>
+    <section>
+      <form class="signup" action="/users/new" method="post">
+        <h4>User Details:</h4>
+        <label for="first_name">First Name</label>
+        <input type="text" name="first_name" id="first_name">
+        <label for="last_name">Last Name</label>
+        <input type="text" name="last_name" id="last_name">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+        <label for="password">Password (minimum of 8 characters)</label>
+        <input type="password" name="password" id="password">
+        <label for="zipcode">Zipcode</label>
+        <input type="text" name="zipcode" id="zipcode">
+        <button type="submit">Create Account</button>
+      </form>
+      <% if @user %>
+        <h3>Oops! Please fix these errors:</h3>
+        <ul>
+          <% @user.errors().full_messages().each do |message| %>
+          <li><%= message %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    </section>
+    <div class="sidebar">
+      <ul>
+        <li><a href="#">Browse Market</a></li>
+        <li><a href="/user/new">Create account</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </div>
+</div>
