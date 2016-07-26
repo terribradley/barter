@@ -31,6 +31,7 @@ end
 # USER PROFILE
 get('/users/:id') do
   @user = User.find(params.fetch('id').to_i)
+  @tags = Tag.all
   erb(:user)
 end
 
@@ -56,6 +57,22 @@ patch('/users/edit/tags/want') do
   user.tags.push(tag)
   redirect("/users/#{user.id}/edit")
 end
+
+# USER UPDATE TAGS HAVE
+  patch('/skills/tags/new') do
+  skill = Skill.find(params.fetch('skill_tag'))
+  user = User.find(params.fetch('user_id').to_i)
+  new_tags = params.fetch('tag_id')
+  tags = []
+  new_tags.each do | tag |
+    tags.push(Tag.find(tag.to_i))
+  end
+  tags.each do |tag|
+    skill.tags.push(tag)
+  end
+  redirect("/users/#{user.id}")
+end
+
 
 # SKILL ADD
 post('/skills/add') do

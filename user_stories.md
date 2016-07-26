@@ -20,4 +20,4 @@
 
 * As a user, I want to be able to sort my trades by deadline
 
-* As a user, I want to be able to add skills to my wish list
+* As a user, I want to be able to add trades to my wish list

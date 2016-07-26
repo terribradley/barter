@@ -54,23 +54,45 @@
 <% else %>
 <p>It looks like you haven't added any skills to trade. <a href="/skills/new">Get started</a></p>
 <% end %>
-
+<!-- ADD SKILL -->
+<h4>Add a skill</h4>
 <form class="" action="/skills/add" method="post">
   <input type="hidden" name="user_id" value="<%= @user.id %>">
   <p>Add skills you have that you would like to trade with others. Be descriptive, and include your proficiency. Profiles with skill photos tend to get more trades.</p>
   <label for="skill_title">Skill Title</label>
   <input type="text" name="skill_title" id="skill_title">
-  <label for="skill_description">Add a skill to trade:</label>
+  <label for="skill_description">Skill description:</label>
   <textarea name="skill_description" rows="8" cols="40"></textarea>
   <button type="submit">Add skill</button>
 </form>
 
+<!-- TAG YOUR SKILL -->
+<h4>Add tags to your skills</h4>
+<form class="" action="/skills/tags/new" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input type="hidden" name="user_id" value="<%= @user.id %>">
+    <% if @user.skills.any? %>
+      <select class="" name="skill_tag">
+      <% @user.skills.each do |skill| %>
+        <option value="<%= skill.id %>"><%= skill.title %></option>
+      <% end %>
+      </select>
+    <% end %>
+    <% if @tags %>
+      <% @tags.each do |tag| %>
+        <input type="checkbox" name="tag_id[]" id="tag_id[]" value="<%= tag.id %>"><%= tag.name %>
+      <% end %>
+    <% end %>
+    <button type="submit">Add tag</button>
+</form>
+
+<!-- DELETE SKILL -->
 <% if @user.skills.any? %>
 <form class="" action="/skills/delete" method="post">
   <input type="hidden" name="user_id" value="<%= @user.id %>">
   <input type="hidden" name="_method" value="delete">
   <p>No longer want to offer this skill?</p>
-  <label for="skill_delete">Select and Delete</label>
+  <label for="skill_delete">Delete my skill</label>
   <select class="" name="skill_delete" id="skill_delete">
     <% @user.skills.each do |skill| %>
     <option value="<%= skill.id %>"><%=skill.title %></option>
