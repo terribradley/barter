@@ -5,8 +5,9 @@
   flex-direction: column;
   // background-color: lighten(#4b5564, 20%);
   padding: 2%;
-  .skill-list, .interest, .edit-info {
-    margin-top: 1rem;
+  .skill-list, .interest, .edit-info, .skill-form {
+    margin: 2% 0;
+
     h4 {
       font-size: 2.5rem;
     }

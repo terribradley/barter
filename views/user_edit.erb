@@ -30,6 +30,7 @@
     <% if @user.bio %>
     <p><%= @user.bio %></p>
     <% end %>
+    <hr>
   </div>
 
   <!-- EDIT USER BIO -->
@@ -54,7 +55,7 @@
     <% end %>
 
     <!-- ADD USER INTERESTS -->
-    <form class="" action="/users/edit/interests" method="post">
+    <form class="add-user-interest" action="/users/edit/interests" method="post">
       <input type="hidden" name="_method" value="patch">
       <input type="hidden" name="user_id" value="<%= @user.id %>">
       <label for="tags_want">What type of trades interest you?</label>
