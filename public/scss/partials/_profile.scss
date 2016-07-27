@@ -1,12 +1,74 @@
 .profile-content {
-  width: 75vw;
+  width: 85vw;
   margin: 5% auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  background-color: lighten(#4b5564, 20%);
-
+  // background-color: lighten(#4b5564, 20%);
   padding: 2%;
+  .skill-list, .interest, .edit-info, .skill-form {
+    margin: 2% 0;
+
+    h4 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.9rem;
+    }
+    a {
+      border:2px solid $color-eight;
+      border-radius: 4px;
+      padding: 5px 20px;
+      margin-bottom: 5px;
+      color: $color-eight;
+      display: block;
+      width: 16rem;
+      text-align: center;
+      @media screen and (min-width: $mediumbreak) {
+        &:hover {
+          transform: scale(1.1);
+        }
+       }
+     }
+    }
+  }
+
+  .edit-info {
+    display: flex;
+    flex-direction: column;
+    button {
+      align-self: flex-end;
+      margin-top: 1rem;
+      @extend %buttons;
+    }
+    .skill-form {
+      display: flex;
+      flex-direction: column;
+      #skill_title {
+        width: 50%;
+      }
+      label:nth-of-type(2) {
+      display: block;
+      }
+      label {
+        margin: .5rem;
+        font-size: 2.5rem;
+        font-weight: 500;
+      }
+      textarea {
+        @extend %textarea;
+      }
+    }
+    .add-tag-form {
+      display: flex;
+      align-items: center;
+      button {
+        width: 137px;
+        order: -1;
+      }
+
+    }
+  }
+
   @media screen and (min-width:$mediumbreak) {
     flex-direction: row;
     width: 700px;
@@ -15,6 +77,9 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    hr {
+      width: 100%;
+    }
     p {
       align-self: flex-end;
       width: 50%;
@@ -52,9 +117,8 @@
 
     }
 
-    @media screen and (min-width:$mediumbreak) {
-      order: -1;
-
-    }
+    // @media screen and (min-width:$mediumbreak) {
+    //   order: -1;
+    //
+    // }
   }
-}

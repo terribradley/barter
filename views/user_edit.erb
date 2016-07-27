@@ -24,7 +24,6 @@
       <% end %>
       <% end %>
     </div>
-
         <!-- RETURN TO PROFILE LINK -->
         <p><a href="/users/<%= @user.id %>">Return to profile</a></p>
 
@@ -41,7 +40,7 @@
     <form class="profile-form" action="/users/edit/bio" method="post">
       <input type="hidden" name="_method" value="patch">
       <input type="hidden" name="user_id" value="<%= @user.id %>">
-      <label for="bio">Details:</label>
+      <!-- <label for="bio">Details:</label> -->
       <textarea name="bio" id="bio" rows="8" cols="40"></textarea>
       <button type="submit">Update Bio</button>
     </form>
@@ -55,9 +54,8 @@
       <% end %>
     </ul>
     <% end %>
-
         <!-- ADD USER INTERESTS -->
-        <form action="/users/edit/tags/want" method="post">
+        <form class="add-user-interest" action="/users/edit/tags/want" method="post">
           <input type="hidden" name="_method" value="patch">
           <input type="hidden" name="user_id" value="<%= @user.id %>">
           <label for="tags_want">What type of trades interest you?</label>
@@ -70,6 +68,7 @@
           <% end %>
           <button type="submit">Add interest</button>
         </form>
+
 
     <!-- DELETE INTERESTS -->
     <form class="" action="/users/delete/tags/want" method="post">
@@ -90,7 +89,6 @@
     <h4>My skills</h4>
     <% if @user.skills.any? %>
     <ul>
-      <% @user.skills.each do |skill| %>
       <% @user.skills.each do |skill| %>
       <li><%= skill.title %>
         <ul>

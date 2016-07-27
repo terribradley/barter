@@ -11,7 +11,7 @@
 <!-- GREETING -->
 <h1>Hello,  <%= @user.first_name %> <%= @user.last_name%></h1>
 
-
+<!-- user rating -->
 <div class="stars">
   <h4>My Rating:</h4>
   <% if @user.rating.nil? %>
@@ -33,37 +33,11 @@
   <p>Your profile is missing a bio. <a href="/users/<%= @user.id %>/edit">Add one</a></p>
 <% end %>
 </div>
-
-    <!-- USER INTERESTS -->
     <!-- EDIT PROFILE LINK -->
     <p><a href="/users/<%= @user.id %>/edit">Edit profile</a></p>
 
-    <div class="edit-info">
-      <h4>Stuff I'm interested in:</h4>
-      <% if @user.tags.any? %>
-      <ul>
-        <% @user.tags.each do |tag| %>
-        <li><%= tag.name %></li>
-      </ul>
-      <% end %>
-      <% else %>
-      <p>What are you interested in trading for? <a href="/users/<%= @user.id %>/edit">Add Interests</a></p>
-      <% end %>
-
-<!-- USER INTERESTS -->
-<div class="edit-info">
-  <h4>Stuff I'm interested in:</h4>
-  <% if @user.tags.any? %>
-  <ul>
-    <% @user.tags.each do |tag| %>
-    <li><%= tag.name %></li>
-  </ul>
-  <% end %>
-  <% else %>
-  <p>What are you interested in trading for? <a href="/users/<%= @user.id %>/edit">Add Interests</a></p>
-  <% end %>
-
-  <!-- LIST OF SKILLS -->
+    <!-- LIST OF SKILLS -->
+<section class="list-of-skills">
   <h4>My skills</h4>
   <% if @user.skills.any? %>
   <ul>
@@ -78,8 +52,22 @@
     <% end %>
   </ul>
   <% else %>
-  <p>It looks like you haven't added any skills to trade. <a href="/users/<%= @user.id %>">Get started</a></p>
+  <p>It looks like you haven't added any skills to trade. <a href="/users/<%= @user.id %>/edit">Get started</a></p>
   <% end %>
-</div>
-
+  <hr>
 </section>
+
+<!-- USER INTERESTS -->
+<div class="interest">
+  <h4>Stuff I'm interested in:</h4>
+  <% if @user.tags.any? %>
+  <ul>
+    <% @user.tags.each do |tag| %>
+    <li><%= tag.name %></li>
+  </ul>
+  <% end %>
+  <% else %>
+  <p>What are you interested in trading for? <a href="/users/<%= @user.id %>/edit">Add Interests</a></p>
+  <% end %>
+    <hr>
+  </div>
