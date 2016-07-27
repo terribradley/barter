@@ -15,13 +15,17 @@
    </header>
     <section class="profile-content">
       <div class="avatar">
+        <!-- USER PHOTO -->
         <% if @user.photo.nil? %>
-        <img src="/img/images.jpeg" alt="generic user photo" />
-        <% else%>
-        <img src="/img/<%= @user.photo %>" alt="user photo" />
-        <% end %>
+          <img src="/img/images.jpeg" alt="generic user photo" />
+          <% else%>
+            <img src="/img/<%= @user.photo %>" alt="user photo" />
+          <% end %>
 
+        <!-- GREETING -->
         <h1>Hello,  <%= @user.first_name %> <%= @user.last_name%></h1>
+
+        <!-- USER RATING -->
         <div class="stars">
           <h4>My Rating:</h4>
           <% if @user.rating.nil? %>
@@ -34,11 +38,15 @@
           <% end %>
           <% end %>
         </div>
+
+        <!-- USER BIO -->
         <h4>Bio:</h4>
         <% if @user.bio %>
         <p><%= @user.bio %></p>
         <% end %>
       </div>
+
+      <!-- EDIT USER BIO -->
       <div class="edit-info">
         <h5>Edit Your Bio:</h5>
         <form class="profile-form" action="/users/edit/bio" method="post">
@@ -49,23 +57,47 @@
           <button type="submit">Update Bio</button>
         </form>
 
+        <!-- USER INTERESTS -->
         <h4>Stuff I'm interested in:</h4>
         <% if @user.tags.any? %>
         <ul>
           <% @user.tags.each do |tag| %>
           <li><%= tag.name %></li>
+          <% end %>
         </ul>
         <% end %>
-        <% end %>
+
+        <!-- ADD USER INTERESTS -->
         <form class="" action="/users/edit/interests" method="post">
           <input type="hidden" name="_method" value="patch">
           <input type="hidden" name="user_id" value="<%= @user.id %>">
           <label for="tags_want">What type of trades interest you?</label>
-          <select class="" name="tags_want">
-            <option value="option">option</option>
+          <% if @tags %>
+          <select class="" name="tag_want" id="tag_want">
+            <% @tags.each do |tag| %>
+            <option value="<%= tag.id %>"><%= tag.name %></option>
+            <% end %>
           </select>
+          <% end %>
+          <button type="submit">Add interest</button>
         </form>
 
+        <!-- DELETE INTERESTS -->
+        <form class="" action="/users/delete/tags/want" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input type="hidden" name="user_id" value="<%= @user.id %>">
+          <label for="tags_want_delete">Delete Interests:</label>
+          <% if @user.tags %>
+          <select class="" name="tag_want_delete" id="tag_want_delete">
+            <% @user.tags.each do |tag| %>
+            <option value="<%= tag.id %>"><%= tag.name %></option>
+            <% end %>
+          </select>
+          <% end %>
+          <button type="submit">Delete</button>
+        </form>
+
+        <!-- LIST OF SKILLS -->
         <h4>My skills</h4>
         <% if @user.skills.any? %>
         <ul>

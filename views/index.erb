@@ -24,51 +24,52 @@
      </section>
      <section id="featured">
        <aside class="sidebar-list">
+         <% if @tags.any? %>
          <ul>
-           <li><a href="#">Trade Skills</a></li>
-           <li><a href="#">Craft</a></li>
-           <li><a href="#">Tech</a></li>
-           <li><a href="#">Goods</a></li>
+           <% @tags[0..3].each do |tag| %>
+           <li><a href="/tags/<%= tag.id %>"><%= tag.name %></a></li>
+           <% end %>
+           <% end %>
          </ul>
        </aside>
        <h2>Post things you have to trade of things you can do...</h2>
-       <div class="featured-image head-one">
+       <div class="featured-image head-two">
          <div class="overlay">
            <p>product name</p>
          </div>
        </div>
-       <div class="featured-image head-one">
+       <div class="featured-image head-two">
          <div class="overlay">
            <p>product name</p>
          </div>
        </div>
-       <div class="featured-image head-one">
+       <div class="featured-image head-two">
          <div class="overlay">
            <p>product name</p>
          </div>
        </div>
-       <div class="featured-image head-one">
+       <div class="featured-image head-two">
          <div class="overlay">
            <p>product name</p>
          </div>
        </div>
        <h2>...and things you want in our marketplace.</h2>
-       <div class="featured-image head-three">
+       <div class="featured-image head-two">
          <div class="overlay">
            <p>user name</p>
          </div>
        </div>
-       <div class="featured-image head-three">
+       <div class="featured-image head-two">
          <div class="overlay">
            <p>user name</p>
          </div>
        </div>
-       <div class="featured-image head-three">
+       <div class="featured-image head-two">
          <div class="overlay">
            <p>user name</p>
          </div>
        </div>
-       <div class="featured-image head-three">
+       <div class="featured-image head-two">
          <div class="overlay">
            <p>user name</p>
          </div>
@@ -107,6 +108,14 @@
           </a></li>
         </ul>
       </div>
+      <form class="" action="/users/login" method="post">
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email">
+        <label for="password">Password:</label>
+        <input type="password" name="password" id= "password">
+        <button type="submit" name="button">Login</button>
+        <p>Don't have an Account? Create one <a href="/users/new">here</a></p>
+      </form>
   </footer>
  <div class="sidebar">
    <ul>
@@ -117,11 +126,3 @@
  </div>
 </div>
 </div>
-<form class="" action="/users/login" method="post">
-  <label for="email">Email:</label>
-  <input type="text" name="email" id="email">
-  <label for="password">Password:</label>
-  <input type="password" name="password" id= "password">
-  <button type="submit" name="button">Login</button>
-  <p>Don't have an Account? Create one <a href="/users/new">here</a></p>
-</form>
