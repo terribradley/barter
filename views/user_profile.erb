@@ -1,72 +1,68 @@
 <!-- USER PHOTO -->
-<% if @user.photo.nil? %>
-  <img src="/img/images.jpeg" alt="generic user photo" />
-  <% else%>
-    <img src="/img/<%= @user.photo %>" alt="user photo" />
-  <% end %>
+<section class="profile-content">
+  <div class="avatar edit user">
+    <section class="left-column">
+      <% if @user.photo.nil? %>
+        <img src="/img/images.jpeg" alt="generic user photo" />
+        <% else%>
+          <img src="/img/<%= @user.photo %>" alt="user photo" />
+        <% end %>
 
-<!-- GREETING -->
-<h1><%= @user.first_name %> <%= @user.last_name%></h1>
+      <!-- GREETING -->
+      <h1><%= @user.first_name %> <%= @user.last_name%></h1>
 
-<!-- USER RATING -->
-<h4>Rating:</h4>
-<% if @user.rating.nil? %>
-<% (5).times do %>
-<span id="grey_star" class="glyphicon glyphicon-star"></span>
-<% end %>
-<% else %>
-<% (@user.rating).times do %>
-<span class="glyphicon glyphicon-star"></span>
-<% end %>
-<% end %>
-
-<!-- USER BIO -->
-<h4>Bio:</h4>
-<% if @user.bio %>
-  <p><%= @user.bio %></p>
-<% end %>
-
-<!-- USER TRADE TAGS -->
-<h4><%= @user.first_name %> is interested in trades involving:</h4>
-<% if @user.tags.any? %>
-  <ul>
-    <% @user.tags.each do |tag| %>
-    <li><%= tag.name %></li>
-    <% end %>
-  </ul>
-<% end %>
-
-<!-- USER SKILLS -->
-<h4><%= @user.first_name %>'s skills</h4>
-<% if @user.skills.any? %>
-<ul>
-  <% @user.skills.each do |skill| %>
-  <li><%= skill.title %>
-    <br>
-    <%= skill.description %>
-    <ul>
-      <% skill.tags.each do |tag| %>
-      <li><%= tag.name %></li>
+      <!-- USER RATING -->
+      <h4>Rating:</h4>
+      <% if @user.rating.nil? %>
+      <% (5).times do %>
+      <span id="grey_star" class="glyphicon glyphicon-star"></span>
       <% end %>
-    </ul>
-  </li>
-  <% end %>
-</ul>
-<% end %>
+      <% else %>
+      <% (@user.rating).times do %>
+      <span class="glyphicon glyphicon-star"></span>
+      <% end %>
+      <% end %>
 
+      <!-- USER BIO -->
+      <h4>Bio:</h4>
+      <% if @user.bio %>
+        <p><%= @user.bio %></p>
+      <% end %>
+    </section>
+    <section class="right-column">
+<!-- USER TRADE TAGS -->
+      <h4><%= @user.first_name %>'s skills</h4>
+      <% if @user.skills.any? %>
+      <ul>
+        <% @user.skills.each do |skill| %>
+        <li><%= skill.title %>
+          <br>
+          <%= skill.description %>
+          <ul>
+            <% skill.tags.each do |tag| %>
+            <li><%= tag.name %></li>
+            <% end %>
+          </ul>
+        </li>
+        <% end %>
+      </ul>
+      <% end %>
+    </section>
+    </div>
 <!-- GRIDDED USER SKILLS (title and description are inside picture divs)-->
 
-<section id="featured">
+<section id="trades">
   <% if @user.skills.any? %>
       <% @user.skills.each do |skill| %>
         <form class="" action="/trades/verify" method="get">
-          <div class="featured-image main">
-          </div>
           <p><%= skill.title %></p>
           <p><%= skill.description %></p>
             <input type="hidden" name="skill_id" value="<%= skill.id %>">
             <button type="submit">Propose Trade</button>
+            <div class="featured-image main">
+            </div>
         </form>
       <% end %>
   <% end %>
+</section>
 </section>
