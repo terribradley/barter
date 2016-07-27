@@ -1,0 +1,9 @@
+.edit-info {
+  .profile-form {
+    display: flex;
+    flex-direction: column;
+    @extend %textarea;
+
+  }
+
+}

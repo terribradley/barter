@@ -41,7 +41,7 @@
     <form class="profile-form" action="/users/edit/bio" method="post">
       <input type="hidden" name="_method" value="patch">
       <input type="hidden" name="user_id" value="<%= @user.id %>">
-      <label for="bio">Details:</label>
+      <!-- <label for="bio">Details:</label> -->
       <textarea name="bio" id="bio" rows="8" cols="40"></textarea>
       <button type="submit">Update Bio</button>
     </form>
@@ -57,16 +57,16 @@
     <% end %>
 
     <!-- ADD USER INTERESTS -->
-    <form action="/users/edit/tags/want" method="post">
+    <form class="add-user-interest" action="/users/edit/tags/want" method="post">
       <input type="hidden" name="_method" value="patch">
       <input type="hidden" name="user_id" value="<%= @user.id %>">
       <label for="tags_want">What type of trades interest you?</label>
       <% if @tags %>
-        <select class="" name="tag_want" id="tag_want">
-          <% @tags.each do |tag| %>
-          <option value="<%= tag.id %>"><%= tag.name %></option>
+      <select class="" name="tag_want" id="tag_want">
+        <% @tags.each do |tag| %>
+        <option value="<%= tag.id %>"><%= tag.name %></option>
         <% end %>
-        </select>
+      </select>
       <% end %>
       <button type="submit">Add interest</button>
     </form>
