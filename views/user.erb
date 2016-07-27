@@ -7,6 +7,7 @@
   <% else%>
     <img src="/img/<%= @user.photo %>" alt="user photo" />
   <% end %>
+  <a href="/users/<%= @user.id %>/edit">Edit profile</a>
 
 <!-- GREETING -->
 <h1>Hello,  <%= @user.first_name %> <%= @user.last_name%></h1>
@@ -32,9 +33,9 @@
   <% else%>
   <p>Your profile is missing a bio. <a href="/users/<%= @user.id %>/edit">Add one</a></p>
 <% end %>
+  <hr>
 </div>
     <!-- EDIT PROFILE LINK -->
-    <p><a href="/users/<%= @user.id %>/edit">Edit profile</a></p>
 
     <!-- LIST OF SKILLS -->
 <section class="list-of-skills">

@@ -772,13 +772,13 @@ nav h1 a {
   display: flex;
   flex-direction: column;
   padding: 2%; }
-  .profile-content .skill-list, .profile-content .interest, .profile-content .edit-info, .profile-content .skill-form {
+  .profile-content .skill-list, .profile-content .interest, .profile-content .list-of-skills, .profile-content .edit-info, .profile-content .skill-form {
     margin: 2% 0; }
-    .profile-content .skill-list h4, .profile-content .interest h4, .profile-content .edit-info h4, .profile-content .skill-form h4 {
+    .profile-content .skill-list h4, .profile-content .interest h4, .profile-content .list-of-skills h4, .profile-content .edit-info h4, .profile-content .skill-form h4 {
       font-size: 2.5rem; }
-    .profile-content .skill-list p, .profile-content .interest p, .profile-content .edit-info p, .profile-content .skill-form p {
+    .profile-content .skill-list p, .profile-content .interest p, .profile-content .list-of-skills p, .profile-content .edit-info p, .profile-content .skill-form p {
       font-size: 1.9rem; }
-    .profile-content .skill-list a, .profile-content .interest a, .profile-content .edit-info a, .profile-content .skill-form a {
+    .profile-content .skill-list a, .profile-content .interest a, .profile-content .list-of-skills a, .profile-content .edit-info a, .profile-content .skill-form a {
       border: 2px solid #610c24;
       border-radius: 4px;
       padding: 5px 20px;
@@ -788,7 +788,7 @@ nav h1 a {
       width: 16rem;
       text-align: center; }
       @media screen and (min-width: 700px) {
-        .profile-content .skill-list a:hover, .profile-content .interest a:hover, .profile-content .edit-info a:hover, .profile-content .skill-form a:hover {
+        .profile-content .skill-list a:hover, .profile-content .interest a:hover, .profile-content .list-of-skills a:hover, .profile-content .edit-info a:hover, .profile-content .skill-form a:hover {
           transform: scale(1.1); } }
 
 .edit-info {
@@ -824,6 +824,20 @@ nav h1 a {
   width: 100%; }
   .avatar hr {
     width: 100%; }
+  .avatar a {
+    border: 1px solid #610c24;
+    border-radius: 4px;
+    padding: 3px 4px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: #610c24;
+    display: block;
+    width: 8rem;
+    text-align: center;
+    align-self: center; }
+    @media screen and (min-width: 700px) {
+      .avatar a:hover {
+        transform: scale(1.1); } }
   .avatar p {
     align-self: flex-end;
     width: 50%;
@@ -842,9 +856,6 @@ nav h1 a {
     align-items: center; }
     .avatar .stars h4 {
       margin-right: 10px; }
-  @media screen and (min-width: 700px) {
-    .avatar {
-      align-items: flex-end; } }
 
 .edit-info .profile-form {
   width: 100%;
