@@ -91,13 +91,14 @@
     <% if @user.skills.any? %>
     <ul>
       <% @user.skills.each do |skill| %>
-      <li><%= skill.description %>
+      <% @user.skills.each do |skill| %>
+      <li><%= skill.title %>
         <ul>
           <% skill.tags.each do |tag| %>
-          <li><%= tag.name %></li>
+            <li><%= tag.name %></li>
           <% end %>
         </ul>
-      </li>
+          </li>
     </ul>
     <% end %>
     <% else %>
