@@ -841,15 +841,13 @@ nav h1 a {
     display: flex;
     justify-content: space-between;
     max-width: 1000px; } }
-.add-user-interest, .delete-form {
-  display: flex;
-  flex-direction: column; }
-  .add-user-interest label, .delete-form label {
-    font-size: 2.5rem; }
-  .add-user-interest .form-button, .delete-form .form-button {
+@media screen and (min-width: 700px) {
+  .avatar {
     display: flex;
-    justify-content: space-between;
-    align-items: center; }
+    flex-direction: row;
+    justify-content: space-between; }
+    .avatar .right-column h4 {
+      font-size: 2.5rem; } }
 
 .edit-info button {
   align-self: flex-end;
@@ -885,6 +883,30 @@ nav h1 a {
   justify-content: space-around;
   width: 100%; }
   .edit-info .delete-form .form-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+@media screen and (min-width: 1024px) {
+  .edit-info {
+    display: flex;
+    flex-direction: column; }
+    .edit-info .row-one {
+      display: flex; }
+      .edit-info .row-one .column-one {
+        display: flex;
+        flex-direction: column; }
+    .edit-info .row-two {
+      display: flex; }
+      .edit-info .row-two .column-two {
+        display: flex;
+        flex-direction: column; } }
+
+.add-user-interest, .delete-form {
+  display: flex;
+  flex-direction: column; }
+  .add-user-interest label, .delete-form label {
+    font-size: 2.5rem; }
+  .add-user-interest .form-button, .delete-form .form-button {
     display: flex;
     justify-content: space-between;
     align-items: center; }

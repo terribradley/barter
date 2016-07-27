@@ -1,15 +1,17 @@
-.add-user-interest, .delete-form {
-  display: flex;
-  flex-direction: column;
-  label {
-    font-size: $medium-font
-  }
-  .form-button {
+
+  .avatar {
+    @media screen and (min-width: $mediumbreak) {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    .right-column {
+    h4 {
+      font-size: $medium-font;
+    }
+    }
   }
 }
+
 
 .edit-info {
   button {
@@ -68,8 +70,38 @@
       align-items: center;
     }
   }
+  @media screen and (min-width: $largebreak){
+    display: flex;
+    flex-direction: column;
+    .row-one {
+      display: flex;
+      .column-one {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .row-two {
+      display: flex;
+      .column-two {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
 }
 
+.add-user-interest, .delete-form {
+  display: flex;
+  flex-direction: column;
+  label {
+    font-size: $medium-font
+  }
+  .form-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 
 
 // .edit-info {
