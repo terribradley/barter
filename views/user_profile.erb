@@ -1,6 +1,6 @@
 <!-- USER PHOTO -->
 <section class="profile-content">
-  <div class="avatar edit">
+  <div class="avatar edit user">
     <section class="left-column">
       <% if @user.photo.nil? %>
         <img src="/img/images.jpeg" alt="generic user photo" />
@@ -51,7 +51,7 @@
     </div>
 <!-- GRIDDED USER SKILLS (title and description are inside picture divs)-->
 
-<section id="featured">
+<section id="trades">
   <% if @user.skills.any? %>
       <% @user.skills.each do |skill| %>
         <form class="" action="/trades/verify" method="get">

@@ -24,7 +24,7 @@ html {
       .sidebar-list ul li a:hover, .sidebar ul li a:hover {
         color: #8e1235; }
 
-.signup button, .signup-form button, .edit-info button, #featured form button {
+.signup button, .signup-form button, .edit-info button, #trades form button {
   color: white;
   background-color: #001a54;
   border: 2px solid #001a54;
@@ -434,7 +434,7 @@ body {
 
 #intro {
   display: flex;
-  margin-top: 5%;
+  margin: 5% auto;
   align-items: center; }
   @media screen and (min-width: 700px) {
     #intro h2 {
@@ -629,7 +629,8 @@ nav {
   flex-direction: column;
   text-align: center; }
   #featured h2 {
-    width: 100%; }
+    width: 100%;
+    margin: 2% auto; }
   @media screen and (min-width: 700px) {
     #featured {
       flex-direction: row;
@@ -932,10 +933,13 @@ nav h1 a {
 .user {
   margin-bottom: 5%; }
 
-#featured {
+.right-column h4 {
+  margin: 0; }
+
+#trades {
   margin-top: 5%;
   border-top: 1px solid #666666; }
-  #featured form {
+  #trades form {
     margin: 10px; }
 
 /*# sourceMappingURL=master.css.map */
