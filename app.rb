@@ -170,18 +170,24 @@ get('/trades/new') do
 end
 # SUBMITS A NEW TRADE
 post('/trades/new') do
-  skill_wanted = Skill.find(params.fetch('skill_wanted_id').to_i)
-  skill_offered = Skill.find(params.fetch('user_offering_skills').to_i)
-  user_offering = User.find(skill_offered.user_id.to_i)
-  terms = params.fetch('trade_terms')
-  deadline = params.fetch('trade_deadline')
-  trade = Trade.create({:terms => terms, :deadline => deadline, :agree => false})
-  skill_wanted.trades.push(trade)
-  skill_offered.trades.push(trade)
+  @skill_wanted = Skill.find(params.fetch('skill_wanted_id').to_i)
+  @skill_offered = Skill.find(params.fetch('user_offering_skills').to_i)
+  @user_offering = User.find(@skill_offered.user_id.to_i)
+  @terms = params.fetch('trade_terms')
+  @deadline = params.fetch('trade_deadline')
+  @trade = Trade.create({:terms => @terms, :deadline => @deadline, :agree => false})
+  @skill_wanted.trades.push(@trade)
+  @skill_offered.trades.push(@trade)
   redirect("/users/#{@user_offering.id}")
 end
 
-
+# APPROVES TRADE
+patch('/trades/update') do
+  trade = Trade.find(params.fetch('trade_id').to_i)
+  @user = User.find(params.fetch('user_id').to_i)
+  trade.update({:agree => true})
+  redirect("/users/#{@user.id}")
+end
 
 # CLEAR OUT DATABASE
 get('/clear') do
@@ -193,6 +199,13 @@ get('/clear') do
   end
   Skill.all.each do |skill|
     skill.destroy
+  end
+  redirect("/")
+end
+
+  get('/clear/trades') do
+  Trade.all.each do |trade|
+    trade.destroy
   end
   redirect("/")
 end
