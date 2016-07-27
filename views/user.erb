@@ -11,17 +11,17 @@
 <!-- GREETING -->
 <h1>Hello,  <%= @user.first_name %> <%= @user.last_name%></h1>
 
-
+<!-- USER RATING -->
 <div class="stars">
   <h4>My Rating:</h4>
   <% if @user.rating.nil? %>
-  <% (5).times do %>
-  <span id="grey_star" class="glyphicon glyphicon-star"></span>
-  <% end %>
-  <% else %>
-  <% (@user.rating).times do %>
-  <span class="glyphicon glyphicon-star"></span>
-  <% end %>
+    <% (5).times do %>
+      <span id="grey_star" class="glyphicon glyphicon-star"></span>
+    <% end %>
+    <% else %>
+      <% (@user.rating).times do %>
+      <span class="glyphicon glyphicon-star"></span>
+    <% end %>
   <% end %>
 </div>
 
@@ -34,52 +34,39 @@
 <% end %>
 </div>
 
-    <!-- USER INTERESTS -->
-    <!-- EDIT PROFILE LINK -->
-    <p><a href="/users/<%= @user.id %>/edit">Edit profile</a></p>
+<!-- EDIT PROFILE LINK -->
+<p><a href="/users/<%= @user.id %>/edit">Edit profile</a></p>
 
-    <div class="edit-info">
-      <h4>Stuff I'm interested in:</h4>
-      <% if @user.tags.any? %>
-      <ul>
-        <% @user.tags.each do |tag| %>
-        <li><%= tag.name %></li>
-      </ul>
+<!-- LIST OF SKILLS -->
+<h4>My skills</h4>
+<% if @user.skills.any? %>
+<ul>
+  <% @user.skills.each do |skill| %>
+  <li><%= skill.title %>
+    <ul>
+      <% skill.tags.each do |tag| %>
+      <li><%= tag.name %></li>
       <% end %>
-      <% else %>
-      <p>What are you interested in trading for? <a href="/users/<%= @user.id %>/edit">Add Interests</a></p>
-      <% end %>
-
+    </ul>
+  </li>
+  <% end %>
+</ul>
+<% else %>
+<p>It looks like you haven't added any skills to trade. <a href="/users/<%= @user.id %>">Get started</a></p>
+<% end %>
+</div>
 <!-- USER INTERESTS -->
-<div class="edit-info">
+<div class="interests">
   <h4>Stuff I'm interested in:</h4>
   <% if @user.tags.any? %>
-  <ul>
-    <% @user.tags.each do |tag| %>
-    <li><%= tag.name %></li>
-  </ul>
+    <ul>
+      <% @user.tags.each do |tag| %>
+      <li><%= tag.name %></li>
+    </ul>
+      <% end %>
+    <% else %>
+    <p>What are you interested in trading for? <a href="/users/<%= @user.id %>/edit">Add Interests</a></p>
   <% end %>
-  <% else %>
-  <p>What are you interested in trading for? <a href="/users/<%= @user.id %>/edit">Add Interests</a></p>
-  <% end %>
-
-  <!-- LIST OF SKILLS -->
-  <h4>My skills</h4>
-  <% if @user.skills.any? %>
-  <ul>
-    <% @user.skills.each do |skill| %>
-    <li><%= skill.title %>
-      <ul>
-        <% skill.tags.each do |tag| %>
-        <li><%= tag.name %></li>
-        <% end %>
-      </ul>
-    </li>
-    <% end %>
-  </ul>
-  <% else %>
-  <p>It looks like you haven't added any skills to trade. <a href="/users/<%= @user.id %>">Get started</a></p>
-  <% end %>
-</div>
-
+  <hr>
 </section>
+</div>
