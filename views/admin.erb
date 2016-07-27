@@ -1,12 +1,12 @@
-<h1>Welcome Admin</h1>
+<h1>Welcome Aasdfasdfdmin</h1>
 <!-- LIST OF ALL TAGS -->
-<form class="" action="/tags/new" method="post">
+<form action="/tags/new" method="post">
   <label for="tags">Add a tag:</label>
   <input type="text" name="tag" id="tag">
   <button type="submit">Add tag</button>
 </form>
-<% if @tags %>
 <h4>Tags:</h4>
+<% if @tags %>
 <ul>
   <% @tags.each do |tag| %>
   <li><%= tag.name %></li>
