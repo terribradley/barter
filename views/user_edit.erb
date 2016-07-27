@@ -60,8 +60,9 @@
       <hr>
     <h1>EDIT YOUR PROFILE</h1>
 <div class="row-one">
-  <h4>Edit Your Bio:</h4>
+
   <form class="profile-form" action="/users/edit/bio" method="post">
+      <h4>Edit Your Bio:</h4>
     <input type="hidden" name="_method" value="patch">
     <input type="hidden" name="user_id" value="<%= @user.id %>">
     <!-- <label for="bio">Details:</label> -->
@@ -69,8 +70,9 @@
     <button type="submit">Update Bio</button>
   </form>
   <!-- ADD SKILL -->
-  <h4>Add a skill</h4>
+
   <form class="skill-form" action="/skills/add" method="post">
+      <h4>Add a skill</h4>
     <input type="hidden" name="user_id" value="<%= @user.id %>">
     <p>Add skills you have that you would like to trade with others. Be descriptive, and include your proficiency. Profiles with skill photos tend to get more trades.</p>
     <label for="skill_title">Skill Title</label>
@@ -79,6 +81,7 @@
     <textarea name="skill_description" rows="8" cols="40"></textarea>
     <button type="submit">Add skill</button>
   </form>
+
 </div>
 <div class="row-two">
   <div class="column-one">

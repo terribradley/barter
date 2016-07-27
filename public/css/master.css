@@ -833,7 +833,7 @@ nav h1 a {
 
 .edit-info .profile-form {
   width: 100%;
-  margin: 5% auto;
+  margin: 2% auto;
   background-color: none; }
 
 @media screen and (min-width: 1024px) {
@@ -849,57 +849,70 @@ nav h1 a {
     .avatar .right-column h4 {
       font-size: 2.5rem; } }
 
-.edit-info button {
-  align-self: flex-end;
-  margin-top: 1rem; }
-.edit-info .profile-form {
-  display: flex;
-  flex-direction: column; }
-.edit-info .skill-form {
-  display: flex;
-  flex-direction: column; }
-  .edit-info .skill-form #skill_title {
-    width: 50%; }
-  .edit-info .skill-form label:nth-of-type(2) {
-    display: block; }
-  .edit-info .skill-form label {
-    margin: .5rem;
-    font-size: 2.5rem;
-    font-weight: 500; }
-  .edit-info .skill-form input, .edit-info .skill-form textarea {
-    margin-top: 5px; }
-.edit-info .add-tag-form {
-  display: flex;
-  flex-wrap: wrap; }
-  .edit-info .add-tag-form span {
-    width: 100%;
-    margin: 5% 0; }
-  .edit-info .add-tag-form .tag {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end; }
-.edit-info .delete-form {
-  display: flex;
-  justify-content: space-around;
-  width: 100%; }
-  .edit-info .delete-form .form-button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-@media screen and (min-width: 1024px) {
-  .edit-info {
+.edit-info {
+  border-top: 1px solid #666666; }
+  .edit-info button {
+    align-self: flex-end;
+    margin-top: 1rem; }
+  .edit-info .profile-form {
     display: flex;
     flex-direction: column; }
-    .edit-info .row-one {
-      display: flex; }
-      .edit-info .row-one .column-one {
+  .edit-info .skill-form {
+    display: flex;
+    flex-direction: column; }
+    .edit-info .skill-form #skill_title {
+      width: 50%; }
+    .edit-info .skill-form label:nth-of-type(2) {
+      display: block; }
+    .edit-info .skill-form label {
+      margin: .5rem;
+      font-size: 2.5rem;
+      font-weight: 500; }
+    .edit-info .skill-form input, .edit-info .skill-form textarea {
+      margin-top: 5px; }
+  .edit-info .add-tag-form {
+    display: flex;
+    flex-wrap: wrap; }
+    .edit-info .add-tag-form span {
+      width: 100%;
+      margin: 5% 0; }
+    .edit-info .add-tag-form .tag {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end; }
+  .edit-info .delete-form {
+    display: flex;
+    justify-content: space-around;
+    width: 100%; }
+    .edit-info .delete-form .form-button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+  @media screen and (min-width: 1024px) {
+    .edit-info {
+      display: flex;
+      flex-direction: column; }
+      .edit-info .row-one {
+        display: flex; }
+        .edit-info .row-one .skill-form {
+          margin-left: 5%;
+          width: 50%; }
+        .edit-info .row-one .profile-form {
+          width: 50%; }
+      .edit-info .row-two {
+        margin-top: 5%;
         display: flex;
-        flex-direction: column; }
-    .edit-info .row-two {
-      display: flex; }
-      .edit-info .row-two .column-two {
-        display: flex;
-        flex-direction: column; } }
+        border-top: 1px solid #666666; }
+        .edit-info .row-two .column-one {
+          display: flex;
+          flex-direction: column;
+          margin-right: 2.5%;
+          width: 50%; }
+        .edit-info .row-two .column-two {
+          display: flex;
+          flex-direction: column;
+          margin-left: 2.5%;
+          width: 50%; } }
 
 .add-user-interest, .delete-form {
   display: flex;

@@ -14,10 +14,10 @@
 
 
 .edit-info {
+  border-top: 1px solid lighten($color-two, 40%);
   button {
     align-self: flex-end;
     margin-top: 1rem;
-
     @extend %buttons;
   }
   .profile-form {
@@ -75,16 +75,30 @@
     flex-direction: column;
     .row-one {
       display: flex;
+      .skill-form {
+        margin-left: 5%;
+         width: 50%;
+      }
+      .profile-form {
+        width: 50%;
+      }
+
+    }
+    .row-two {
+      margin-top: 5%;
+      display: flex;
+      border-top: 1px solid lighten($color-two, 40%);
       .column-one {
         display: flex;
         flex-direction: column;
+        margin-right: 2.5%;
+        width: 50%;
       }
-    }
-    .row-two {
-      display: flex;
       .column-two {
         display: flex;
         flex-direction: column;
+        margin-left: 2.5%;
+        width: 50%;
       }
     }
   }
