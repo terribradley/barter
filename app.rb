@@ -189,6 +189,29 @@ patch('/trades/update') do
   redirect("/users/#{@user.id}")
 end
 
+# DECLINE TRADE
+delete('/trades/delete') do
+  trade = Trade.find(params.fetch('trade_id').to_i)
+  @user = User.find(params.fetch('user_id').to_i)
+  trade.destroy
+  redirect("/users/#{@user.id}")
+end
+
+#RATE USER
+patch('/users/rating') do
+  @user = User.find(params.fetch("user_id").to_i)
+  user_rating = params.fetch("rating").to_i
+  new_rating = Rating.create({:rating => user_rating})
+  new_rating.users.push(@user)
+  total = 0
+  @user.ratings.each do |rating|
+    total = total + rating.rating
+  end
+
+  @user.update({:rating => (total/(@user.ratings.length)).ceil})
+  redirect ("/user/profile/#{@user.id}")
+end
+
 # CLEAR OUT DATABASE
 get('/clear') do
   User.all.each do |user|
@@ -208,4 +231,11 @@ end
     trade.destroy
   end
   redirect("/")
+end
+
+get('/clear/ratings') do
+Rating.all.each do |rating|
+  rating.destroy
+end
+redirect("/")
 end
