@@ -1,18 +1,35 @@
-section {
+.profile-content {
   width: 75vw;
   margin: 5% auto;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  background-color: lighten(#4b5564, 20%);
+
+  padding: 2%;
   @media screen and (min-width:$mediumbreak) {
     flex-direction: row;
+    width: 700px;
   }
   .avatar {
     display: flex;
     flex-direction: column;
     width: 100%;
     p {
-      width: 90px;
-      margin: 10px;
+      align-self: flex-end;
+      width: 50%;
+      color: black;
+    }
+    img {
+      width: 250px;
+      height: 250px;
+      margin: 0 auto;
+        @media screen and (min-width:$mediumbreak) {
+          margin: 0;
+        }
+    }
+    h4 {
+      margin-right: 138px;
     }
     .stars {
       display: flex;
@@ -23,6 +40,7 @@ section {
     }
     @media screen and (min-width:$mediumbreak) {
       align-items: flex-end;
+
       }
 
   }
@@ -36,6 +54,7 @@ section {
 
     @media screen and (min-width:$mediumbreak) {
       order: -1;
+
     }
   }
 }

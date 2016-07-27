@@ -6,8 +6,6 @@
 
 <!-- * As a user, I want to be able to view possible trades by theme -->
 
-* As a user, I want to be able to sort trades by value
-
 * As a user, I want to be able to make an offer to another user
 
 * As a user, I want to be able to accept an offer, and see it on my dash
