@@ -35,8 +35,8 @@
 <% end %>
   <hr>
 </div>
-    <!-- EDIT PROFILE LINK -->
 
+<section class="profile-row-one"
     <!-- LIST OF SKILLS -->
 <section class="list-of-skills">
   <h4>My skills</h4>
@@ -59,7 +59,7 @@
 </section>
 
 <!-- USER INTERESTS -->
-<div class="interest">
+<section class="interest">
   <h4>Stuff I'm interested in:</h4>
   <% if @user.tags.any? %>
   <ul>
@@ -71,4 +71,5 @@
   <p>What are you interested in trading for? <a href="/users/<%= @user.id %>/edit">Add Interests</a></p>
   <% end %>
     <hr>
-  </div>
+  </section>
+</section>

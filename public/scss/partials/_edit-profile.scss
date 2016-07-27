@@ -1,9 +1,106 @@
+.add-user-interest, .delete-form {
+  display: flex;
+  flex-direction: column;
+  label {
+    font-size: $medium-font
+  }
+  .form-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .edit-info {
+  button {
+    align-self: flex-end;
+    margin-top: 1rem;
+
+    @extend %buttons;
+  }
   .profile-form {
     display: flex;
     flex-direction: column;
     @extend %textarea;
-
   }
 
+  .skill-form {
+    display: flex;
+    flex-direction: column;
+    #skill_title {
+      width: 50%;
+    }
+    label:nth-of-type(2) {
+    display: block;
+    }
+    label {
+      margin: .5rem;
+      font-size: 2.5rem;
+      font-weight: 500;
+    }
+
+    input, textarea {
+      margin-top: 5px;
+      @extend %textarea;
+    }
+  }
+  .add-tag-form {
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+    span {
+      width: 100%;
+      margin: 5% 0;
+    }
+    .tag {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+    }
+  }
+  .delete-form {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    .form-button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
 }
+
+
+
+// .edit-info {
+//   display: flex;
+//   flex-direction: column;
+//
+//   .skill-form {
+//     display: flex;
+//     flex-direction: column;
+//     #skill_title {
+//       width: 50%;
+//     }
+//     label:nth-of-type(2) {
+//     display: block;
+//     }
+//     label {
+//       margin: .5rem;
+//       font-size: 2.5rem;
+//       font-weight: 500;
+//     }
+//     textarea {
+//       @extend %textarea;
+//     }
+//   }
+//   .add-tag-form {
+//     display: flex;
+//     align-items: center;
+//     button {
+//       width: 137px;
+//       // order: -1;
+//     }
+//
+//   }
+// }

@@ -1,5 +1,5 @@
 .profile-content {
-  width: 85vw;
+  width: 95vw;
   margin: 5% auto;
   display: flex;
   flex-direction: column;
@@ -9,63 +9,35 @@
     margin: 2% 0;
 
     h4 {
-      font-size: 2.5rem;
+      font-size: $medium-font;
     }
     p {
       font-size: 1.9rem;
     }
-    a {
-      border:2px solid $color-eight;
-      border-radius: 4px;
-      padding: 5px 20px;
-      margin-bottom: 5px;
-      color: $color-eight;
-      display: block;
-      width: 16rem;
-      text-align: center;
-      @media screen and (min-width: $mediumbreak) {
-        &:hover {
-          transform: scale(1.1);
-        }
-       }
-     }
+    // a {
+    //   border:2px solid $color-eight;
+    //   border-radius: 4px;
+    //   padding: 5px 20px;
+    //   margin-bottom: 5px;
+    //   color: $color-eight;
+    //   display: block;
+    //   width: 30rem;
+    //   text-align: center;
+    //   @media screen and (min-width: $mediumbreak) {
+    //     &:hover {
+    //       transform: scale(1.1);
+    //     }
+    //
+    // //    }
+    //  }
     }
-  }
-
-  .edit-info {
-    display: flex;
-    flex-direction: column;
-    button {
-      align-self: flex-end;
-      margin-top: 1rem;
-      @extend %buttons;
+    @media screen and (min-width: $mediumbreak) {
+      max-width: 60vw;
+      margin: 5% auto;
     }
-    .skill-form {
-      display: flex;
-      flex-direction: column;
-      #skill_title {
-        width: 50%;
-      }
-      label:nth-of-type(2) {
-      display: block;
-      }
-      label {
-        margin: .5rem;
-        font-size: 2.5rem;
-        font-weight: 500;
-      }
-      textarea {
-        @extend %textarea;
-      }
-    }
-    .add-tag-form {
-      display: flex;
-      align-items: center;
-      button {
-        width: 137px;
-        order: -1;
-      }
-
+    @media screen and (min-width:$largebreak) {
+      max-width: 70vw;
+      margin: 5% auto;
     }
   }
 
@@ -86,21 +58,21 @@
       padding: 3px 4px;
       margin-bottom: 5px;
       margin-top: 5px;
-      // margin-right: 100px;
       color: $color-eight;
       display: block;
-      width: 8rem;
+      width: 13rem;
       text-align: center;
       align-self: center;
       @media screen and (min-width: $mediumbreak) {
+        align-self: flex-start;
         &:hover {
           transform: scale(1.1);
         }
       }
     }
     p {
-      align-self: flex-end;
-      width: 50%;
+      // align-self: flex-end;
+      // width: 50%;
       color: black;
     }
     img {
@@ -135,8 +107,10 @@
 
     }
 }
-    // @media screen and (min-width:$mediumbreak) {
-    //   order: -1;
-    //
-    // }
-  // }
+  @media screen and (min-width:$largebreak) {
+    .profile-row-one {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1000px;
+    }
+  }

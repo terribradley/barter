@@ -29,9 +29,11 @@ html {
   background-color: #001a54;
   border: 2px solid #001a54;
   border-radius: 3px;
-  padding: 10px 40px; }
+  text-align: center;
+  width: 150px;
+  height: 40px; }
 
-.edit-info .skill-form textarea, .edit-info .profile-form {
+.edit-info .profile-form, .edit-info .skill-form input, .edit-info .skill-form textarea {
   width: 100%; }
 
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
@@ -545,7 +547,7 @@ nav {
           margin: 1% 0; }
           nav .nav-links a:hover {
             border-bottom: 1px solid #610c24; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     nav {
       flex-direction: row;
       justify-content: space-between;
@@ -663,7 +665,7 @@ nav {
       .featured-image .overlay {
         align-items: center;
         justify-content: center; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     .featured-image {
       width: 20%;
       height: 250px;
@@ -719,7 +721,7 @@ nav h1 a {
   color: #1c3873; }
   nav h1 a:hover {
     text-decoration: none; }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     nav h1 a {
       color: white; } }
 
@@ -767,7 +769,7 @@ nav h1 a {
   cursor: pointer; }
 
 .profile-content {
-  width: 85vw;
+  width: 95vw;
   margin: 5% auto;
   display: flex;
   flex-direction: column;
@@ -778,42 +780,14 @@ nav h1 a {
       font-size: 2.5rem; }
     .profile-content .skill-list p, .profile-content .interest p, .profile-content .list-of-skills p, .profile-content .edit-info p, .profile-content .skill-form p {
       font-size: 1.9rem; }
-    .profile-content .skill-list a, .profile-content .interest a, .profile-content .list-of-skills a, .profile-content .edit-info a, .profile-content .skill-form a {
-      border: 2px solid #610c24;
-      border-radius: 4px;
-      padding: 5px 20px;
-      margin-bottom: 5px;
-      color: #610c24;
-      display: block;
-      width: 16rem;
-      text-align: center; }
-      @media screen and (min-width: 700px) {
-        .profile-content .skill-list a:hover, .profile-content .interest a:hover, .profile-content .list-of-skills a:hover, .profile-content .edit-info a:hover, .profile-content .skill-form a:hover {
-          transform: scale(1.1); } }
-
-.edit-info {
-  display: flex;
-  flex-direction: column; }
-  .edit-info button {
-    align-self: flex-end;
-    margin-top: 1rem; }
-  .edit-info .skill-form {
-    display: flex;
-    flex-direction: column; }
-    .edit-info .skill-form #skill_title {
-      width: 50%; }
-    .edit-info .skill-form label:nth-of-type(2) {
-      display: block; }
-    .edit-info .skill-form label {
-      margin: .5rem;
-      font-size: 2.5rem;
-      font-weight: 500; }
-  .edit-info .add-tag-form {
-    display: flex;
-    align-items: center; }
-    .edit-info .add-tag-form button {
-      width: 137px;
-      order: -1; }
+  @media screen and (min-width: 700px) {
+    .profile-content {
+      max-width: 60vw;
+      margin: 5% auto; } }
+  @media screen and (min-width: 1024px) {
+    .profile-content {
+      max-width: 70vw;
+      margin: 5% auto; } }
 
 @media screen and (min-width: 700px) {
   flex-direction: row;
@@ -832,15 +806,15 @@ nav h1 a {
     margin-top: 5px;
     color: #610c24;
     display: block;
-    width: 8rem;
+    width: 13rem;
     text-align: center;
     align-self: center; }
     @media screen and (min-width: 700px) {
-      .avatar a:hover {
-        transform: scale(1.1); } }
+      .avatar a {
+        align-self: flex-start; }
+        .avatar a:hover {
+          transform: scale(1.1); } }
   .avatar p {
-    align-self: flex-end;
-    width: 50%;
     color: black; }
   .avatar img {
     width: 250px;
@@ -862,8 +836,57 @@ nav h1 a {
   margin: 5% auto;
   background-color: none; }
 
+@media screen and (min-width: 1024px) {
+  .profile-row-one {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px; } }
+.add-user-interest, .delete-form {
+  display: flex;
+  flex-direction: column; }
+  .add-user-interest label, .delete-form label {
+    font-size: 2.5rem; }
+  .add-user-interest .form-button, .delete-form .form-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+
+.edit-info button {
+  align-self: flex-end;
+  margin-top: 1rem; }
 .edit-info .profile-form {
   display: flex;
   flex-direction: column; }
+.edit-info .skill-form {
+  display: flex;
+  flex-direction: column; }
+  .edit-info .skill-form #skill_title {
+    width: 50%; }
+  .edit-info .skill-form label:nth-of-type(2) {
+    display: block; }
+  .edit-info .skill-form label {
+    margin: .5rem;
+    font-size: 2.5rem;
+    font-weight: 500; }
+  .edit-info .skill-form input, .edit-info .skill-form textarea {
+    margin-top: 5px; }
+.edit-info .add-tag-form {
+  display: flex;
+  flex-wrap: wrap; }
+  .edit-info .add-tag-form span {
+    width: 100%;
+    margin: 5% 0; }
+  .edit-info .add-tag-form .tag {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end; }
+.edit-info .delete-form {
+  display: flex;
+  justify-content: space-around;
+  width: 100%; }
+  .edit-info .delete-form .form-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
 
 /*# sourceMappingURL=master.css.map */
