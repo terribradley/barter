@@ -38,7 +38,7 @@
     <form class="profile-form" action="/users/edit/bio" method="post">
       <input type="hidden" name="_method" value="patch">
       <input type="hidden" name="user_id" value="<%= @user.id %>">
-      <label for="bio">Details:</label>
+      <!-- <label for="bio">Details:</label> -->
       <textarea name="bio" id="bio" rows="8" cols="40"></textarea>
       <button type="submit">Update Bio</button>
     </form>

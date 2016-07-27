@@ -71,7 +71,7 @@ end
   tags.each do |tag|
     skill.tags.push(tag)
   end
-  redirect("/users/#{user.id}")
+  redirect("/users/#{user.id}/edit")
 end
 
 
@@ -82,7 +82,7 @@ post('/skills/add') do
   description = params.fetch('skill_description')
   title = params.fetch("skill_title")
   Skill.create({:description => description, :user_id => user_id, :title => title})
-  redirect("/users/#{user.id}")
+  redirect("/users/#{user.id}/edit")
 end
 
 #SKILL DELETE

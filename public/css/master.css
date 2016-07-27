@@ -24,12 +24,15 @@ html {
       .sidebar-list ul li a:hover, .sidebar ul li a:hover {
         color: #8e1235; }
 
-.signup button, .signup-form button {
+.signup button, .signup-form button, .edit-info button {
   color: white;
   background-color: #001a54;
   border: 2px solid #001a54;
   border-radius: 3px;
   padding: 10px 40px; }
+
+.edit-info .skill-form textarea, .edit-info .profile-form {
+  width: 100%; }
 
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -764,48 +767,92 @@ nav h1 a {
   cursor: pointer; }
 
 .profile-content {
-  width: 75vw;
+  width: 85vw;
   margin: 5% auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  background-color: #7a879b;
   padding: 2%; }
-  @media screen and (min-width: 700px) {
-    .profile-content {
-      flex-direction: row;
-      width: 700px; } }
-  .profile-content .avatar {
-    display: flex;
-    flex-direction: column;
-    width: 100%; }
-    .profile-content .avatar p {
-      align-self: flex-end;
-      width: 50%;
-      color: black; }
-    .profile-content .avatar img {
-      width: 250px;
-      height: 250px;
-      margin: 0 auto; }
+  .profile-content .skill-list, .profile-content .interest, .profile-content .edit-info {
+    margin-top: 1rem; }
+    .profile-content .skill-list h4, .profile-content .interest h4, .profile-content .edit-info h4 {
+      font-size: 2.5rem; }
+    .profile-content .skill-list p, .profile-content .interest p, .profile-content .edit-info p {
+      font-size: 1.9rem; }
+    .profile-content .skill-list a, .profile-content .interest a, .profile-content .edit-info a {
+      border: 2px solid #610c24;
+      border-radius: 4px;
+      padding: 5px 20px;
+      margin-bottom: 5px;
+      color: #610c24;
+      display: block;
+      width: 16rem;
+      text-align: center; }
       @media screen and (min-width: 700px) {
-        .profile-content .avatar img {
-          margin: 0; } }
-    .profile-content .avatar h4 {
-      margin-right: 138px; }
-    .profile-content .avatar .stars {
-      display: flex;
-      align-items: center; }
-      .profile-content .avatar .stars h4 {
-        margin-right: 10px; }
+        .profile-content .skill-list a:hover, .profile-content .interest a:hover, .profile-content .edit-info a:hover {
+          transform: scale(1.1); } }
+
+.edit-info {
+  display: flex;
+  flex-direction: column; }
+  .edit-info button {
+    align-self: flex-end;
+    margin-top: 1rem; }
+  .edit-info .skill-form {
+    display: flex;
+    flex-direction: column; }
+    .edit-info .skill-form #skill_title {
+      width: 50%; }
+    .edit-info .skill-form label:nth-of-type(2) {
+      display: block; }
+    .edit-info .skill-form label {
+      margin: .5rem;
+      font-size: 2.5rem;
+      font-weight: 500; }
+  .edit-info .add-tag-form {
+    display: flex;
+    align-items: center; }
+    .edit-info .add-tag-form button {
+      width: 137px;
+      order: -1; }
+
+@media screen and (min-width: 700px) {
+  flex-direction: row;
+  width: 700px; }
+.avatar {
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+  .avatar hr {
+    width: 100%; }
+  .avatar p {
+    align-self: flex-end;
+    width: 50%;
+    color: black; }
+  .avatar img {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto; }
     @media screen and (min-width: 700px) {
-      .profile-content .avatar {
-        align-items: flex-end; } }
-  .profile-content .edit-info .profile-form {
-    width: 100%;
-    margin: 5% auto;
-    background-color: none; }
+      .avatar img {
+        margin: 0; } }
+  .avatar h4 {
+    margin-right: 138px; }
+  .avatar .stars {
+    display: flex;
+    align-items: center; }
+    .avatar .stars h4 {
+      margin-right: 10px; }
   @media screen and (min-width: 700px) {
-    .profile-content .edit-info {
-      order: -1; } }
+    .avatar {
+      align-items: flex-end; } }
+
+.edit-info .profile-form {
+  width: 100%;
+  margin: 5% auto;
+  background-color: none; }
+
+.edit-info .profile-form {
+  display: flex;
+  flex-direction: column; }
 
 /*# sourceMappingURL=master.css.map */
