@@ -1,0 +1,22 @@
+<h1>Browse <%= @tag.name %></h1>
+  <h5>Explore Other Categories</h5>
+  <% if @tags %>
+    <ul>
+      <% @tags.each do |tag| %>
+      <li><a href="/tags/<%= tag.id %>"><%= tag.name %></a></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+<!-- GRIDDED SKILLS -->
+<section id="featured">
+  <% if @skills.any? %>
+      <% @skills.each do |skill| %>
+        <div class="featured-image main">
+          <div class="overlay">
+            <p><a href="/user/profile/<%=skill.user.id %>"><%= skill.title %></a></p>
+            </div>
+          </div>
+      <% end %>
+  <% end %>
+</section>

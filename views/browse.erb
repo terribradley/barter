@@ -1,13 +1,11 @@
-<h1>SKILLS PAGE</h1>
-<h5><%= @tag.name.upcase %></h5>
-<% if @skills.any? %>
-  <ul>
-    <% @skills.each do |skill| %>
-    <li><a href="/user/profile/<%=skill.user.id %>"><%= skill.title %></a><br>
-    <%= skill.description %></li>
-    <% end %>
-  </ul>
-<% end %>
+<h1>Browse skills by subject</h1>
+  <% if @tags %>
+    <ul>
+      <% @tags.each do |tag| %>
+      <li><a href="/tags/<%= tag.id %>"><%= tag.name %></a></li>
+      <% end %>
+    </ul>
+  <% end %>
 
 <!-- GRIDDED SKILLS -->
 <section id="featured">

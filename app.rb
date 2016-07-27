@@ -142,11 +142,18 @@ delete('/users/delete') do
   redirect("/admin")
 end
 
+# BROWSE PAGE
+get('/tags') do
+  @skills = Skill.all
+  @tags = Tag.all
+  erb(:browse)
+end
 # SEE SKILL PAGE
 get('/tags/:id') do
   @tag = Tag.find(params.fetch('id').to_i)
   @skills = @tag.skills
-  erb(:skill)
+  @tags = Tag.all
+  erb(:browse_tags)
 end
 
 #SEE PROFILE PAGE
