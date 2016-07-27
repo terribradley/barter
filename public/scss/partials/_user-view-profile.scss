@@ -1,0 +1,14 @@
+
+.user {
+  margin-bottom: 5%;
+}
+#featured {
+  margin-top: 5%;
+  border-top: 1px solid lighten($color-two, 40%);
+  form {
+    margin: 10px;
+    button {
+      @extend %buttons;
+    }
+  }
+}

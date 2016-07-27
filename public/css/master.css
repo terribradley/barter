@@ -24,7 +24,7 @@ html {
       .sidebar-list ul li a:hover, .sidebar ul li a:hover {
         color: #8e1235; }
 
-.signup button, .signup-form button, .edit-info button {
+.signup button, .signup-form button, .edit-info button, #featured form button {
   color: white;
   background-color: #001a54;
   border: 2px solid #001a54;
@@ -842,12 +842,17 @@ nav h1 a {
     justify-content: space-between;
     max-width: 1000px; } }
 @media screen and (min-width: 700px) {
-  .avatar {
+  .edit {
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
-    .avatar .right-column h4 {
-      font-size: 2.5rem; } }
+    .edit .right-column {
+      margin-left: 10%; }
+      .edit .right-column h4 {
+        font-size: 2.5rem; } }
+@media screen and (min-width: 1024px) {
+  .edit {
+    max-width: 50%; } }
 
 .edit-info {
   border-top: 1px solid #666666; }
@@ -923,5 +928,14 @@ nav h1 a {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+
+.user {
+  margin-bottom: 5%; }
+
+#featured {
+  margin-top: 5%;
+  border-top: 1px solid #666666; }
+  #featured form {
+    margin: 10px; }
 
 /*# sourceMappingURL=master.css.map */
