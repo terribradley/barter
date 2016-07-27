@@ -81,7 +81,7 @@ post('/skills/add') do
   user = User.find(user_id)
   description = params.fetch('skill_description')
   title = params.fetch("skill_title")
-  Skill.create({:description => description, :user_id => user_id, :title => title})
+  skill = Skill.create({:description => description, :user_id => user_id, :title => title})
   redirect("/users/#{user.id}/edit")
 end
 
@@ -90,7 +90,7 @@ delete('/skills/delete') do
   skill = Skill.find(params.fetch('skill_delete'))
   skill.destroy
   user = User.find(params.fetch('user_id').to_i)
-  redirect("/users/#{user.id}")
+  redirect("/users/#{user.id}/edit")
 end
 
 #USER DELETE TAGS WANT
@@ -155,10 +155,32 @@ get('/user/profile/:id') do
   erb(:user_profile)
 end
 
-# USER PROPOSE TRADE
-get('/trades/new') do
-
+# USER PROPOSE TRADE GOES TO PASSWORD VERIFICATION
+get('/trades/verify') do
+  @skill_wanted_id = params.fetch('skill_id').to_i
+  erb(:trade_password)
 end
+# SUBMITS PASSWORD VERIFICATION
+get('/trades/new') do
+  @skill_wanted_id = params.fetch('skill_id').to_i
+  @skill_wanted = Skill.find(@skill_wanted_id)
+  password = params.fetch('user_password')
+  @user_offering = User.find_by({:password => password})
+  erb(:trade_form)
+end
+# SUBMITS A NEW TRADE
+post('/trades/new') do
+  skill_wanted = Skill.find(params.fetch('skill_wanted_id').to_i)
+  skill_offered = Skill.find(params.fetch('user_offering_skills').to_i)
+  user_offering = User.find(skill_offered.user_id.to_i)
+  terms = params.fetch('trade_terms')
+  deadline = params.fetch('trade_deadline')
+  trade = Trade.create({:terms => terms, :deadline => deadline, :agree => false})
+  skill_wanted.trades.push(trade)
+  skill_offered.trades.push(trade)
+  redirect("/users/#{@user_offering.id}")
+end
+
 
 
 # CLEAR OUT DATABASE

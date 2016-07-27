@@ -1,0 +1,33 @@
+<!-- HEADLINE -->
+<h4>Propose a trade</h4>
+
+<!-- FORM TO PROPOSE A TRADE -->
+<form class="" action="/trades/new" method="post">
+  <input type="hidden" name="skill_wanted_id" value="<%= @skill_wanted_id %>">
+  <input type="hidden" name="user_offering" value="<%= @user_offering %>">
+  <input type="hidden" name="skill_wanted" value="<%= @skill_wanted %>">
+  <label for="skill_wanted">Skill wanted:</label>
+  <p>
+    <%= @skill_wanted.title %>
+  </p>
+  <label for="skill_offered">The skill you'd like to offer</label>
+  <select name="user_offering_skills" id="user_offering_skills">
+    <% if @user_offering.skills.any? %>
+      <% @user_offering.skills.each do |skill| %>
+      <option value="<%= skill.id %>"><%= skill.title %></option>
+    <% end %>
+    <% else %>
+    <p>
+      You have not added any skills. <a href="/users/<%= @user_offering.id/edit %>">Add a skill </a>in order to make a trade
+    </p>
+    <% end %>
+  </select>
+  <br>
+  <label for="trade_terms">Details of the trade:</label>
+  <textarea name="trade_terms" id="trade_terms" rows="8" cols="40"></textarea>
+  <br>
+  <label for="trade_deadline">Proposed deadline:</label>
+  <input type="date" name="trade_deadline" id="trade_deadline">
+  <br>
+  <button type="submit">Submit trade for approval</button>
+</form>
