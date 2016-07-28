@@ -1,60 +1,144 @@
 
 <section class="profile-content">
-  <div class="avatar">
+  <div class="avatar edit">
     <!-- USER PHOTO -->
-    <% if @user.photo.nil? %>
+    <section class="left-column">
+      <% if @user.photo.nil? %>
       <img src="/img/images.jpeg" alt="generic user photo" />
-    <% else%>
+      <% else%>
       <img src="/img/<%= @user.photo %>" alt="user photo" />
-    <% end %>
+      <% end %>
+      <!-- RETURN TO PROFILE LINK -->
+      <a href="/users/<%= @user.id %>">Return to profile</a>
+      <!-- GREETING -->
+      <h1>Hello,  <%= @user.first_name %> <%= @user.last_name%></h1>
 
-    <!-- GREETING -->
-    <h1>Hello,  <%= @user.first_name %> <%= @user.last_name%></h1>
-
-    <!-- USER RATING -->
-    <div class="stars">
-      <h4>My Rating:</h4>
-      <% if @user.rating.nil? %>
+      <!-- USER RATING -->
+      <div class="stars">
+        <h4>My Rating:</h4>
+        <% if @user.rating.nil? %>
         <% (5).times do %>
         <span id="grey_star" class="glyphicon glyphicon-star"></span>
-      <% end %>
-      <% else %>
+        <% end %>
+        <% else %>
         <% (@user.rating).times do %>
         <span class="glyphicon glyphicon-star"></span>
+        <% end %>
+        <% end %>
+      </div>
+      <!-- USER BIO -->
+      <h4>Bio:</h4>
+      <% if @user.bio %>
+      <p><%= @user.bio %></p>
       <% end %>
+    </section>
+    <!-- LIST OF SKILLS -->
+    <section class="right-column">
+      <h4>My skills</h4>
+      <% if @user.skills.any? %>
+      <ul>
+        <% @user.skills.each do |skill| %>
+        <li><%= skill.title %>
+          <ul>
+            <% skill.tags.each do |tag| %>
+            <li><%= tag.name %></li>
+            <% end %>
+          </ul>
+        </li>
+      </ul>
       <% end %>
-    </div>
+      <% else %>
+      <p>It looks like you haven't added any skills to trade.</p>
+      <% end %>
 
-    <!-- RETURN TO PROFILE LINK -->
-    <p><a href="/users/<%= @user.id %>">Return to profile</a></p>
-
-    <!-- USER BIO -->
-    <h4>Bio:</h4>
-    <% if @user.bio %>
-    <p><%= @user.bio %></p>
-    <% end %>
+    </section>
   </div>
+
 
   <!-- EDIT USER BIO -->
   <div class="edit-info">
-    <h5>Edit Your Bio:</h5>
-    <form class="profile-form" action="/users/edit/bio" method="post">
-      <input type="hidden" name="_method" value="patch">
-      <input type="hidden" name="user_id" value="<%= @user.id %>">
-      <!-- <label for="bio">Details:</label> -->
-      <textarea name="bio" id="bio" rows="8" cols="40"></textarea>
-      <button type="submit">Update Bio</button>
-    </form>
+      <hr>
+    <h1>EDIT YOUR PROFILE</h1>
+    <div class="row-one">
 
-    <!-- USER INTERESTS -->
-    <h4>Stuff I'm interested in:</h4>
-    <% if @user.tags.any? %>
-      <ul>
-        <% @user.tags.each do |tag| %>
-        <li><%= tag.name %></li>
-      <% end %>
-      </ul>
-    <% end %>
+      <form class="profile-form" action="/users/edit/bio" method="post">
+          <h4>Edit Your Bio:</h4>
+        <input type="hidden" name="_method" value="patch">
+        <input type="hidden" name="user_id" value="<%= @user.id %>">
+        <!-- <label for="bio">Details:</label> -->
+        <textarea name="bio" id="bio" rows="8" cols="40"></textarea>
+        <button type="submit">Update Bio</button>
+      </form>
+
+      <!-- ADD SKILL -->
+      <form class="skill-form" action="/skills/add" method="post">
+          <h4>Add a skill</h4>
+        <input type="hidden" name="user_id" value="<%= @user.id %>">
+        <p>Add skills you have that you would like to trade with others. Be descriptive, and include your proficiency. Profiles with skill photos tend to get more trades.</p>
+        <label for="skill_title">Skill Title</label>
+        <input type="text" name="skill_title" id="skill_title">
+        <label for="skill_description">Skill description:</label>
+        <textarea name="skill_description" rows="8" cols="40"></textarea>
+        <button type="submit">Add skill</button>
+      </form>
+
+    </div>
+
+    <!-- TAG YOUR SKILL -->
+    <div class="row-two">
+      <div class="column-one">
+        <% if @tags.any? %>
+        <h4>Add tags to your skills</h4>
+        <form class="add-tag-form" action="/skills/tags/new" method="post">
+          <input type="hidden" name="_method" value="patch">
+          <input type="hidden" name="user_id" value="<%= @user.id %>">
+            <% if @user.skills.any? %>
+            <span><select class="" name="skill_tag">
+              <% @user.skills.each do |skill| %>
+              <option value="<%= skill.id %>"><%= skill.title %></option>
+              <% end %>
+            </select></span>
+            <% end %>
+            <% if @tags %>
+            <% @tags.each do |tag| %>
+            <input type="checkbox" name="tag_id[]" id="tag_id[]" value="<%= tag.id %>"><%= tag.name %>
+            <% end %>
+            <span class="tag"><button type="submit">Add Tag</button></span>
+            <% end %>
+          </form>
+        <% end %>
+
+        <!-- DELETE SKILL -->
+        <h4>No longer want to offer this skill?</h4>
+        <% if @user.skills.any? %>
+          <form class="delete-form" action="/skills/delete" method="post">
+            <input type="hidden" name="user_id" value="<%= @user.id %>">
+            <input type="hidden" name="_method" value="delete">
+
+            <label for="skill_delete"></label>
+            <div class="form-button">
+              <select class="" name="skill_delete" id="skill_delete">
+                <% @user.skills.each do |skill| %>
+                <option value="<%= skill.id %>"><%=skill.title %></option>
+                <% end %>
+              </select>
+              <button type="submit">Delete</button>
+            </div>
+            <hr>
+          </form>
+        <% end %>
+      </div>
+
+
+      <div class="column-two">
+        <h1>EDIT YOUR SEARCHES:</h1>
+        <% if @user.tags.any? %>
+          <ul>
+            <% @user.tags.each do |tag| %>
+            <li><%= tag.name %></li>
+          <% end %>
+          </ul>
+        <% end %>
 
     <!-- ADD USER INTERESTS -->
     <form class="add-user-interest" action="/users/edit/tags/want" method="post">
@@ -62,96 +146,35 @@
       <input type="hidden" name="user_id" value="<%= @user.id %>">
       <label for="tags_want">What type of trades interest you?</label>
       <% if @tags %>
-      <select class="" name="tag_want" id="tag_want">
-        <% @tags.each do |tag| %>
-        <option value="<%= tag.id %>"><%= tag.name %></option>
+      <div class="form-button">
+        <select class="" name="tag_want" id="tag_want">
+          <% @tags.each do |tag| %>
+          <option value="<%= tag.id %>"><%= tag.name %></option>
+          <% end %>
+        </select>
         <% end %>
-      </select>
-      <% end %>
-      <button type="submit">Add interest</button>
+        <button type="submit">Add interest</button>
+      </div>
     </form>
 
     <!-- DELETE INTERESTS -->
-    <form class="" action="/users/delete/tags/want" method="post">
+    <form class="delete-form" action="/users/delete/tags/want" method="post">
       <input type="hidden" name="_method" value="delete">
       <input type="hidden" name="user_id" value="<%= @user.id %>">
       <label for="tags_want_delete">Delete Interests:</label>
       <% if @user.tags %>
+      <div class="form-button">
         <select class="" name="tag_want_delete" id="tag_want_delete">
           <% @user.tags.each do |tag| %>
           <option value="<%= tag.id %>"><%= tag.name %></option>
           <% end %>
         </select>
-      <% end %>
-      <button type="submit">Delete</button>
+        <% end %>
+        <button type="submit">Delete</button>
+      </div>
     </form>
+  </div>
 
-    <!-- LIST OF SKILLS -->
-    <h4>My skills</h4>
-      <% if @user.skills.any? %>
-        <ul>
-          <% @user.skills.each do |skill| %>
-          <li><%= skill.title %>
-            <ul>
-              <% skill.tags.each do |tag| %>
-                <li><%= tag.name %></li>
-              <% end %>
-            </ul>
-          </li>
-        </ul>
-    <% end %>
-    <% else %>
-      <p>It looks like you haven't added any skills to trade.</p>
-    <% end %>
+    </div>
   </div>
 </section>
-
-    <!-- ADD SKILL -->
-    <h4>Add a skill</h4>
-    <form class="" action="/skills/add" method="post">
-      <input type="hidden" name="user_id" value="<%= @user.id %>">
-      <p>Add skills you have that you would like to trade with others. Be descriptive, and include your proficiency. Profiles with skill photos tend to get more trades.</p>
-      <label for="skill_title">Skill Title</label>
-      <input type="text" name="skill_title" id="skill_title">
-      <label for="skill_description">Skill description:</label>
-      <textarea name="skill_description" rows="8" cols="40"></textarea>
-      <button type="submit">Add skill</button>
-    </form>
-
-    <!-- TAG YOUR SKILL -->
-    <% if @tags.any? %>
-    <h4>Add tags to your skills</h4>
-    <form class="" action="/skills/tags/new" method="post">
-      <input type="hidden" name="_method" value="patch">
-      <input type="hidden" name="user_id" value="<%= @user.id %>">
-        <% if @user.skills.any? %>
-          <select class="" name="skill_tag">
-          <% @user.skills.each do |skill| %>
-            <option value="<%= skill.id %>"><%= skill.title %></option>
-          <% end %>
-          </select>
-        <% end %>
-        <% if @tags %>
-          <% @tags.each do |tag| %>
-            <input type="checkbox" name="tag_id[]" id="tag_id[]" value="<%= tag.id %>"><%= tag.name %>
-          <% end %>
-          <button type="submit">Add tag</button>
-        <% end %>
-    </form>
-    <% end %>
-
-    <!-- DELETE SKILL -->
-    <% if @user.skills.any? %>
-    <form class="" action="/skills/delete" method="post">
-      <input type="hidden" name="user_id" value="<%= @user.id %>">
-      <input type="hidden" name="_method" value="delete">
-      <p>No longer want to offer this skill?</p>
-      <label for="skill_delete">Delete my skill</label>
-      <select class="" name="skill_delete" id="skill_delete">
-        <% @user.skills.each do |skill| %>
-        <option value="<%= skill.id %>"><%=skill.title %></option>
-        <% end %>
-      </select>
-      <button type="submit">Delete</button>
-    </form>
-    <% end %>
