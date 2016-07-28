@@ -36,7 +36,7 @@ html {
 .edit-info .profile-form, .edit-info .skill-form input, .edit-info .skill-form textarea {
   width: 100%; }
 
-.profile-row-one ul li .tag, .profile-row-one .interest ul .tag {
+.profile-row-one ul li .tag-name, .profile-row-one .interest ul .tag-name, .edit .list-of-skills ul li .tag-name {
   font-size: 1.7rem;
   background-color: white;
   border-radius: 2px;
@@ -787,11 +787,11 @@ body {
   flex-direction: column;
   background-color: #efeff4;
   padding: 2%; }
-  .profile-content .skill-list, .profile-content .interest, .profile-content .list-of-skills, .profile-content .edit-info, .profile-content .skill-form {
+  .profile-content .interest, .profile-content .list-of-skills, .profile-content .edit-info, .profile-content .skill-form {
     margin: 2% 0; }
-    .profile-content .skill-list h4, .profile-content .interest h4, .profile-content .list-of-skills h4, .profile-content .edit-info h4, .profile-content .skill-form h4 {
+    .profile-content .interest h4, .profile-content .list-of-skills h4, .profile-content .edit-info h4, .profile-content .skill-form h4 {
       font-size: 2.5rem; }
-    .profile-content .skill-list p, .profile-content .interest p, .profile-content .list-of-skills p, .profile-content .edit-info p, .profile-content .skill-form p {
+    .profile-content .interest p, .profile-content .list-of-skills p, .profile-content .edit-info p, .profile-content .skill-form p {
       font-size: 1.9rem; }
   @media screen and (min-width: 700px) {
     .profile-content {
@@ -847,28 +847,42 @@ body {
     .avatar .stars h4 {
       margin-right: 10px; }
 
-.profile-row-one h4 {
-  margin-bottom: 5%; }
-.profile-row-one ul {
-  display: flex;
-  flex-direction: column; }
-  .profile-row-one ul li {
-    list-style-type: none;
-    font-size: 2.5rem;
-    width: 140px; }
-.profile-row-one .interest {
-  margin-left: 10%; }
+.profile-row-one {
+  border-top: 1px solid #666666; }
+  .profile-row-one h4 {
+    margin-bottom: 5%; }
+  .profile-row-one ul {
+    display: flex;
+    flex-direction: column; }
+    .profile-row-one ul li {
+      list-style-type: none;
+      font-size: 2.5rem;
+      width: 140px; }
+  @media screen and (min-width: 1024px) {
+    .profile-row-one .interest {
+      margin-left: 10%; } }
+  @media screen and (min-width: 1024px) {
+    .profile-row-one {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1000px; } }
 
 .edit-info .profile-form {
   width: 100%;
   margin: 2% auto;
   background-color: none; }
 
-@media screen and (min-width: 1024px) {
-  .profile-row-one {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1000px; } }
+.edit p {
+  width: 90%; }
+.edit h4 {
+  margin-bottom: 5%; }
+.edit .list-of-skills ul {
+  display: flex;
+  flex-direction: column; }
+  .edit .list-of-skills ul li {
+    list-style-type: none;
+    font-size: 2.5rem;
+    width: 140px; }
 @media screen and (min-width: 700px) {
   .edit {
     display: flex;
@@ -903,6 +917,8 @@ body {
       font-weight: 500; }
     .edit-info .skill-form input, .edit-info .skill-form textarea {
       margin-top: 5px; }
+  .edit-info .row-two {
+    border-top: 1px solid #666666; }
   .edit-info .add-tag-form {
     display: flex;
     flex-wrap: wrap; }
@@ -934,8 +950,7 @@ body {
           width: 50%; }
       .edit-info .row-two {
         margin-top: 5%;
-        display: flex;
-        border-top: 1px solid #666666; }
+        display: flex; }
         .edit-info .row-two .column-one {
           display: flex;
           flex-direction: column;

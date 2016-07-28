@@ -35,22 +35,24 @@
 
     <!-- LIST OF SKILLS -->
       <section class="right-column">
-        <h4>My skills</h4>
-        <% if @user.skills.any? %>
-        <ul>
-          <% @user.skills.each do |skill| %>
-          <li><%= skill.title %>
-            <ul>
-              <% skill.tags.each do |tag| %>
-              <li><%= tag.name %></li>
-              <% end %>
-            </ul>
-          </li>
-        </ul>
-        <% end %>
-        <% else %>
-        <p>It looks like you haven't added any skills to trade.</p>
-        <% end %>
+        <section class="list-of-skills">
+          <h4>Services/Skills/Goods that I have to barter with</h4>
+          <% if @user.skills.any? %>
+          <ul>
+            <% @user.skills.each do |skill| %>
+            <li><%= skill.title %>
+              <ul>
+                <% skill.tags.each do |tag| %>
+                <li class="tag-name"><%= tag.name %></li>
+                <% end %>
+              </ul>
+            </li>
+            <% end %>
+          </ul>
+          <% else %>
+          <p>It looks like you haven't added any skills to trade.</p>
+          <% end %>
+        </section>
       </section>
       </div>
 
