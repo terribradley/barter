@@ -1,35 +1,49 @@
 <header class="head-two form-header">
 </header>
-<!-- HEADLINE -->
-<h4>Propose a trade</h4>
-
-<!-- FORM TO PROPOSE A TRADE -->
-<form class="" action="/trades/new" method="post">
-  <input type="hidden" name="skill_wanted_id" value="<%= @skill_wanted_id %>">
-  <input type="hidden" name="user_offering" value="<%= @user_offering %>">
-  <input type="hidden" name="skill_wanted" value="<%= @skill_wanted %>">
-  <label for="skill_wanted">Skill wanted:</label>
-  <p>
-    <%= @skill_wanted.title %>
-  </p>
-  <label for="skill_offered">The skill you'd like to offer</label>
-  <select name="user_offering_skills" id="user_offering_skills">
-    <% if @user_offering.skills.any? %>
+<div class="profile-content trade">
+  <div class="headline">
+    <h1>Propose a trade!</h1>
+    <h4>This is the skill/service/product you want to tarde for:</h4>
+    <form class="" action="/trades/new" method="post">
+      <input type="hidden" name="skill_wanted_id" value="<%= @skill_wanted_id %>">
+      <input type="hidden" name="user_offering" value="<%= @user_offering %>">
+      <input type="hidden" name="skill_wanted" value="<%= @skill_wanted %>">
+      <label for="skill_wanted"></label>
+      <h4>
+        <%= @skill_wanted.title %>
+      </h4>
+  </div>
+  <!-- HEADLINE -->
+<section class="trade-form">
+  <!-- FORM TO PROPOSE A TRADE -->
+  <div class="column-one">
+    <p>
+      Now that you've found something you want to barter for, pick an item you've listed on your profile to trade!
+    </p>
+    <label for="skill_offered">The skill you'd like to offer</label>
+    <select name="user_offering_skills" id="user_offering_skills">
+      <% if @user_offering.skills.any? %>
       <% @user_offering.skills.each do |skill| %>
       <option value="<%= skill.id %>"><%= skill.title %></option>
-    <% end %>
-    <% else %>
-    <p>
-      You have not added any skills. <a href="/users/<%= @user_offering.id/edit %>">Add a skill </a>in order to make a trade
-    </p>
-    <% end %>
-  </select>
-  <br>
-  <label for="trade_terms">Details of the trade:</label>
-  <textarea name="trade_terms" id="trade_terms" rows="8" cols="40"></textarea>
-  <br>
-  <label for="trade_deadline">Proposed deadline:</label>
-  <input type="date" name="trade_deadline" id="trade_deadline">
-  <br>
-  <button type="submit">Submit trade for approval</button>
-</form>
+      <% end %>
+      <% else %>
+      <p>
+        You have not added any skills. <a href="/users/<%= @user_offering.id/edit %>">Add a skill </a>in order to make a trade
+      </p>
+      <% end %>
+    </select>
+    <h5>Details of the trade:</h5>
+    <p>This is the place to decribe what you are offering for trade and why you feel like its a fair trade.</p>
+    <label for="trade_terms"></label>
+    <textarea name="trade_terms" id="trade_terms" rows="8" cols="40"></textarea>
+  </div>
+  <div class="column-two">
+    <label for="trade_deadline">Proposed deadline:</label>
+    <input type="date" name="trade_deadline" id="trade_deadline">
+    <br>
+    <button type="submit">Submit trade</button>
+  </form>
+
+  </div>
+</section>
+</div>
