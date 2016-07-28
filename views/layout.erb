@@ -2,7 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/js/scripts.js" type="text/javascript"></script>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
     <link rel="stylesheet" href="/styles_back.css" type="text/css">
     <link rel="stylesheet" href="/css/master.css" type="text/css">
@@ -19,18 +21,36 @@
          <div class="nav-links">
            <a href="/users/new">Signup</a>
            <a href="/tags">Browse Market</a>
-           <a href="/">Login</a>
+           <a id="login-link" href="#">Login</a>
          </div>
        </nav>
+       <form class="login-form" action="/users/login" method="post">
+         <div class="login-form-content">
+           <label for="email">Email:</label>
+           <input type="text" name="email" id="email">
+           <label for="password">Password:</label>
+           <input type="password" name="password" id="password">
+           <button type="submit" name="button">Login</button>
+           <p>Don't have an Account? Create one <a href="/users/new">here</a></p>
+         </div>
+       </form>
+       <header class="head-two form-header">
+       </header>
       <%= yield %>
       <div class="sidebar">
         <ul>
           <li><a href="/tags">Browse Market</a></li>
           <li><a href="/users/new">Create account</a></li>
-          <li><a href="/">Login</a></li>
-            <ul>
-
-            </ul>
+          <li><a id="login-link-side" href="#">Login</a></li>
+          <li><form class="login-form-side" action="/users/login" method="post">
+              <label for="email">Email:</label>
+              <input type="text" name="email" id="email">
+              <label for="password">Password:</label>
+              <input type="password" name="password" id="password">
+              <button type="submit" name="button">Login</button>
+              <p>Don't have an Account? Create one <a href="/users/new">here</a></p>
+            </form>
+          </li>
         </ul>
       </div>
     </div>

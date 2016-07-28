@@ -15,11 +15,11 @@
       <h1><%= @user.first_name %> <%= @user.last_name%></h1>
 
       <!-- USER RATING -->
-      <h4>Rating:</h4>
+      <h4>Rating:
       <% if @user.rating.nil? %>
       <% (5).times do %>
       <span id="grey_star" class="glyphicon glyphicon-star"></span>
-      <% end %>
+      <% end %></h4>
       <% else %>
       <% (@user.rating).times do %>
       <span class="glyphicon glyphicon-star"></span>
@@ -49,20 +49,24 @@
 <!-- USER TRADE TAGS -->
       <h4><%= @user.first_name %>'s skills</h4>
       <% if @user.skills.any? %>
-      <ul>
-        <% @user.skills.each do |skill| %>
-        <li><%= skill.title %>
-          <br>
-          <%= skill.description %>
-          <ul>
-            <% skill.tags.each do |tag| %>
-            <li><%= tag.name %></li>
-            <% end %>
-          </ul>
-        </li>
+      <div class="skills">
+        <ul>
+          <% @user.skills.each do |skill| %>
+          <li><%= skill.title %>
+            <br>
+            <h5>Details:</h5>
+            <div id="description"><%= skill.description %></div>
+            <h5>Tags:</h5>
+            <ul>
+              <% skill.tags.each do |tag| %>
+              <li class="tag-name"><%= tag.name %></li>
+              <% end %>
+            </ul>
+          </li>
+          <% end %>
+        </ul>
         <% end %>
-      </ul>
-      <% end %>
+      </div>
     </section>
     </div>
 <!-- GRIDDED USER SKILLS (title and description are inside picture divs)-->

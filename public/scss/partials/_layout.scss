@@ -26,13 +26,12 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  button {
     @extend %buttons;
-    &:hover {
+    button:hover {
       color: $color-one;
       background-color: $color-three;
     }
-  }
+
 }
 #intro {
   display: flex;

@@ -22,7 +22,8 @@
 
   }
 }
-%buttons {
+%buttons
+button {
   color: $color-three;
   background-color: $color-one;
   border: 2px solid $color-one;
@@ -32,12 +33,13 @@
   height: 40px;
 }
 
-%textarea {
+%textarea
+textarea {
   width: 100%;
 }
-%tags {
+%tags
+.tag-name {
   font-size: 1.7rem;
-  // border: .6px solid $color-eight;
   background-color: $color-three;
   border-radius: 2px;
   text-align: center;
