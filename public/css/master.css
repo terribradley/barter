@@ -48,7 +48,13 @@ html {
       .sidebar-list ul li a:hover, .sidebar ul li a:hover {
         color: #8e1235; }
 
-.signup button, .signup-form button, .edit-info button, #trades form button {
+.signup
+button, .signup-form button
+button, .edit-info button
+button, .user .left-column
+button, #trades form
+button, .admin
+button {
   color: white;
   background-color: #001a54;
   border: 2px solid #001a54;
@@ -57,10 +63,17 @@ html {
   width: 150px;
   height: 40px; }
 
-.edit-info .profile-form, .edit-info .skill-form input, .edit-info .skill-form textarea {
+.edit-info .profile-form
+textarea, .edit-info .skill-form input
+textarea, .edit-info .skill-form textarea
+textarea {
   width: 100%; }
 
-.profile-row-one ul li .tag-name, .profile-row-one .interest ul .tag-name, .edit .list-of-skills ul li .tag-name, .edit-info .column-two ul li .tag-name {
+.profile-row-one ul
+.tag-name, .edit .list-of-skills ul li
+.tag-name, .edit-info .column-two ul li
+.tag-name, .user .right-column ul
+.tag-name {
   font-size: 1.7rem;
   background-color: white;
   border-radius: 2px;
@@ -502,11 +515,6 @@ header {
     font-size: 4em;
     text-decoration: overline;
     text-shadow: 3px 0 0 black; }
-  @media screen and (min-width: 700px) {
-    header {
-      height: 75vh; }
-      header h1 {
-        font-size: 6em; } }
 
 .toggle {
   text-decoration: none;
@@ -679,7 +687,8 @@ nav {
   .featured-image .overlay {
     position: absolute;
     left: 10px;
-    bottom: -45px; }
+    bottom: -45px;
+    font-size: 2.1rem; }
   @media screen and (min-width: 700px) {
     .featured-image {
       width: 45%;
@@ -691,7 +700,7 @@ nav {
         left: 0;
         width: 100%;
         height: 300px;
-        background: rgba(0, 0, 0, 0.3);
+        background: rgba(0, 0, 0, 0.5);
         color: white;
         transition: transform .2s linear; }
       .featured-image:hover .overlay {
@@ -828,9 +837,6 @@ body {
       max-width: 70vw;
       margin: 5% auto; } }
 
-@media screen and (min-width: 700px) {
-  flex-direction: row;
-  width: 700px; }
 .avatar {
   display: flex;
   flex-direction: column;
@@ -865,8 +871,6 @@ body {
     @media screen and (min-width: 700px) {
       .avatar img {
         margin: 0; } }
-  .avatar h4 {
-    margin-right: 138px; }
   .avatar .stars {
     display: flex;
     align-items: center; }
@@ -970,31 +974,31 @@ body {
       list-style-type: none;
       font-size: 1.5rem;
       width: 140px; }
-  @media screen and (min-width: 1024px) {
-    .edit-info {
-      display: flex;
-      flex-direction: column; }
-      .edit-info .row-one {
-        display: flex; }
-        .edit-info .row-one .skill-form {
-          margin-left: 5%;
-          width: 50%; }
-        .edit-info .row-one .profile-form {
-          width: 50%; }
-      .edit-info .row-two {
-        margin-top: 5%;
-        display: flex; }
-        .edit-info .row-two .column-one {
-          display: flex;
-          flex-direction: column;
-          margin-right: 2.5%;
-          width: 50%; }
-        .edit-info .row-two .column-two {
-          display: flex;
-          flex-direction: column;
-          margin-left: 2.5%;
-          width: 50%; } }
 
+@media screen and (min-width: 1024px) {
+  display: flex;
+  flex-direction: column;
+  .row-one {
+    display: flex; }
+    .row-one .skill-form {
+      margin-left: 5%;
+      width: 50%; }
+    .row-one .profile-form {
+      width: 50%; }
+
+  .row-two {
+    margin-top: 5%;
+    display: flex; }
+    .row-two .column-one {
+      display: flex;
+      flex-direction: column;
+      margin-right: 2.5%;
+      width: 50%; }
+    .row-two .column-two {
+      display: flex;
+      flex-direction: column;
+      margin-left: 2.5%;
+      width: 50%; } }
 .add-user-interest, .delete-form {
   display: flex;
   flex-direction: column; }
@@ -1007,14 +1011,89 @@ body {
 
 .user {
   margin-bottom: 5%; }
-
-.right-column h4 {
-  margin: 0; }
+  .user h4 {
+    font-size: 2.5rem; }
+  .user .left-column p {
+    font-size: 1.9rem; }
+  .user .right-column h5 {
+    font-size: 1.9rem; }
+  .user .right-column ul {
+    display: flex;
+    flex-direction: column; }
+    .user .right-column ul #description {
+      font-size: 1.5rem;
+      margin-left: 10px; }
+    .user .right-column ul li {
+      list-style-type: none;
+      font-size: 2.3rem;
+      width: 140px; }
+  .user .right-column h4 {
+    margin: 0; }
 
 #trades {
   margin-top: 5%;
   border-top: 1px solid #666666; }
   #trades form {
     margin: 10px; }
+
+h3 {
+  padding-bottom: 5%;
+  border-bottom: 1px solid #666666; }
+
+.admin {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .admin .tags-created {
+    padding-right: 10%; }
+    .admin .tags-created h4 {
+      font-size: 2.5rem; }
+    .admin .tags-created input {
+      margin: 2% auto;
+      width: 60%;
+      margin-right: 40%; }
+    .admin .tags-created button {
+      margin-left: 2px;
+      font-size: 1.9rem; }
+    .admin .tags-created ul {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 30vh;
+      padding-left: 0; }
+      @media screen and (min-width: 700px) {
+        .admin .tags-created ul {
+          height: 40vh; } }
+      @media screen and (min-width: 1024px) {
+        .admin .tags-created ul {
+          height: 100%; } }
+      .admin .tags-created ul .tag-name {
+        list-style-type: none;
+        width: 140px;
+        font-size: 1.7rem;
+        background-color: white;
+        border-radius: 2px;
+        text-align: center;
+        margin-bottom: 10px;
+        padding: 5px 0;
+        margin-left: 2px; }
+  .admin .delete {
+    border-top: 1px solid #666666;
+    display: flex;
+    flex-direction: column; }
+    .admin .delete h4 {
+      font-size: 2.5rem; }
+    .admin .delete label {
+      margin-right: 5%;
+      font-size: 2rem; }
+    .admin .delete button {
+      margin-right: 50%;
+      margin-top: 3%; }
+  @media screen and (min-width: 1024px) {
+    .admin {
+      flex-direction: row;
+      justify-content: space-between; }
+      .admin .delete {
+        border-top: none; } }
 
 /*# sourceMappingURL=master.css.map */

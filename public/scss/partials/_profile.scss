@@ -27,39 +27,39 @@ body {
       margin: 5% auto;
     }
   }
+  // @media screen and (min-width:$mediumbreak) {
+  //   flex-direction: row;
+  //   width: 700px;
+  // }
 
-  @media screen and (min-width:$mediumbreak) {
-    flex-direction: row;
-    width: 700px;
-  }
-  .avatar {
-    display: flex;
-    flex-direction: column;
+.avatar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  hr {
     width: 100%;
-    hr {
-      width: 100%;
-    }
-    a {
-      border:1px solid $color-eight;
-      background-color: $color-three;
-      border-radius: 4px;
-      padding: 3px 4px;
-      margin-bottom: 5px;
-      margin-top: 5px;
-      margin-left: 5px;
-      color: $color-eight;
-      display: block;
-      width: 13rem;
-      text-align: center;
-      align-self: center;
-      @media screen and (min-width: $mediumbreak) {
-        align-self: flex-start;
-        &:hover {
-          transform: scale(1.1);
-          text-decoration: none;
-        }
+  }
+  a {
+    border:1px solid $color-eight;
+    background-color: $color-three;
+    border-radius: 4px;
+    padding: 3px 4px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    color: $color-eight;
+    display: block;
+    width: 13rem;
+    text-align: center;
+    align-self: center;
+    @media screen and (min-width: $mediumbreak) {
+      align-self: flex-start;
+      &:hover {
+        transform: scale(1.1);
+        text-decoration: none;
       }
     }
+  }
     p {
       width: 40%;
     }
@@ -70,9 +70,6 @@ body {
         @media screen and (min-width:$mediumbreak) {
           margin: 0;
         }
-    }
-    h4 {
-      margin-right: 138px;
     }
     .stars {
       display: flex;
@@ -90,20 +87,16 @@ body {
     ul {
       display: flex;
       flex-direction: column;
+      @extend %tags;
       li {
         list-style-type: none;
         font-size: 2.5rem;
         width: 140px;
-        .tag-name {
-          @extend %tags;
-          }
         }
       }
       .interest {
         ul {
-         .tag-name {
            @extend %tags;
-          }
         }
         @media screen and (min-width: $largebreak) {
           margin-left: 10%;

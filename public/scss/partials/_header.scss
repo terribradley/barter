@@ -11,10 +11,13 @@ header {
     text-decoration: overline;
     text-shadow: 3px 0 0 $color-two;
   }
+
   @media screen and (min-width: $mediumbreak) {
-    height: 75vh;
-    h1 {
-      font-size: 6em;
-    }
+    // .main {
+    //   height: 90vh;
+    //   h1 {
+    //     font-size: 6em;
+    //   }
+    // }
   }
 }
