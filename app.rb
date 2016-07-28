@@ -142,11 +142,18 @@ delete('/users/delete') do
   redirect("/admin")
 end
 
+# BROWSE PAGE
+get('/tags') do
+  @skills = Skill.all
+  @tags = Tag.all
+  erb(:browse)
+end
 # SEE SKILL PAGE
 get('/tags/:id') do
   @tag = Tag.find(params.fetch('id').to_i)
   @skills = @tag.skills
-  erb(:skill)
+  @tags = Tag.all
+  erb(:browse_tags)
 end
 
 #SEE PROFILE PAGE
@@ -170,18 +177,47 @@ get('/trades/new') do
 end
 # SUBMITS A NEW TRADE
 post('/trades/new') do
-  skill_wanted = Skill.find(params.fetch('skill_wanted_id').to_i)
-  skill_offered = Skill.find(params.fetch('user_offering_skills').to_i)
-  user_offering = User.find(skill_offered.user_id.to_i)
-  terms = params.fetch('trade_terms')
-  deadline = params.fetch('trade_deadline')
-  trade = Trade.create({:terms => terms, :deadline => deadline, :agree => false})
-  skill_wanted.trades.push(trade)
-  skill_offered.trades.push(trade)
+  @skill_wanted = Skill.find(params.fetch('skill_wanted_id').to_i)
+  @skill_offered = Skill.find(params.fetch('user_offering_skills').to_i)
+  @user_offering = User.find(@skill_offered.user_id.to_i)
+  @terms = params.fetch('trade_terms')
+  @deadline = params.fetch('trade_deadline')
+  @trade = Trade.create({:terms => @terms, :deadline => @deadline, :agree => false})
+  @skill_wanted.trades.push(@trade)
+  @skill_offered.trades.push(@trade)
   redirect("/users/#{@user_offering.id}")
 end
 
+# APPROVES TRADE
+patch('/trades/update') do
+  trade = Trade.find(params.fetch('trade_id').to_i)
+  @user = User.find(params.fetch('user_id').to_i)
+  trade.update({:agree => true})
+  redirect("/users/#{@user.id}")
+end
 
+# DECLINE TRADE
+delete('/trades/delete') do
+  trade = Trade.find(params.fetch('trade_id').to_i)
+  @user = User.find(params.fetch('user_id').to_i)
+  trade.destroy
+  redirect("/users/#{@user.id}")
+end
+
+#RATE USER
+patch('/users/rating') do
+  @user = User.find(params.fetch("user_id").to_i)
+  user_rating = params.fetch("rating").to_i
+  new_rating = Rating.create({:rating => user_rating})
+  new_rating.users.push(@user)
+  total = 0
+  @user.ratings.each do |rating|
+    total = total + rating.rating
+  end
+
+  @user.update({:rating => (total/(@user.ratings.length)).ceil})
+  redirect ("/user/profile/#{@user.id}")
+end
 
 # CLEAR OUT DATABASE
 get('/clear') do
@@ -195,4 +231,18 @@ get('/clear') do
     skill.destroy
   end
   redirect("/")
+end
+
+  get('/clear/trades') do
+  Trade.all.each do |trade|
+    trade.destroy
+  end
+  redirect("/")
+end
+
+get('/clear/ratings') do
+Rating.all.each do |rating|
+  rating.destroy
+end
+redirect("/")
 end

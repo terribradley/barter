@@ -12,17 +12,17 @@
 <!-- GREETING -->
 <h1>Hello,  <%= @user.first_name %> <%= @user.last_name%></h1>
 
-<!-- user rating -->
+<!-- USER RATING -->
 <div class="stars">
   <h4>My Rating:</h4>
   <% if @user.rating.nil? %>
-  <% (5).times do %>
-  <span id="grey_star" class="glyphicon glyphicon-star"></span>
-  <% end %>
-  <% else %>
-  <% (@user.rating).times do %>
-  <span class="glyphicon glyphicon-star"></span>
-  <% end %>
+    <% (5).times do %>
+      <span id="grey_star" class="glyphicon glyphicon-star"></span>
+    <% end %>
+    <% else %>
+      <% (@user.rating).times do %>
+      <span class="glyphicon glyphicon-star"></span>
+    <% end %>
   <% end %>
 </div>
 
@@ -36,8 +36,8 @@
   <hr>
 </div>
 
-<section class="profile-row-one"
-    <!-- LIST OF SKILLS -->
+<!-- LIST OF SKILLS -->
+<section class="profile-row-one">
 <section class="list-of-skills">
   <h4>My skills</h4>
   <% if @user.skills.any? %>
@@ -65,11 +65,48 @@
   <ul>
     <% @user.tags.each do |tag| %>
     <li><%= tag.name %></li>
+    <% end %>
   </ul>
-  <% end %>
   <% else %>
   <p>What are you interested in trading for? <a href="/users/<%= @user.id %>/edit">Add Interests</a></p>
   <% end %>
     <hr>
   </section>
 </section>
+
+<!-- USER TRADES -->
+    <% if @user.skills.any? %>
+    <h4>My trades:</h4>
+    <p>Please note that once a trade is agreed to, you are expected to fulfil the terms of the trade.</p>
+      <% @user.skills.each do |skill| %>
+          <% skill.trades.each do |trade| %>
+          <form class="" action="/trades/update" method="post">
+            <input type="hidden" name="_method" value="patch">
+            <input type="hidden" name="trade_id" value="<%= trade.id %>">
+            <input type="hidden" name="user_id" value="<%= @user.id %>">
+          <ol>
+            <hr>
+            <%if trade.agree? %>
+              <strong><p>This trade is active!</p></strong>
+              </form>
+            <% else %>
+              <strong><p>This trade is waiting for approval.</p></strong>
+              <button type="submit">Accept trade</button>
+            </form>
+            <form class="" action="/trades/delete" method="post">
+              <input type="hidden" name="_method" value="delete">
+              <input type="hidden" name="trade_id" value="<%= trade.id %>">
+              <input type="hidden" name="user_id" value="<%= @user.id %>">
+              <button type="submit">Decline trade</button>
+            </form>
+            <% end %>
+            <h5>Terms: <%= trade.terms%></h5>
+            <h5>Deadline: <%= trade.deadline%></h5>
+            <h5>Skills being swapped:</h5>
+            <% trade.skills.each do |skill| %>
+                <li><%= skill.title %></li>
+              <% end %>
+          </ol>
+          <% end %>
+      <% end %>
+    <% end %>
