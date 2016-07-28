@@ -48,10 +48,11 @@ html {
       .sidebar-list ul li a:hover, .sidebar ul li a:hover {
         color: #8e1235; }
 
-.signup button
+.signup
 button, .signup-form button
 button, .edit-info button
-button, #trades form button
+button, .user .left-column
+button, #trades form
 button, .admin
 button {
   color: white;
@@ -68,10 +69,10 @@ textarea, .edit-info .skill-form textarea
 textarea {
   width: 100%; }
 
-.profile-row-one ul li
-.tag-name, .profile-row-one .interest ul
+.profile-row-one ul
 .tag-name, .edit .list-of-skills ul li
 .tag-name, .edit-info .column-two ul li
+.tag-name, .user .right-column ul
 .tag-name {
   font-size: 1.7rem;
   background-color: white;
@@ -686,7 +687,8 @@ nav {
   .featured-image .overlay {
     position: absolute;
     left: 10px;
-    bottom: -45px; }
+    bottom: -45px;
+    font-size: 2.1rem; }
   @media screen and (min-width: 700px) {
     .featured-image {
       width: 45%;
@@ -698,7 +700,7 @@ nav {
         left: 0;
         width: 100%;
         height: 300px;
-        background: rgba(0, 0, 0, 0.3);
+        background: rgba(0, 0, 0, 0.5);
         color: white;
         transition: transform .2s linear; }
       .featured-image:hover .overlay {
@@ -835,9 +837,6 @@ body {
       max-width: 70vw;
       margin: 5% auto; } }
 
-@media screen and (min-width: 700px) {
-  flex-direction: row;
-  width: 700px; }
 .avatar {
   display: flex;
   flex-direction: column;
@@ -872,8 +871,6 @@ body {
     @media screen and (min-width: 700px) {
       .avatar img {
         margin: 0; } }
-  .avatar h4 {
-    margin-right: 138px; }
   .avatar .stars {
     display: flex;
     align-items: center; }
@@ -1014,9 +1011,24 @@ body {
 
 .user {
   margin-bottom: 5%; }
-
-.right-column h4 {
-  margin: 0; }
+  .user h4 {
+    font-size: 2.5rem; }
+  .user .left-column p {
+    font-size: 1.9rem; }
+  .user .right-column h5 {
+    font-size: 1.9rem; }
+  .user .right-column ul {
+    display: flex;
+    flex-direction: column; }
+    .user .right-column ul #description {
+      font-size: 1.5rem;
+      margin-left: 10px; }
+    .user .right-column ul li {
+      list-style-type: none;
+      font-size: 2.3rem;
+      width: 140px; }
+  .user .right-column h4 {
+    margin: 0; }
 
 #trades {
   margin-top: 5%;
