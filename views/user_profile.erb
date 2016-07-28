@@ -15,11 +15,11 @@
       <h1><%= @user.first_name %> <%= @user.last_name%></h1>
 
       <!-- USER RATING -->
-      <h4>Rating:
+      <h4>Rating:</h4>
       <% if @user.rating.nil? %>
       <% (5).times do %>
       <span id="grey_star" class="glyphicon glyphicon-star"></span>
-      <% end %></h4>
+      <% end %>
       <% else %>
       <% (@user.rating).times do %>
       <span class="glyphicon glyphicon-star"></span>
@@ -74,13 +74,11 @@
 <section id="trades">
   <% if @user.skills.any? %>
       <% @user.skills.each do |skill| %>
-      <hr>
-      <hr>
       <div class="featured-image main">
         <img class="browse_img" src="/img/<%=skill.id%>.jpg" alt="<%=skill.id%>"/>
       </div>
         <form class="" action="/trades/verify" method="get">
-          <p><strong><%= skill.title %></strong></p>
+          <h4><%= skill.title %></h4>
           <p><%= skill.description %></p>
             <input type="hidden" name="skill_id" value="<%= skill.id %>">
             <button type="submit">Propose Trade</button>
