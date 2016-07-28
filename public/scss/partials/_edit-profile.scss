@@ -98,7 +98,21 @@
       align-items: center;
     }
   }
-  @media screen and (min-width: $largebreak){
+  .column-two {
+    ul {
+      display: flex;
+      flex-direction: column;
+      li {
+        list-style-type: none;
+        font-size: 1.5rem;
+        width: 140px;
+        .tag-name {
+          @extend %tags;
+          }
+        }
+      }
+  }
+  @media screen and (min-width: $largebreak) {
     display: flex;
     flex-direction: column;
     .row-one {
@@ -126,7 +140,7 @@
         flex-direction: column;
         margin-left: 2.5%;
         width: 50%;
-      }
+        }
     }
   }
 }

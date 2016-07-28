@@ -36,7 +36,7 @@ html {
 .edit-info .profile-form, .edit-info .skill-form input, .edit-info .skill-form textarea {
   width: 100%; }
 
-.profile-row-one ul li .tag-name, .profile-row-one .interest ul .tag-name, .edit .list-of-skills ul li .tag-name {
+.profile-row-one ul li .tag-name, .profile-row-one .interest ul .tag-name, .edit .list-of-skills ul li .tag-name, .edit-info .column-two ul li .tag-name {
   font-size: 1.7rem;
   background-color: white;
   border-radius: 2px;
@@ -937,6 +937,13 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center; }
+  .edit-info .column-two ul {
+    display: flex;
+    flex-direction: column; }
+    .edit-info .column-two ul li {
+      list-style-type: none;
+      font-size: 1.5rem;
+      width: 140px; }
   @media screen and (min-width: 1024px) {
     .edit-info {
       display: flex;

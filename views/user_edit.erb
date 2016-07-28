@@ -129,11 +129,11 @@
       </div>
 
       <div class="column-two">
-        <h1>EDIT YOUR SEARCHES:</h1>
+        <h1>What type of trades interest you</h1>
         <% if @user.tags.any? %>
           <ul>
             <% @user.tags.each do |tag| %>
-            <li><%= tag.name %></li>
+            <li class="tag-name"><%= tag.name %></li>
           <% end %>
           </ul>
         <% end %>
@@ -142,7 +142,7 @@
     <form class="add-user-interest" action="/users/edit/tags/want" method="post">
       <input type="hidden" name="_method" value="patch">
       <input type="hidden" name="user_id" value="<%= @user.id %>">
-      <label for="tags_want">What type of trades interest you?</label>
+      <label for="tags_want"></label>
       <% if @tags %>
       <div class="form-button">
         <select class="" name="tag_want" id="tag_want">
