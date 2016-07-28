@@ -58,13 +58,14 @@ html {
         color: #8e1235; }
 
 .signup
-button, .signup-form button
+button, .signup-form
 button, .profile-row-two
 button, .edit-info
 button, .user .left-column
 button, #trades form
 button, .security-form button
 button, .admin
+button, .trade .trade-form
 button {
   color: white;
   background-color: #001a54;
@@ -77,6 +78,7 @@ button {
 .edit-info .profile-form
 textarea, .edit-info .skill-form input
 textarea, .edit-info .skill-form textarea
+textarea, .trade .trade-form
 textarea {
   width: 100%; }
 
@@ -843,7 +845,8 @@ body {
   .profile-row-two .trade-offer {
     border: 0.3px solid #666666;
     border-radius: 3px;
-    background-color: #fafdf9; }
+    background-color: #fafdf9;
+    margin-bottom: 2%; }
 
 .edit-info .profile-form {
   width: 100%;
@@ -995,6 +998,12 @@ body {
   border-top: 1px solid #666666; }
   #trades form {
     margin: 10px; }
+    #trades form h4 {
+      font-size: 2.5rem; }
+    #trades form p {
+      font-size: 2rem; }
+  #trades .featured-image {
+    margin: 0; }
 
 .security-form {
   width: 98%;
@@ -1224,5 +1233,25 @@ nav {
         color: #1c3873; }
       .login-form a {
         color: #b78f44; } }
+
+.trade .headline {
+  margin-bottom: 10%; }
+  .trade .headline h4 {
+    font-size: 2.5rem;
+    margin: 0;
+    text-align: center; }
+.trade .trade-form {
+  border: 0.4px solid #666666;
+  padding: 5%;
+  display: flex; }
+  .trade .trade-form .column-one h5 {
+    font-size: 2.5rem;
+    margin: 2% 0; }
+  .trade .trade-form .column-one p {
+    font-size: 1.7rem; }
+  .trade .trade-form .column-two {
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column; }
 
 /*# sourceMappingURL=master.css.map */

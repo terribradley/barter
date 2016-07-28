@@ -81,9 +81,9 @@
     <% if @user.skills.any? %>
     <h4>My trades:</h4>
     <p>Please note that once a trade is agreed to, you are expected to fulfil the terms of the trade.</p>
-    <div class="trade-offer">
       <% @user.skills.each do |skill| %>
       <% skill.trades.each do |trade| %>
+      <div class="trade-offer">
       <form class="" action="/trades/update" method="post">
         <input type="hidden" name="_method" value="patch">
         <input type="hidden" name="trade_id" value="<%= trade.id %>">
@@ -110,8 +110,8 @@
       </form>
       <% end %>
     </ol>
+  </div>
     <% end %>
     <% end %>
     <% end %>
-    </div>
 </section>
