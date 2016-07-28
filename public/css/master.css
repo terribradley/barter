@@ -48,7 +48,12 @@ html {
       .sidebar-list ul li a:hover, .sidebar ul li a:hover {
         color: #8e1235; }
 
-.signup button, .signup-form button, .edit-info button, #trades form button {
+.signup button
+button, .signup-form button
+button, .edit-info button
+button, #trades form button
+button, .admin
+button {
   color: white;
   background-color: #001a54;
   border: 2px solid #001a54;
@@ -57,10 +62,17 @@ html {
   width: 150px;
   height: 40px; }
 
-.edit-info .profile-form, .edit-info .skill-form input, .edit-info .skill-form textarea {
+.edit-info .profile-form
+textarea, .edit-info .skill-form input
+textarea, .edit-info .skill-form textarea
+textarea {
   width: 100%; }
 
-.profile-row-one ul li .tag-name, .profile-row-one .interest ul .tag-name, .edit .list-of-skills ul li .tag-name, .edit-info .column-two ul li .tag-name {
+.profile-row-one ul li
+.tag-name, .profile-row-one .interest ul
+.tag-name, .edit .list-of-skills ul li
+.tag-name, .edit-info .column-two ul li
+.tag-name {
   font-size: 1.7rem;
   background-color: white;
   border-radius: 2px;
@@ -502,11 +514,6 @@ header {
     font-size: 4em;
     text-decoration: overline;
     text-shadow: 3px 0 0 black; }
-  @media screen and (min-width: 700px) {
-    header {
-      height: 75vh; }
-      header h1 {
-        font-size: 6em; } }
 
 .toggle {
   text-decoration: none;
@@ -970,31 +977,31 @@ body {
       list-style-type: none;
       font-size: 1.5rem;
       width: 140px; }
-  @media screen and (min-width: 1024px) {
-    .edit-info {
-      display: flex;
-      flex-direction: column; }
-      .edit-info .row-one {
-        display: flex; }
-        .edit-info .row-one .skill-form {
-          margin-left: 5%;
-          width: 50%; }
-        .edit-info .row-one .profile-form {
-          width: 50%; }
-      .edit-info .row-two {
-        margin-top: 5%;
-        display: flex; }
-        .edit-info .row-two .column-one {
-          display: flex;
-          flex-direction: column;
-          margin-right: 2.5%;
-          width: 50%; }
-        .edit-info .row-two .column-two {
-          display: flex;
-          flex-direction: column;
-          margin-left: 2.5%;
-          width: 50%; } }
 
+@media screen and (min-width: 1024px) {
+  display: flex;
+  flex-direction: column;
+  .row-one {
+    display: flex; }
+    .row-one .skill-form {
+      margin-left: 5%;
+      width: 50%; }
+    .row-one .profile-form {
+      width: 50%; }
+
+  .row-two {
+    margin-top: 5%;
+    display: flex; }
+    .row-two .column-one {
+      display: flex;
+      flex-direction: column;
+      margin-right: 2.5%;
+      width: 50%; }
+    .row-two .column-two {
+      display: flex;
+      flex-direction: column;
+      margin-left: 2.5%;
+      width: 50%; } }
 .add-user-interest, .delete-form {
   display: flex;
   flex-direction: column; }
@@ -1016,5 +1023,39 @@ body {
   border-top: 1px solid #666666; }
   #trades form {
     margin: 10px; }
+
+h3 {
+  padding-bottom: 5%;
+  border-bottom: 1px solid #666666; }
+
+.admin {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .admin h4 {
+    font-size: 2.5rem; }
+  .admin input {
+    margin: 2% auto; }
+  .admin button {
+    margin-left: 2%;
+    font-size: 1.9rem; }
+  .admin .tags-created ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 50vh; }
+    .admin .tags-created ul .tag-name {
+      list-style-type: none;
+      width: 140px;
+      font-size: 1.7rem;
+      background-color: white;
+      border-radius: 2px;
+      text-align: center;
+      margin-bottom: 10px;
+      padding: 5px 0; }
+  .admin .delete {
+    border-top: 1px solid #666666; }
 
 /*# sourceMappingURL=master.css.map */
