@@ -37,6 +37,15 @@ html {
 .head-eleven {
   background-image: url(../img/tambourine.jpg); }
 
+.head-thirty {
+  background-image: url(../img/gears.jpg); }
+
+.head-thirtyone {
+  background-image: url(../img/lanterns.jpg); }
+
+.head-thirtytwo {
+  background-image: url(../img/neon.jpg); }
+
 .sidebar-list ul, .sidebar ul {
   display: flex;
   padding: 0; }
@@ -630,6 +639,11 @@ header {
       width: 20%;
       height: 250px;
       margin-left: 5%; } }
+
+.head-three {
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-color: white; }
 
 .form-intro {
   padding: 5% 20%; }
