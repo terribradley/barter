@@ -6,7 +6,7 @@
   <% if @user.photo.nil? %>
   <img src="/img/images.jpeg" alt="generic user photo" />
   <% else%>
-    <img src="/img/<%= @user.photo %>" alt="user photo" />
+    <img src="/img/<%= @user.photo %>.jpg" alt="user photo" />
   <% end %>
   <!-- EDIT PROFILE -->
   <a href="/users/<%= @user.id %>/edit">Edit profile</a>
