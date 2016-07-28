@@ -220,6 +220,13 @@ patch('/users/rating') do
   redirect ("/user/profile/#{@user.id}")
 end
 
+get('/photos') do
+  User.all.each do |user|
+    photo = user.first_name
+    user.update({:photo => photo})
+  end
+end
+
 # CLEAR OUT DATABASE
 get('/clear') do
   User.all.each do |user|

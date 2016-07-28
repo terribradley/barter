@@ -15,9 +15,10 @@
       <% @skills.each do |skill| %>
         <div class="featured-image main">
           <img class="browse_img" src="/img/<%=skill.id%>.jpg" alt="<%=skill.id%>"/>
-          <div class="overlay">
-            <p><a href="/user/profile/<%=skill.user.id %>"><%= skill.title %></a></p>
-            </div>
+          <a href="/user/profile/<%=skill.user.id %>"><div class="overlay">
+            <p><%= skill.title %>:<br> <%= skill.description %></p>
+            <p></p>
+            </div></a>
           </div>
       <% end %>
   <% end %>

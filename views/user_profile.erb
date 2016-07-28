@@ -8,7 +8,7 @@
       <% if @user.photo.nil? %>
         <img src="/img/images.jpeg" alt="generic user photo" />
         <% else%>
-          <img src="/img/<%= @user.photo %>" alt="user photo" />
+            <img src="/img/<%= @user.photo %>.jpg" alt="user photo" />
         <% end %>
 
       <!-- GREETING -->
@@ -74,13 +74,16 @@
 <section id="trades">
   <% if @user.skills.any? %>
       <% @user.skills.each do |skill| %>
+      <hr>
+      <hr>
+      <div class="featured-image main">
+        <img class="browse_img" src="/img/<%=skill.id%>.jpg" alt="<%=skill.id%>"/>
+      </div>
         <form class="" action="/trades/verify" method="get">
-          <p><%= skill.title %></p>
+          <p><strong><%= skill.title %></strong></p>
           <p><%= skill.description %></p>
             <input type="hidden" name="skill_id" value="<%= skill.id %>">
             <button type="submit">Propose Trade</button>
-            <div class="featured-image main">
-            </div>
         </form>
       <% end %>
   <% end %>
