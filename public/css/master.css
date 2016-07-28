@@ -24,7 +24,7 @@ html {
       .sidebar-list ul li a:hover, .sidebar ul li a:hover {
         color: #8e1235; }
 
-.signup button, .signup-form button, .edit-info button, #trades form button {
+.signup button, .signup-form button, .edit-info button, #trades form button, .security-form button {
   color: white;
   background-color: #001a54;
   border: 2px solid #001a54;
@@ -619,6 +619,8 @@ nav {
       width: 55rem;
       background-color: rgba(28, 56, 115, 0.8);
       color: white; }
+      .login-form input {
+        color: #1c3873; }
       .login-form button {
         background-color: white;
         border-color: white;
@@ -1005,5 +1007,20 @@ nav h1 a {
   border-top: 1px solid #666666; }
   #trades form {
     margin: 10px; }
+
+.security-form {
+  width: 98%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem; }
+  .security-form .password-entry {
+    margin-top: 1rem; }
+  .security-form button {
+    margin-left: 1rem; }
+  @media screen and (min-width: 700px) {
+    .security-form {
+      width: 60rem; } }
 
 /*# sourceMappingURL=master.css.map */

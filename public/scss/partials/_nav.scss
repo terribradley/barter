@@ -169,6 +169,9 @@ nav {
     width: 55rem;
     background-color: transparentize($color-four, .2);
     color: $color-three;
+    input {
+      color: $color-four;
+    }
     button {
       background-color: $color-three;
       border-color: $color-three;
