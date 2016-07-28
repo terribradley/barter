@@ -534,9 +534,10 @@ nav {
       flex-direction: column;
       align-items: center;
       height: 200px;
-      padding: 2% 2%; }
+      padding: 0 2%; }
       nav img {
-        height: 5rem; }
+        height: 5rem;
+        margin-top: 2%; }
       nav .nav-links {
         display: flex;
         width: 40%;
@@ -565,61 +566,62 @@ nav {
         nav .nav-links a {
           color: white; } }
 
-.login-form {
-  position: absolute;
-  top: 8vh;
-  right: 0;
-  height: 9rem;
-  width: 55rem;
-  border-radius: 2%;
-  background-color: rgba(28, 56, 115, 0.8);
+.login-form-side {
   color: white;
   display: none; }
-  .login-form input {
-    margin: 0 .7rem .7rem .7rem; }
-  .login-form button {
+  .login-form-side label, .login-form-side button, .login-form-side p {
+    margin-top: .8rem; }
+  .login-form-side button {
     background-color: white;
     border: 2px solid white;
     border-radius: 3px;
     width: 5rem;
     height: 3rem;
     color: #1c3873; }
-  .login-form a {
+  .login-form-side p > a {
     color: #b78f44; }
-  .login-form .login-form-content {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    height: 9rem;
-    width: 55rem; }
+
+.login-form {
+  display: none; }
   @media screen and (min-width: 700px) {
     .login-form {
       height: 9rem;
       width: 55rem;
       border-radius: 2%;
-      top: 24vh;
+      position: absolute;
+      top: 199px;
       right: 18vw;
       background-color: rgba(255, 255, 255, 0.8);
       color: #1c3873; }
       .login-form button {
         background-color: #1c3873;
-        border-color: #1c3873;
-        color: white; } }
+        border: 2px solid #1c3873;
+        border-radius: 3px;
+        width: 5rem;
+        height: 3rem;
+        color: white; }
+      .login-form input {
+        margin: 0 .7rem .7rem .7rem; }
+      .login-form a {
+        color: #b78f44; }
+      .login-form .login-form-content {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 9rem;
+        width: 55rem; } }
   @media screen and (min-width: 1024px) {
     .login-form {
-      top: 8vh;
-      right: 0;
+      top: 7.9vh;
+      right: 1rem;
       height: 9rem;
       width: 55rem;
       background-color: rgba(28, 56, 115, 0.8);
       color: white; }
       .login-form button {
         background-color: white;
-        border: 2px solid white;
-        border-radius: 3px;
-        width: 5rem;
-        height: 3rem;
+        border-color: white;
         color: #1c3873; }
       .login-form a {
         color: #b78f44; } }
