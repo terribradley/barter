@@ -58,6 +58,7 @@
 
 nav {
   display: none;
+  position: relative;
   .nav-links {
     display: none;
   }
@@ -66,16 +67,16 @@ nav {
     flex-direction: column;
     align-items: center;
     height: 200px;
-    padding: 2% 2%;
+    padding: 0 2%;
       & img {
         height: 5rem;
+        margin-top: 2%;
       }
       .nav-links {
         display: flex;
         width: 40%;
         // margin: 0 auto;
         justify-content: space-between;
-
         a {
           text-decoration: none;
           color: $color-one;
@@ -92,16 +93,95 @@ nav {
       justify-content: space-between;
       height: 8vh;
       background-color: $color-four;
-        h1 {
-          margin-right: auto;
-          padding-left: 10px;
-          color: $color-nine;
+      position: relative;
+      padding: 0% 2%;
+      img {
+        margin: 0;
+      }
+      h1 {
+        margin-right: auto;
+        padding-left: 10px;
+        color: $color-nine;
+        }
+       .nav-links {
+         width: 30%;
+         a {
+          color: $color-three;
           }
-         .nav-links {
-           width: 30%;
-           a {
-            color: $color-three;
-            }
-          }
+        }
     }
+}
+
+.login-form-side {
+  color: $color-three;
+  display: none;
+  label, button, p {
+    margin-top: .8rem;
+  }
+  button {
+    background-color: $color-three;
+    border: 2px solid $color-three;
+    border-radius: 3px;
+    width: 5rem;
+    height: 3rem;
+    color: $color-four;
+  }
+  p>a {
+    color: $color-five;
+  }
+}
+
+.login-form {
+  display: none;
+  @media screen and (min-width: $mediumbreak){
+    height: 9rem;
+    width: 55rem;
+    border-radius: 2%;
+    position: absolute;
+    top: 199px;
+    right: 18vw;
+    background-color: transparentize(white, .2);
+    color: $color-four;
+    button {
+      background-color: $color-four;
+      border: 2px solid $color-four;
+      border-radius: 3px;
+      width: 5rem;
+      height: 3rem;
+      color: $color-three;
+    }
+    input {
+      margin: 0 .7rem .7rem .7rem;
+    }
+    a {
+      color: $color-five;
+    }
+    .login-form-content {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      height: 9rem;
+      width: 55rem;
+    }
+  }
+  @media screen and (min-width: $largebreak) {
+    top: 7.9vh;
+    right: 1rem;
+    height: 9rem;
+    width: 55rem;
+    background-color: transparentize($color-four, .2);
+    color: $color-three;
+    input {
+      color: $color-four;
+    }
+    button {
+      background-color: $color-three;
+      border-color: $color-three;
+      color: $color-four;
+    }
+    a {
+      color: $color-five;
+    }
+  }
 }
