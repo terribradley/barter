@@ -1,7 +1,6 @@
 @each $image-name, $image-value in $images {
   .#{$image-name} {
     background-image: #{$image-value};
-
   }
 }
 
@@ -23,7 +22,8 @@
 
   }
 }
-%buttons {
+%buttons
+button {
   color: $color-three;
   background-color: $color-one;
   border: 2px solid $color-one;
@@ -33,6 +33,16 @@
   height: 40px;
 }
 
-%textarea {
+%textarea
+textarea {
   width: 100%;
+}
+%tags
+.tag-name {
+  font-size: 1.7rem;
+  background-color: $color-three;
+  border-radius: 2px;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 2px 0;
 }

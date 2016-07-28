@@ -13,6 +13,7 @@ $color-seven: #542e1f;
 $color-eight: #610c24;
 $color-nine: #fafdf9;
 $color-ten: #4b5564;
+$color-eleven: #efeff4;
 
 
 
@@ -20,10 +21,26 @@ $color-ten: #4b5564;
 $img-head-one: url(../img/market.jpg);
 $img-head-two: url(../img/street-market.jpeg);
 $img-head-three: url(../img/hands.jpg);
+$img-head-four: url(../img/food.jpg);
+$img-head-five: url(../img/bike.jpg);
+$img-head-six: url(../img/knitting.jpg);
+$img-head-seven: url(../img/woodworking.jpg);
+$img-head-eight: url(../img/gardener.jpg);
+$img-head-nine: url(../img/baking.jpg);
+$img-head-ten: url(../img/boxing.jpg);
+$img-head-eleven: url(../img/tambourine.jpg);
 
 
 $images: (
   head-one: $img-head-one,
   head-two: $img-head-two,
-  head-three: $img-head-three
+  head-three: $img-head-three,
+  head-four: $img-head-four,
+  head-five: $img-head-five,
+  head-six: $img-head-six,
+  head-seven: $img-head-seven,
+  head-eight: $img-head-eight,
+  head-nine: $img-head-nine,
+  head-ten: $img-head-ten,
+  head-eleven: $img-head-eleven
 );

@@ -1,5 +1,23 @@
 
   .edit {
+    p {
+      width: 90%;
+    }
+    h4 {
+      margin-bottom: 5%;
+    }
+    .list-of-skills {
+      ul {
+        display: flex;
+        flex-direction: column;
+        li {
+          list-style-type: none;
+          font-size: 2.5rem;
+          width: 140px;
+          @extend %tags;
+        }
+      }
+    }
     @media screen and (min-width: $mediumbreak) {
     display: flex;
     flex-direction: row;
@@ -50,6 +68,9 @@
       @extend %textarea;
     }
   }
+  .row-two {
+    border-top: 1px solid lighten($color-two, 40%);
+  }
   .add-tag-form {
     display: flex;
     // flex-direction: column;
@@ -74,7 +95,20 @@
       align-items: center;
     }
   }
-  @media screen and (min-width: $largebreak){
+  .column-two {
+    ul {
+      display: flex;
+      flex-direction: column;
+      li {
+        list-style-type: none;
+        font-size: 1.5rem;
+        width: 140px;
+          @extend %tags;
+          }
+        }
+      }
+  }
+  @media screen and (min-width: $largebreak) {
     display: flex;
     flex-direction: column;
     .row-one {
@@ -91,7 +125,6 @@
     .row-two {
       margin-top: 5%;
       display: flex;
-      border-top: 1px solid lighten($color-two, 40%);
       .column-one {
         display: flex;
         flex-direction: column;
@@ -103,10 +136,10 @@
         flex-direction: column;
         margin-left: 2.5%;
         width: 50%;
-      }
+        }
     }
   }
-}
+
 
 .add-user-interest, .delete-form {
   display: flex;
@@ -120,37 +153,3 @@
     align-items: center;
   }
 }
-
-
-// .edit-info {
-//   display: flex;
-//   flex-direction: column;
-//
-//   .skill-form {
-//     display: flex;
-//     flex-direction: column;
-//     #skill_title {
-//       width: 50%;
-//     }
-//     label:nth-of-type(2) {
-//     display: block;
-//     }
-//     label {
-//       margin: .5rem;
-//       font-size: 2.5rem;
-//       font-weight: 500;
-//     }
-//     textarea {
-//       @extend %textarea;
-//     }
-//   }
-//   .add-tag-form {
-//     display: flex;
-//     align-items: center;
-//     button {
-//       width: 137px;
-//       // order: -1;
-//     }
-//
-//   }
-// }

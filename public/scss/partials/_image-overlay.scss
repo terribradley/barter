@@ -17,10 +17,13 @@
   height: 300px;
   margin-bottom: 15%;
   position: relative;
+  background-position: center;
+  background-size: cover;
   .overlay {
     position: absolute;
     left: 10px;
     bottom: -45px;
+    font-size: $medium-font - .4rem;;
   }
   @media screen and (min-width: $mediumbreak) {
     width: 45%;
@@ -32,7 +35,7 @@
       left: 0;
       width: 100%;
       height: 300px;
-      background: rgba(0, 0, 0, .3);
+      background: rgba(0, 0, 0, .5);
       color: $color-three;
       transition: transform .2s linear;
     }
@@ -43,6 +46,7 @@
     .overlay {
       align-items: center;
       justify-content: center;
+
     }
   }
 

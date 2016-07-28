@@ -1,13 +1,16 @@
+body {
+  background-color: $color-eleven;
+}
+
 .profile-content {
   width: 95vw;
   margin: 5% auto;
   display: flex;
   flex-direction: column;
-  // background-color: lighten(#4b5564, 20%);
+  background-color: $color-eleven;
   padding: 2%;
-  .skill-list, .interest, .list-of-skills, .edit-info, .skill-form {
+ .interest, .list-of-skills, .edit-info, .skill-form {
     margin: 2% 0;
-
     h4 {
       font-size: $medium-font;
     }
@@ -24,40 +27,41 @@
       margin: 5% auto;
     }
   }
+  // @media screen and (min-width:$mediumbreak) {
+  //   flex-direction: row;
+  //   width: 700px;
+  // }
 
-  @media screen and (min-width:$mediumbreak) {
-    flex-direction: row;
-    width: 700px;
-  }
-  .avatar {
-    display: flex;
-    flex-direction: column;
+.avatar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  hr {
     width: 100%;
-    hr {
-      width: 100%;
-    }
-    a {
-      border:1px solid $color-eight;
-      border-radius: 4px;
-      padding: 3px 4px;
-      margin-bottom: 5px;
-      margin-top: 5px;
-      color: $color-eight;
-      display: block;
-      width: 13rem;
-      text-align: center;
-      align-self: center;
-      @media screen and (min-width: $mediumbreak) {
-        align-self: flex-start;
-        &:hover {
-          transform: scale(1.1);
-        }
+  }
+  a {
+    border:1px solid $color-eight;
+    background-color: $color-three;
+    border-radius: 4px;
+    padding: 3px 4px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    color: $color-eight;
+    display: block;
+    width: 13rem;
+    text-align: center;
+    align-self: center;
+    @media screen and (min-width: $mediumbreak) {
+      align-self: flex-start;
+      &:hover {
+        transform: scale(1.1);
+        text-decoration: none;
       }
     }
+  }
     p {
-      // align-self: flex-end;
-      // width: 50%;
-      color: black;
+      width: 40%;
     }
     img {
       width: 250px;
@@ -67,9 +71,6 @@
           margin: 0;
         }
     }
-    h4 {
-      margin-right: 138px;
-    }
     .stars {
       display: flex;
       align-items: center;
@@ -77,12 +78,39 @@
         margin-right: 10px;
       }
     }
-    // @media screen and (min-width:$mediumbreak) {
-    //   align-items: flex-end;
-    //
-    //   }
-
   }
+  .profile-row-one {
+    border-top: 1px solid lighten($color-two, 40%);
+    h4 {
+      margin-bottom: 5%;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      @extend %tags;
+      li {
+        list-style-type: none;
+        font-size: 2.5rem;
+        width: 140px;
+        }
+      }
+      .interest {
+        ul {
+           @extend %tags;
+        }
+        @media screen and (min-width: $largebreak) {
+          margin-left: 10%;
+        }
+      }
+      @media screen and (min-width:$largebreak) {
+          display: flex;
+          justify-content: space-between;
+          max-width: 1000px;
+        }
+      }
+
+
+
   .edit-info {
     .profile-form {
       width: 100%;
@@ -91,10 +119,3 @@
 
     }
 }
-  @media screen and (min-width:$largebreak) {
-    .profile-row-one {
-      display: flex;
-      justify-content: space-between;
-      max-width: 1000px;
-    }
-  }
