@@ -7,22 +7,23 @@
   <% else%>
     <img src="/img/<%= @user.photo %>" alt="user photo" />
   <% end %>
+  <!-- EDIT PROFILE -->
   <a href="/users/<%= @user.id %>/edit">Edit profile</a>
 
 <!-- GREETING -->
 <h1>Hello,  <%= @user.first_name %> <%= @user.last_name%></h1>
 
-<!-- USER RATING -->
+<!-- user rating -->
 <div class="stars">
   <h4>My Rating:</h4>
   <% if @user.rating.nil? %>
-    <% (5).times do %>
-      <span id="grey_star" class="glyphicon glyphicon-star"></span>
-    <% end %>
-    <% else %>
-      <% (@user.rating).times do %>
-      <span class="glyphicon glyphicon-star"></span>
-    <% end %>
+  <% (5).times do %>
+  <span id="grey_star" class="glyphicon glyphicon-star"></span>
+  <% end %>
+  <% else %>
+  <% (@user.rating).times do %>
+  <span class="glyphicon glyphicon-star"></span>
+  <% end %>
   <% end %>
 </div>
 
@@ -35,28 +36,27 @@
 <% end %>
   <hr>
 </div>
-
 <!-- LIST OF SKILLS -->
 <section class="profile-row-one">
-<section class="list-of-skills">
-  <h4>My skills</h4>
-  <% if @user.skills.any? %>
-  <ul>
-    <% @user.skills.each do |skill| %>
-    <li><%= skill.title %>
-      <ul>
-        <% skill.tags.each do |tag| %>
-        <li><%= tag.name %></li>
-        <% end %>
-      </ul>
-    </li>
+  <section class="list-of-skills">
+    <h4>My skills</h4>
+    <% if @user.skills.any? %>
+    <ul>
+      <% @user.skills.each do |skill| %>
+      <li><%= skill.title %>
+        <ul>
+          <% skill.tags.each do |tag| %>
+          <li><%= tag.name %></li>
+          <% end %>
+        </ul>
+      </li>
+      <% end %>
+    </ul>
+    <% else %>
+    <p>It looks like you haven't added any skills to trade. <a href="/users/<%= @user.id %>/edit">Get started</a></p>
     <% end %>
-  </ul>
-  <% else %>
-  <p>It looks like you haven't added any skills to trade. <a href="/users/<%= @user.id %>/edit">Get started</a></p>
-  <% end %>
-  <hr>
-</section>
+    <hr>
+  </section>
 
 <!-- USER INTERESTS -->
 <section class="interest">
@@ -65,8 +65,8 @@
   <ul>
     <% @user.tags.each do |tag| %>
     <li><%= tag.name %></li>
-    <% end %>
   </ul>
+  <% end %>
   <% else %>
   <p>What are you interested in trading for? <a href="/users/<%= @user.id %>/edit">Add Interests</a></p>
   <% end %>
