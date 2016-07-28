@@ -1,25 +1,27 @@
 <header class="head-two form-header">
 </header>
 <h1>Browse <%= @tag.name %></h1>
-  <h5>Explore Other Categories</h5>
+<h5>Explore Other Categories</h5>
+<div class="browse-content">  
   <% if @tags %>
     <ul>
       <% @tags.each do |tag| %>
-      <li><a href="/tags/<%= tag.id %>"><%= tag.name %></a></li>
+      <li class="browse-tag"><a href="/tags/<%= tag.id %>"><%= tag.name %></a></li>
       <% end %>
     </ul>
   <% end %>
 
-<!-- GRIDDED SKILLS -->
-<section id="featured">
-  <% if @skills.any? %>
-      <% @skills.each do |skill| %>
-        <div class="featured-image main">
-          <img class="browse_img" src="/img/<%=skill.id%>.jpg" alt="<%=skill.id%>"/>
-          <a href="/user/profile/<%=skill.user.id %>"><div class="overlay">
-              <p><%= skill.title %>:<br> <%= skill.description %></p>
-            </div></a>
-          </div>
-      <% end %>
-  <% end %>
-</section>
+  <!-- GRIDDED SKILLS -->
+  <section id="featured">
+    <% if @skills.any? %>
+        <% @skills.each do |skill| %>
+          <div class="featured-image main">
+            <img class="browse_img" src="/img/<%=skill.id%>.jpg" alt="<%=skill.id%>"/>
+            <a href="/user/profile/<%=skill.user.id %>"><div class="overlay">
+                <p><%= skill.title %>:<br> <%= skill.description %></p>
+              </div></a>
+            </div>
+        <% end %>
+    <% end %>
+  </section>
+</div>
