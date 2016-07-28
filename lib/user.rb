@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :skills
   has_and_belongs_to_many(:tags)
+  has_and_belongs_to_many(:ratings)
 
   validates(:first_name, {:presence => true})
   validates(:last_name, {:presence => true})
