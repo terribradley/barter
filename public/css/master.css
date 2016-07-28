@@ -50,7 +50,8 @@ html {
 
 .signup
 button, .signup-form button
-button, .edit-info button
+button, .profile-row-two
+button, .edit-info
 button, .user .left-column
 button, #trades form
 button, .security-form button
@@ -72,7 +73,7 @@ textarea {
 
 .profile-row-one ul
 .tag-name, .edit .list-of-skills ul li
-.tag-name, .edit-info .column-two ul li
+.tag-name, .edit-info .column-two ul
 .tag-name, .user .right-column ul
 .tag-name {
   font-size: 1.7rem;
@@ -756,8 +757,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%; }
-  .avatar hr {
-    width: 100%; }
   .avatar a {
     border: 1px solid #610c24;
     background-color: white;
@@ -812,6 +811,24 @@ body {
       justify-content: space-between;
       max-width: 1000px; } }
 
+.profile-row-two {
+  border-top: 1px solid #666666; }
+  .profile-row-two h4 {
+    font-size: 2.5rem;
+    margin-bottom: 5%; }
+  .profile-row-two h4 {
+    font-size: 2.1rem; }
+  .profile-row-two p {
+    font-size: 1.9rem; }
+  .profile-row-two li {
+    font-size: 1.9rem; }
+  .profile-row-two button {
+    margin: 2%; }
+  .profile-row-two .trade-offer {
+    border: 0.3px solid #666666;
+    border-radius: 3px;
+    background-color: #fafdf9; }
+
 .edit-info .profile-form {
   width: 100%;
   margin: 2% auto;
@@ -837,9 +854,6 @@ body {
       margin-left: 10%; }
       .edit .right-column h4 {
         font-size: 2.5rem; } }
-@media screen and (min-width: 1024px) {
-  .edit {
-    max-width: 50%; } }
 
 .edit-info {
   border-top: 1px solid #666666; }
@@ -891,15 +905,17 @@ body {
       width: 140px; }
 
 @media screen and (min-width: 1024px) {
-  display: flex;
-  flex-direction: column;
   .row-one {
-    display: flex; }
+    width: 100%;
+    display: flex;
+    flex-direction: row; }
     .row-one .skill-form {
-      margin-left: 5%;
-      width: 50%; }
+      margin: 0;
+      margin-left: 5%; }
     .row-one .profile-form {
-      width: 50%; }
+      margin: 0;
+      margin-right: 0;
+      width: 100%; }
 
   .row-two {
     margin-top: 5%;
@@ -925,25 +941,38 @@ body {
     align-items: center; }
 
 .user {
-  margin-bottom: 5%; }
+  display: flex;
+  margin: 0 5%; }
   .user h4 {
     font-size: 2.5rem; }
+  .user .left-column img {
+    margin: 10%; }
+    @media screen and (min-width: 700px) {
+      .user .left-column img {
+        margin: 0; } }
   .user .left-column p {
     font-size: 1.9rem; }
-  .user .right-column h5 {
-    font-size: 1.9rem; }
-  .user .right-column ul {
-    display: flex;
-    flex-direction: column; }
-    .user .right-column ul #description {
-      font-size: 1.5rem;
-      margin-left: 10px; }
-    .user .right-column ul li {
-      list-style-type: none;
-      font-size: 2.3rem;
-      width: 140px; }
-  .user .right-column h4 {
-    margin: 0; }
+  .user .right-column {
+    width: 50%; }
+    .user .right-column h5 {
+      font-size: 1.9rem; }
+    .user .right-column .skills {
+      margin-top: 5%; }
+      @media screen and (min-width: 1024px) {
+        .user .right-column .skills {
+          border: 0.3px solid #666666; } }
+    .user .right-column ul {
+      display: flex;
+      flex-direction: column; }
+      .user .right-column ul #description {
+        font-size: 1.5rem;
+        margin-left: 10px; }
+      .user .right-column ul li {
+        list-style-type: none;
+        font-size: 2.3rem;
+        width: 140px; }
+    .user .right-column h4 {
+      margin: 0; }
 
 #trades {
   margin-top: 5%;
