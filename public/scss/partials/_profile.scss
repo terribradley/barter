@@ -36,9 +36,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  hr {
-    width: 100%;
-  }
   a {
     border:1px solid $color-eight;
     background-color: $color-three;
@@ -106,6 +103,31 @@ body {
           display: flex;
           justify-content: space-between;
           max-width: 1000px;
+        }
+      }
+      .profile-row-two {
+        border-top: 1px solid lighten($color-two, 40%);
+        h4 {
+          font-size: $medium-font;
+          margin-bottom: 5%;
+        }
+        h4 {
+          font-size: $medium-font - .4rem;
+        }
+        p {
+          font-size: 1.9rem;
+        }
+        li {
+          font-size: 1.9rem;
+        }
+        @extend %buttons;
+        button {
+          margin: 2%;
+        }
+        .trade-offer {
+          border: .3px solid lighten($color-two, 40%);
+          border-radius: 3px;
+          background-color: $color-nine;
         }
       }
 

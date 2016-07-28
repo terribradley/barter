@@ -30,6 +30,10 @@ $img-head-nine: url(../img/baking_trap.jpg);
 $img-head-ten: url(../img/boxing.jpg);
 $img-head-eleven: url(../img/tambourine.jpg);
 
+$img-head-thirty: url(../img/gears.jpg);
+$img-head-thirtyone: url(../img/lanterns.jpg);
+$img-head-thirtytwo: url(../img/neon.jpg);
+
 
 $images: (
   head-one: $img-head-one,
@@ -42,5 +46,8 @@ $images: (
   head-eight: $img-head-eight,
   head-nine: $img-head-nine,
   head-ten: $img-head-ten,
-  head-eleven: $img-head-eleven
+  head-eleven: $img-head-eleven,
+  head-thirty: $img-head-thirty,
+  head-thirtyone: $img-head-thirtyone,
+  head-thirtytwo: $img-head-thirtytwo
 );

@@ -95,6 +95,9 @@ nav {
       background-color: $color-four;
       position: relative;
       padding: 0% 2%;
+      img {
+        margin: 0;
+      }
       h1 {
         margin-right: auto;
         padding-left: 10px;
