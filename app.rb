@@ -228,18 +228,18 @@ get('/photos') do
 end
 
 # CLEAR OUT DATABASE
-get('/clear') do
-  User.all.each do |user|
-    user.destroy
-  end
-  Tag.all.each do |tag|
-    tag.destroy
-  end
-  Skill.all.each do |skill|
-    skill.destroy
-  end
-  redirect("/")
-end
+# get('/clear') do
+#   User.all.each do |user|
+#     user.destroy
+#   end
+#   Tag.all.each do |tag|
+#     tag.destroy
+#   end
+#   Skill.all.each do |skill|
+#     skill.destroy
+#   end
+#   redirect("/")
+# end
 
   get('/clear/trades') do
   Trade.all.each do |trade|
