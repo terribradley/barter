@@ -58,6 +58,7 @@
 
 nav {
   display: none;
+  position: relative;
   .nav-links {
     display: none;
   }
@@ -75,7 +76,6 @@ nav {
         width: 40%;
         // margin: 0 auto;
         justify-content: space-between;
-
         a {
           text-decoration: none;
           color: $color-one;
@@ -92,16 +92,47 @@ nav {
       justify-content: space-between;
       height: 8vh;
       background-color: $color-four;
-        h1 {
-          margin-right: auto;
-          padding-left: 10px;
-          color: $color-nine;
+      position: relative;
+      h1 {
+        margin-right: auto;
+        padding-left: 10px;
+        color: $color-nine;
+        }
+       .nav-links {
+         width: 30%;
+         a {
+          color: $color-three;
           }
-         .nav-links {
-           width: 30%;
-           a {
-            color: $color-three;
-            }
-          }
+        }
     }
+}
+
+.login-form {
+  position: absolute;
+  top: 8vh;
+  right: 0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 9rem;
+  width: 55rem;
+  border-radius: 2%;
+  background-color: transparentize($color-four, .2);
+  color: white;
+  // display: none;
+  input {
+    margin: 0 .7rem .7rem .7rem;
+  }
+  button {
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 3px;
+    width: 5rem;
+    height: 3rem;
+    color: $color-four;
+  }
+  a {
+    color: $color-five;
+  }
 }
