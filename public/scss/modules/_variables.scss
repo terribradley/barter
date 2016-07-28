@@ -20,10 +20,12 @@ $color-ten: #4b5564;
 $img-head-one: url(../img/market.jpg);
 $img-head-two: url(../img/street-market.jpeg);
 $img-head-three: url(../img/hands.jpg);
+$img-head-four: url(../img/food.jpg);
 
 
 $images: (
   head-one: $img-head-one,
   head-two: $img-head-two,
-  head-three: $img-head-three
+  head-three: $img-head-three,
+  head-four: $img-head-four
 );
