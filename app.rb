@@ -60,11 +60,12 @@ patch('/users/edit/tags/want') do
 end
 
 # USER UPDATE TAGS HAVE
-  patch('/skills/tags/new') do
+patch('/skills/tags/new') do
   skill = Skill.find(params.fetch('skill_tag'))
   user = User.find(params.fetch('user_id').to_i)
   new_tags = params.fetch('tag_id')
   tags = []
+  skill.tags.destroy(skill.tags)
   new_tags.each do | tag |
     tags.push(Tag.find(tag.to_i))
   end

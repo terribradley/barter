@@ -88,7 +88,7 @@
     <div class="row-two">
       <div class="column-one">
         <% if @tags.any? %>
-        <h4>Add tags to your skills</h4>
+        <h4>Update tags for your skills</h4>
         <form class="add-tag-form" action="/skills/tags/new" method="post">
           <input type="hidden" name="_method" value="patch">
           <input type="hidden" name="user_id" value="<%= @user.id %>">
@@ -103,7 +103,7 @@
             <% @tags.each do |tag| %>
             <input type="checkbox" name="tag_id[]" id="tag_id[]" value="<%= tag.id %>"><%= tag.name %>
             <% end %>
-            <span class="tag"><button type="submit">Add Tag</button></span>
+            <span class="tag"><button type="submit">Update Tags</button></span>
             <% end %>
           </form>
         <% end %>
