@@ -16,6 +16,27 @@ html {
 .head-four {
   background-image: url(../img/food.jpg); }
 
+.head-five {
+  background-image: url(../img/bike.jpg); }
+
+.head-six {
+  background-image: url(../img/knitting.jpg); }
+
+.head-seven {
+  background-image: url(../img/woodworking.jpg); }
+
+.head-eight {
+  background-image: url(../img/gardener.jpg); }
+
+.head-nine {
+  background-image: url(../img/baking.jpg); }
+
+.head-ten {
+  background-image: url(../img/boxing.jpg); }
+
+.head-eleven {
+  background-image: url(../img/tambourine.jpg); }
+
 .sidebar-list ul, .sidebar ul {
   display: flex;
   padding: 0; }
