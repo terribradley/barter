@@ -32,35 +32,33 @@
       <p><%= @user.bio %></p>
       <% end %>
     </section>
+
     <!-- LIST OF SKILLS -->
-    <section class="right-column">
-      <h4>My skills</h4>
-      <% if @user.skills.any? %>
-      <ul>
-        <% @user.skills.each do |skill| %>
-        <li><%= skill.title %>
-          <ul>
-            <% skill.tags.each do |tag| %>
-            <li><%= tag.name %></li>
-            <% end %>
-          </ul>
-        </li>
-      </ul>
-      <% end %>
-      <% else %>
-      <p>It looks like you haven't added any skills to trade.</p>
-      <% end %>
-
-    </section>
-  </div>
-
+      <section class="right-column">
+        <h4>My skills</h4>
+        <% if @user.skills.any? %>
+        <ul>
+          <% @user.skills.each do |skill| %>
+          <li><%= skill.title %>
+            <ul>
+              <% skill.tags.each do |tag| %>
+              <li><%= tag.name %></li>
+              <% end %>
+            </ul>
+          </li>
+        </ul>
+        <% end %>
+        <% else %>
+        <p>It looks like you haven't added any skills to trade.</p>
+        <% end %>
+      </section>
+      </div>
 
   <!-- EDIT USER BIO -->
   <div class="edit-info">
-      <hr>
+    <hr>
     <h1>EDIT YOUR PROFILE</h1>
     <div class="row-one">
-
       <form class="profile-form" action="/users/edit/bio" method="post">
           <h4>Edit Your Bio:</h4>
         <input type="hidden" name="_method" value="patch">
@@ -70,9 +68,9 @@
         <button type="submit">Update Bio</button>
       </form>
 
-      <!-- ADD SKILL -->
+    <!-- ADD SKILL -->
       <form class="skill-form" action="/skills/add" method="post">
-          <h4>Add a skill</h4>
+        <h4>Add a skill</h4>
         <input type="hidden" name="user_id" value="<%= @user.id %>">
         <p>Add skills you have that you would like to trade with others. Be descriptive, and include your proficiency. Profiles with skill photos tend to get more trades.</p>
         <label for="skill_title">Skill Title</label>
@@ -81,7 +79,6 @@
         <textarea name="skill_description" rows="8" cols="40"></textarea>
         <button type="submit">Add skill</button>
       </form>
-
     </div>
 
     <!-- TAG YOUR SKILL -->
@@ -129,7 +126,6 @@
         <% end %>
       </div>
 
-
       <div class="column-two">
         <h1>EDIT YOUR SEARCHES:</h1>
         <% if @user.tags.any? %>
@@ -175,6 +171,10 @@
     </form>
   </div>
 
+
+  </div>
+
     </div>
+
   </div>
 </section>
