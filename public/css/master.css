@@ -36,6 +36,14 @@ html {
 .edit-info .profile-form, .edit-info .skill-form input, .edit-info .skill-form textarea {
   width: 100%; }
 
+.profile-row-one ul li .tag, .profile-row-one .interest ul .tag {
+  font-size: 1.7rem;
+  background-color: white;
+  border-radius: 2px;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 2px 0; }
+
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -769,11 +777,15 @@ nav h1 a {
   text-decoration: none;
   cursor: pointer; }
 
+body {
+  background-color: #efeff4; }
+
 .profile-content {
   width: 95vw;
   margin: 5% auto;
   display: flex;
   flex-direction: column;
+  background-color: #efeff4;
   padding: 2%; }
   .profile-content .skill-list, .profile-content .interest, .profile-content .list-of-skills, .profile-content .edit-info, .profile-content .skill-form {
     margin: 2% 0; }
@@ -801,10 +813,12 @@ nav h1 a {
     width: 100%; }
   .avatar a {
     border: 1px solid #610c24;
+    background-color: white;
     border-radius: 4px;
     padding: 3px 4px;
     margin-bottom: 5px;
     margin-top: 5px;
+    margin-left: 5px;
     color: #610c24;
     display: block;
     width: 13rem;
@@ -814,9 +828,10 @@ nav h1 a {
       .avatar a {
         align-self: flex-start; }
         .avatar a:hover {
-          transform: scale(1.1); } }
+          transform: scale(1.1);
+          text-decoration: none; } }
   .avatar p {
-    color: black; }
+    width: 40%; }
   .avatar img {
     width: 250px;
     height: 250px;
@@ -831,6 +846,18 @@ nav h1 a {
     align-items: center; }
     .avatar .stars h4 {
       margin-right: 10px; }
+
+.profile-row-one h4 {
+  margin-bottom: 5%; }
+.profile-row-one ul {
+  display: flex;
+  flex-direction: column; }
+  .profile-row-one ul li {
+    list-style-type: none;
+    font-size: 2.5rem;
+    width: 140px; }
+.profile-row-one .interest {
+  margin-left: 10%; }
 
 .edit-info .profile-form {
   width: 100%;
