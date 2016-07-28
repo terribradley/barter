@@ -35,28 +35,27 @@
 <% end %>
   <hr>
 </div>
-
-<section class="profile-row-one"
-    <!-- LIST OF SKILLS -->
-<section class="list-of-skills">
-  <h4>My skills</h4>
-  <% if @user.skills.any? %>
-  <ul>
-    <% @user.skills.each do |skill| %>
-    <li><%= skill.title %>
-      <ul>
-        <% skill.tags.each do |tag| %>
-        <li><%= tag.name %></li>
-        <% end %>
-      </ul>
-    </li>
+<!-- LIST OF SKILLS -->
+<section class="profile-row-one">
+  <section class="list-of-skills">
+    <h4>My skills</h4>
+    <% if @user.skills.any? %>
+    <ul>
+      <% @user.skills.each do |skill| %>
+      <li><%= skill.title %>
+        <ul>
+          <% skill.tags.each do |tag| %>
+          <li><%= tag.name %></li>
+          <% end %>
+        </ul>
+      </li>
+      <% end %>
+    </ul>
+    <% else %>
+    <p>It looks like you haven't added any skills to trade. <a href="/users/<%= @user.id %>/edit">Get started</a></p>
     <% end %>
-  </ul>
-  <% else %>
-  <p>It looks like you haven't added any skills to trade. <a href="/users/<%= @user.id %>/edit">Get started</a></p>
-  <% end %>
-  <hr>
-</section>
+    <hr>
+  </section>
 
 <!-- USER INTERESTS -->
 <section class="interest">
