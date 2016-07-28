@@ -1026,9 +1026,15 @@ body {
     align-items: center; }
 
 .user {
-  display: flex; }
+  display: flex;
+  margin: 0 5%; }
   .user h4 {
     font-size: 2.5rem; }
+  .user .left-column img {
+    margin: 10%; }
+    @media screen and (min-width: 700px) {
+      .user .left-column img {
+        margin: 0; } }
   .user .left-column p {
     font-size: 1.9rem; }
   .user .right-column {
@@ -1036,8 +1042,10 @@ body {
     .user .right-column h5 {
       font-size: 1.9rem; }
     .user .right-column .skills {
-      margin-top: 5%;
-      border: 0.3px solid #666666; }
+      margin-top: 5%; }
+      @media screen and (min-width: 1024px) {
+        .user .right-column .skills {
+          border: 0.3px solid #666666; } }
     .user .right-column ul {
       display: flex;
       flex-direction: column; }
