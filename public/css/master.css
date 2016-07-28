@@ -50,6 +50,7 @@ html {
 
 .signup
 button, .signup-form button
+button, .profile-row-two
 button, .edit-info
 button, .user .left-column
 button, #trades form
@@ -841,8 +842,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%; }
-  .avatar hr {
-    width: 100%; }
   .avatar a {
     border: 1px solid #610c24;
     background-color: white;
@@ -896,6 +895,24 @@ body {
       display: flex;
       justify-content: space-between;
       max-width: 1000px; } }
+
+.profile-row-two {
+  border-top: 1px solid #666666; }
+  .profile-row-two h4 {
+    font-size: 2.5rem;
+    margin-bottom: 5%; }
+  .profile-row-two h4 {
+    font-size: 2.1rem; }
+  .profile-row-two p {
+    font-size: 1.9rem; }
+  .profile-row-two li {
+    font-size: 1.9rem; }
+  .profile-row-two button {
+    margin: 2%; }
+  .profile-row-two .trade-offer {
+    border: 0.3px solid #666666;
+    border-radius: 3px;
+    background-color: #fafdf9; }
 
 .edit-info .profile-form {
   width: 100%;
@@ -982,7 +999,8 @@ body {
       margin-left: 5%; }
     .row-one .profile-form {
       margin: 0;
-      margin-right: 0; }
+      margin-right: 0;
+      width: 100%; }
 
   .row-two {
     margin-top: 5%;
