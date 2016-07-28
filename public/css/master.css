@@ -29,7 +29,7 @@ html {
   background-image: url(../img/gardener.jpg); }
 
 .head-nine {
-  background-image: url(../img/baking.jpg); }
+  background-image: url(../img/baking_trap.jpg); }
 
 .head-ten {
   background-image: url(../img/boxing.jpg); }
@@ -676,6 +676,8 @@ nav {
   position: relative;
   background-position: center;
   background-size: cover; }
+  .featured-image .browse_img {
+    width: 100%; }
   .featured-image .overlay {
     position: absolute;
     left: 10px;
