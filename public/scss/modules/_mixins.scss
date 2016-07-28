@@ -1,7 +1,6 @@
 @each $image-name, $image-value in $images {
   .#{$image-name} {
     background-image: #{$image-value};
-
   }
 }
 
