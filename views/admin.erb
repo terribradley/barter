@@ -4,6 +4,7 @@
   <h1>Welcome Admin</h1>
   <h3>Use the tools below to customize the barter pages!</h3>
 <div class="admin">
+  <section class="tags-created">
   <!-- LIST OF ALL TAGS -->
     <form action="/tags/new" method="post">
       <h4>Add tags for users to archive their barters:</h4>
@@ -11,7 +12,6 @@
       <input type="text" name="tag" id="tag">
       <button type="submit">Add tag</button>
     </form>
-    <section class="tags-created">
     <h4>Tags you've created:</h4>
     <% if @tags %>
     <ul>
@@ -23,9 +23,9 @@
   </section>
   <section class="delete">
     <!-- DELETE TAGS FORM -->
+    <h4>Delete Tags</h4>
     <form class="" action="/tags/delete" method="post">
       <% if @tags %>
-      <h4>Delete Tags</h4>
       <input type="hidden" name="_method" value="delete">
       <label for="delete_tags">Select Tag:</label>
       <select class="" name="tag_id" id="tag_id">
@@ -38,10 +38,10 @@
     </form>
 
     <!-- DELETE AN ACCOUNT -->
+    <h4>Close an account</h4>
     <form class="" action="/users/delete" method="post">
       <input type="hidden" name="_method" value="delete">
       <% if @users.any? %>
-      <h4>Close an account</h4>
       <label for="users">Users</label>
       <select class="" name="user_id" id="user_id">
         <% @users.each do |user| %>

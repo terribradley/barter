@@ -1029,33 +1029,59 @@ h3 {
   border-bottom: 1px solid #666666; }
 
 .admin {
-  width: 80%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-  .admin h4 {
-    font-size: 2.5rem; }
-  .admin input {
-    margin: 2% auto; }
-  .admin button {
-    margin-left: 2%;
-    font-size: 1.9rem; }
-  .admin .tags-created ul {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 50vh; }
-    .admin .tags-created ul .tag-name {
-      list-style-type: none;
-      width: 140px;
-      font-size: 1.7rem;
-      background-color: white;
-      border-radius: 2px;
-      text-align: center;
-      margin-bottom: 10px;
-      padding: 5px 0; }
+  .admin .tags-created {
+    padding-right: 10%; }
+    .admin .tags-created h4 {
+      font-size: 2.5rem; }
+    .admin .tags-created input {
+      margin: 2% auto;
+      width: 60%;
+      margin-right: 40%; }
+    .admin .tags-created button {
+      margin-left: 2px;
+      font-size: 1.9rem; }
+    .admin .tags-created ul {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 30vh;
+      padding-left: 0; }
+      @media screen and (min-width: 700px) {
+        .admin .tags-created ul {
+          height: 40vh; } }
+      @media screen and (min-width: 1024px) {
+        .admin .tags-created ul {
+          height: 100%; } }
+      .admin .tags-created ul .tag-name {
+        list-style-type: none;
+        width: 140px;
+        font-size: 1.7rem;
+        background-color: white;
+        border-radius: 2px;
+        text-align: center;
+        margin-bottom: 10px;
+        padding: 5px 0;
+        margin-left: 2px; }
   .admin .delete {
-    border-top: 1px solid #666666; }
+    border-top: 1px solid #666666;
+    display: flex;
+    flex-direction: column; }
+    .admin .delete h4 {
+      font-size: 2.5rem; }
+    .admin .delete label {
+      margin-right: 5%;
+      font-size: 2rem; }
+    .admin .delete button {
+      margin-right: 50%;
+      margin-top: 3%; }
+  @media screen and (min-width: 1024px) {
+    .admin {
+      flex-direction: row;
+      justify-content: space-between; }
+      .admin .delete {
+        border-top: none; } }
 
 /*# sourceMappingURL=master.css.map */
