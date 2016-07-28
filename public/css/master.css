@@ -60,6 +60,14 @@ html {
 .edit-info .profile-form, .edit-info .skill-form input, .edit-info .skill-form textarea {
   width: 100%; }
 
+.profile-row-one ul li .tag-name, .profile-row-one .interest ul .tag-name, .edit .list-of-skills ul li .tag-name, .edit-info .column-two ul li .tag-name {
+  font-size: 1.7rem;
+  background-color: white;
+  border-radius: 2px;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 2px 0; }
+
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -795,17 +803,21 @@ nav h1 a {
   text-decoration: none;
   cursor: pointer; }
 
+body {
+  background-color: #efeff4; }
+
 .profile-content {
   width: 95vw;
   margin: 5% auto;
   display: flex;
   flex-direction: column;
+  background-color: #efeff4;
   padding: 2%; }
-  .profile-content .skill-list, .profile-content .interest, .profile-content .list-of-skills, .profile-content .edit-info, .profile-content .skill-form {
+  .profile-content .interest, .profile-content .list-of-skills, .profile-content .edit-info, .profile-content .skill-form {
     margin: 2% 0; }
-    .profile-content .skill-list h4, .profile-content .interest h4, .profile-content .list-of-skills h4, .profile-content .edit-info h4, .profile-content .skill-form h4 {
+    .profile-content .interest h4, .profile-content .list-of-skills h4, .profile-content .edit-info h4, .profile-content .skill-form h4 {
       font-size: 2.5rem; }
-    .profile-content .skill-list p, .profile-content .interest p, .profile-content .list-of-skills p, .profile-content .edit-info p, .profile-content .skill-form p {
+    .profile-content .interest p, .profile-content .list-of-skills p, .profile-content .edit-info p, .profile-content .skill-form p {
       font-size: 1.9rem; }
   @media screen and (min-width: 700px) {
     .profile-content {
@@ -827,10 +839,12 @@ nav h1 a {
     width: 100%; }
   .avatar a {
     border: 1px solid #610c24;
+    background-color: white;
     border-radius: 4px;
     padding: 3px 4px;
     margin-bottom: 5px;
     margin-top: 5px;
+    margin-left: 5px;
     color: #610c24;
     display: block;
     width: 13rem;
@@ -840,9 +854,10 @@ nav h1 a {
       .avatar a {
         align-self: flex-start; }
         .avatar a:hover {
-          transform: scale(1.1); } }
+          transform: scale(1.1);
+          text-decoration: none; } }
   .avatar p {
-    color: black; }
+    width: 40%; }
   .avatar img {
     width: 250px;
     height: 250px;
@@ -858,16 +873,42 @@ nav h1 a {
     .avatar .stars h4 {
       margin-right: 10px; }
 
+.profile-row-one {
+  border-top: 1px solid #666666; }
+  .profile-row-one h4 {
+    margin-bottom: 5%; }
+  .profile-row-one ul {
+    display: flex;
+    flex-direction: column; }
+    .profile-row-one ul li {
+      list-style-type: none;
+      font-size: 2.5rem;
+      width: 140px; }
+  @media screen and (min-width: 1024px) {
+    .profile-row-one .interest {
+      margin-left: 10%; } }
+  @media screen and (min-width: 1024px) {
+    .profile-row-one {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1000px; } }
+
 .edit-info .profile-form {
   width: 100%;
   margin: 2% auto;
   background-color: none; }
 
-@media screen and (min-width: 1024px) {
-  .profile-row-one {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1000px; } }
+.edit p {
+  width: 90%; }
+.edit h4 {
+  margin-bottom: 5%; }
+.edit .list-of-skills ul {
+  display: flex;
+  flex-direction: column; }
+  .edit .list-of-skills ul li {
+    list-style-type: none;
+    font-size: 2.5rem;
+    width: 140px; }
 @media screen and (min-width: 700px) {
   .edit {
     display: flex;
@@ -902,6 +943,8 @@ nav h1 a {
       font-weight: 500; }
     .edit-info .skill-form input, .edit-info .skill-form textarea {
       margin-top: 5px; }
+  .edit-info .row-two {
+    border-top: 1px solid #666666; }
   .edit-info .add-tag-form {
     display: flex;
     flex-wrap: wrap; }
@@ -920,6 +963,13 @@ nav h1 a {
       display: flex;
       justify-content: space-between;
       align-items: center; }
+  .edit-info .column-two ul {
+    display: flex;
+    flex-direction: column; }
+    .edit-info .column-two ul li {
+      list-style-type: none;
+      font-size: 1.5rem;
+      width: 140px; }
   @media screen and (min-width: 1024px) {
     .edit-info {
       display: flex;
@@ -933,8 +983,7 @@ nav h1 a {
           width: 50%; }
       .edit-info .row-two {
         margin-top: 5%;
-        display: flex;
-        border-top: 1px solid #666666; }
+        display: flex; }
         .edit-info .row-two .column-one {
           display: flex;
           flex-direction: column;

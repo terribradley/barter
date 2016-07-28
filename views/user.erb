@@ -28,25 +28,27 @@
 </div>
 
 <!-- USER BIO -->
-<h4>Bio:</h4>
-<% if @user.bio %>
+<section class="bio">
+  <h4>Bio</h4>
+  <% if @user.bio %>
   <p><%= @user.bio %></p>
   <% else%>
   <p>Your profile is missing a bio. <a href="/users/<%= @user.id %>/edit">Add one</a></p>
-<% end %>
+  <% end %>
+</section>
   <hr>
 </div>
 <!-- LIST OF SKILLS -->
 <section class="profile-row-one">
   <section class="list-of-skills">
-    <h4>My skills</h4>
+    <h4>Services/Skills/Goods that I have to barter with</h4>
     <% if @user.skills.any? %>
     <ul>
       <% @user.skills.each do |skill| %>
       <li><%= skill.title %>
         <ul>
           <% skill.tags.each do |tag| %>
-          <li><%= tag.name %></li>
+          <li class="tag-name"><%= tag.name %></li>
           <% end %>
         </ul>
       </li>
@@ -60,13 +62,13 @@
 
 <!-- USER INTERESTS -->
 <section class="interest">
-  <h4>Stuff I'm interested in:</h4>
+  <h4>Services and goods I want to barter for</h4>
   <% if @user.tags.any? %>
   <ul>
     <% @user.tags.each do |tag| %>
-    <li><%= tag.name %></li>
+    <li class="tag-name"><%= tag.name %></li>
+    <% end %>
   </ul>
-  <% end %>
   <% else %>
   <p>What are you interested in trading for? <a href="/users/<%= @user.id %>/edit">Add Interests</a></p>
   <% end %>

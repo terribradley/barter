@@ -35,3 +35,12 @@
 %textarea {
   width: 100%;
 }
+%tags {
+  font-size: 1.7rem;
+  // border: .6px solid $color-eight;
+  background-color: $color-three;
+  border-radius: 2px;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 2px 0;
+}
