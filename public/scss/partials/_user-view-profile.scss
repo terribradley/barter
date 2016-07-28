@@ -1,6 +1,6 @@
 
 .user {
-  margin-bottom: 5%;
+  display: flex;
 
   h4 {
     font-size: $medium-font;
@@ -13,8 +13,15 @@
     }
   }
   .right-column {
+    width: 50%;
     h5 {
       font-size: 1.9rem;
+    }
+    .skills {
+      margin-top: 5%;
+      border: .3px solid lighten($color-two, 40%);
+
+
     }
       ul {
         display: flex;
@@ -22,6 +29,7 @@
         #description {
           font-size: 1.5rem;
           margin-left: 10px;
+
         }
         li {
           list-style-type: none;

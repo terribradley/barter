@@ -50,7 +50,7 @@ html {
 
 .signup
 button, .signup-form button
-button, .edit-info button
+button, .edit-info
 button, .user .left-column
 button, #trades form
 button, .admin
@@ -71,7 +71,7 @@ textarea {
 
 .profile-row-one ul
 .tag-name, .edit .list-of-skills ul li
-.tag-name, .edit-info .column-two ul li
+.tag-name, .edit-info .column-two ul
 .tag-name, .user .right-column ul
 .tag-name {
   font-size: 1.7rem;
@@ -922,9 +922,6 @@ body {
       margin-left: 10%; }
       .edit .right-column h4 {
         font-size: 2.5rem; } }
-@media screen and (min-width: 1024px) {
-  .edit {
-    max-width: 50%; } }
 
 .edit-info {
   border-top: 1px solid #666666; }
@@ -976,15 +973,16 @@ body {
       width: 140px; }
 
 @media screen and (min-width: 1024px) {
-  display: flex;
-  flex-direction: column;
   .row-one {
-    display: flex; }
+    width: 100%;
+    display: flex;
+    flex-direction: row; }
     .row-one .skill-form {
-      margin-left: 5%;
-      width: 50%; }
+      margin: 0;
+      margin-left: 5%; }
     .row-one .profile-form {
-      width: 50%; }
+      margin: 0;
+      margin-right: 0; }
 
   .row-two {
     margin-top: 5%;
@@ -1010,25 +1008,30 @@ body {
     align-items: center; }
 
 .user {
-  margin-bottom: 5%; }
+  display: flex; }
   .user h4 {
     font-size: 2.5rem; }
   .user .left-column p {
     font-size: 1.9rem; }
-  .user .right-column h5 {
-    font-size: 1.9rem; }
-  .user .right-column ul {
-    display: flex;
-    flex-direction: column; }
-    .user .right-column ul #description {
-      font-size: 1.5rem;
-      margin-left: 10px; }
-    .user .right-column ul li {
-      list-style-type: none;
-      font-size: 2.3rem;
-      width: 140px; }
-  .user .right-column h4 {
-    margin: 0; }
+  .user .right-column {
+    width: 50%; }
+    .user .right-column h5 {
+      font-size: 1.9rem; }
+    .user .right-column .skills {
+      margin-top: 5%;
+      border: 0.3px solid #666666; }
+    .user .right-column ul {
+      display: flex;
+      flex-direction: column; }
+      .user .right-column ul #description {
+        font-size: 1.5rem;
+        margin-left: 10px; }
+      .user .right-column ul li {
+        list-style-type: none;
+        font-size: 2.3rem;
+        width: 140px; }
+    .user .right-column h4 {
+      margin: 0; }
 
 #trades {
   margin-top: 5%;

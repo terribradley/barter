@@ -76,7 +76,7 @@
     <hr>
   </section>
 </section>
-
+<section class="profile-row-two">
 <!-- USER TRADES -->
     <% if @user.skills.any? %>
     <h4>My trades:</h4>
@@ -88,7 +88,7 @@
             <input type="hidden" name="trade_id" value="<%= trade.id %>">
             <input type="hidden" name="user_id" value="<%= @user.id %>">
           <ol>
-            <hr>
+
             <%if trade.agree? %>
               <strong><p>This trade is active!</p></strong>
               </form>
@@ -113,3 +113,4 @@
           <% end %>
       <% end %>
     <% end %>
+</section>
