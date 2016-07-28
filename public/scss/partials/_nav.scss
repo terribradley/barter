@@ -140,4 +140,37 @@ nav {
     height: 9rem;
     width: 55rem;
   }
+  @media screen and (min-width: $mediumbreak){
+    height: 9rem;
+    width: 55rem;
+    border-radius: 2%;
+    top: 24vh;
+    right: 18vw;
+    background-color: transparentize(white, .2);
+    color: $color-four;
+    button {
+      background-color: $color-four;
+      border-color: $color-four;
+      color: white;
+    }
+  }
+  @media screen and (min-width: $largebreak) {
+    top: 8vh;
+    right: 0;
+    height: 9rem;
+    width: 55rem;
+    background-color: transparentize($color-four, .2);
+    color: white;
+    button {
+      background-color: white;
+      border: 2px solid white;
+      border-radius: 3px;
+      width: 5rem;
+      height: 3rem;
+      color: $color-four;
+    }
+    a {
+      color: $color-five;
+    }
+  }
 }
