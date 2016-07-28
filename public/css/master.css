@@ -554,7 +554,8 @@ nav {
       justify-content: space-between;
       height: 8vh;
       background-color: #1c3873;
-      position: relative; }
+      position: relative;
+      padding: 0% 2%; }
       nav h1 {
         margin-right: auto;
         padding-left: 10px;
@@ -568,15 +569,12 @@ nav {
   position: absolute;
   top: 8vh;
   right: 0;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  flex-wrap: wrap;
   height: 9rem;
   width: 55rem;
   border-radius: 2%;
   background-color: rgba(28, 56, 115, 0.8);
-  color: white; }
+  color: white;
+  display: none; }
   .login-form input {
     margin: 0 .7rem .7rem .7rem; }
   .login-form button {
@@ -588,6 +586,13 @@ nav {
     color: #1c3873; }
   .login-form a {
     color: #b78f44; }
+  .login-form .login-form-content {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 9rem;
+    width: 55rem; }
 
 .footer-2 {
   background: #1c3873;

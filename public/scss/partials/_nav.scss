@@ -93,6 +93,7 @@ nav {
       height: 8vh;
       background-color: $color-four;
       position: relative;
+      padding: 0% 2%;
       h1 {
         margin-right: auto;
         padding-left: 10px;
@@ -111,16 +112,12 @@ nav {
   position: absolute;
   top: 8vh;
   right: 0;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  flex-wrap: wrap;
   height: 9rem;
   width: 55rem;
   border-radius: 2%;
   background-color: transparentize($color-four, .2);
   color: white;
-  // display: none;
+  display: none;
   input {
     margin: 0 .7rem .7rem .7rem;
   }
@@ -134,5 +131,13 @@ nav {
   }
   a {
     color: $color-five;
+  }
+  .login-form-content {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 9rem;
+    width: 55rem;
   }
 }
