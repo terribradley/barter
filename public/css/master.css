@@ -83,7 +83,7 @@ textarea {
   width: 100%; }
 
 .profile-row-one ul
-.tag-name, .edit .list-of-skills ul li
+.tag-name, .edit .list-of-skills ul
 .tag-name, .edit-info .column-two ul
 .tag-name, .user .right-column ul
 .tag-name {
@@ -621,7 +621,6 @@ header {
   @media screen and (min-width: 700px) {
     .featured-image {
       width: 45%;
-      margin-left: 5%;
       overflow: hidden;
       margin-bottom: 5%; }
       .featured-image .overlay {
@@ -642,7 +641,8 @@ header {
     .featured-image {
       width: 20%;
       height: 250px;
-      margin-left: 5%; } }
+      margin-left: 2.5%;
+      margin-right: 2.5%; } }
 
 .head-three {
   background-size: auto;
@@ -775,6 +775,8 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%; }
+  .avatar h1 {
+    margin: 10px 0; }
   .avatar a {
     border: 1px solid #610c24;
     background-color: white;
@@ -839,7 +841,8 @@ body {
   .profile-row-two p {
     font-size: 1.9rem; }
   .profile-row-two li {
-    font-size: 1.9rem; }
+    font-size: 1.9rem;
+    width: 140px; }
   .profile-row-two button {
     margin: 2%; }
   .profile-row-two .trade-offer {
@@ -863,7 +866,7 @@ body {
   .edit .list-of-skills ul li {
     list-style-type: none;
     font-size: 2.5rem;
-    width: 200px; }
+    width: 140px; }
 @media screen and (min-width: 700px) {
   .edit {
     display: flex;
@@ -962,32 +965,42 @@ body {
 .user {
   display: flex;
   margin: 0 5%; }
+  @media screen and (min-width: 700px) {
+    .user {
+      margin: 0; } }
   .user h4 {
     font-size: 2.5rem; }
-  .user .left-column img {
-    margin: 10%; }
+  .user .left-column {
+    border-bottom: 0.3px solid #666666;
+    margin-bottom: 5%; }
     @media screen and (min-width: 700px) {
-      .user .left-column img {
-        margin: 0; } }
-  .user .left-column p {
-    font-size: 1.9rem; }
+      .user .left-column {
+        border-bottom: none; } }
+    .user .left-column img {
+      margin: 10%; }
+      @media screen and (min-width: 700px) {
+        .user .left-column img {
+          margin: 0; } }
+    .user .left-column p {
+      font-size: 1.9rem; }
   .user .right-column {
     width: 50%; }
     .user .right-column h5 {
       font-size: 1.9rem; }
     .user .right-column .skills {
-      margin-top: 5%; }
+      margin-top: 5%;
+      padding: 2%; }
       @media screen and (min-width: 1024px) {
         .user .right-column .skills {
           border: 0.3px solid #666666; } }
+    .user .right-column #description {
+      font-size: 1.5rem;
+      margin-left: 10px;
+      width: 180%; }
     .user .right-column ul {
       display: flex;
       flex-direction: column;
       padding-right: 5%; }
-      .user .right-column ul #description {
-        font-size: 1.5rem;
-        margin-left: 10px;
-        width: 180%; }
       .user .right-column ul li {
         list-style-type: none;
         font-size: 2.3rem;
@@ -1188,7 +1201,7 @@ nav {
     width: 5rem;
     height: 3rem;
     color: #1c3873; }
-  .login-form-side p > a {
+  .login-form-side p a {
     color: #b78f44; }
 
 .login-form {

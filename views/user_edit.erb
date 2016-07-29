@@ -39,15 +39,14 @@
         <section class="list-of-skills">
           <h4>Services/Skills/Goods that I have to barter with</h4>
           <% if @user.skills.any? %>
-          <ul>
             <% @user.skills.each do |skill| %>
-            <li><%= skill.title %>
+            <h4><%= skill.title %></h4>
               <ul>
                 <% skill.tags.each do |tag| %>
                 <li class="tag-name"><%= tag.name %></li>
                 <% end %>
               </ul>
-            </li>
+
             <% end %>
           </ul>
           <% else %>

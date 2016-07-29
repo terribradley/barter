@@ -36,6 +36,9 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  h1 {
+    margin: 10px 0;
+  }
   a {
     border:1px solid $color-eight;
     background-color: $color-three;
@@ -119,6 +122,7 @@ body {
         }
         li {
           font-size: 1.9rem;
+          width: 140px;
         }
         @extend %buttons;
         button {

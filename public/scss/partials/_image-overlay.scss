@@ -19,11 +19,6 @@
   position: relative;
   background-position: center;
   background-size: cover;
-  // img {
-  //   w
-  // }
-
-
   .browse_img {
     width: 100%;
   }
@@ -35,7 +30,6 @@
   }
   @media screen and (min-width: $mediumbreak) {
     width: 45%;
-    margin-left: 5%;
     overflow: hidden;
     margin-bottom: 5%;
     .overlay {
@@ -61,6 +55,7 @@
   @media screen and (min-width: $largebreak) {
     width: 20%;
     height: 250px;
-    margin-left: 5%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
   }
 }

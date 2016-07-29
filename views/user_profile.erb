@@ -50,9 +50,9 @@
       <h4><%= @user.first_name %>'s skills</h4>
       <% if @user.skills.any? %>
       <div class="skills">
-        <ul>
+
           <% @user.skills.each do |skill| %>
-          <li><%= skill.title %>
+          <h4><%= skill.title %><h4>
             <br>
             <h5>Details:</h5>
             <div id="description"><%= skill.description %></div>
@@ -62,9 +62,8 @@
               <li class="tag-name"><%= tag.name %></li>
               <% end %>
             </ul>
-          </li>
           <% end %>
-        </ul>
+
         <% end %>
       </div>
     </section>
