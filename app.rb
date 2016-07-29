@@ -175,7 +175,7 @@ get('/trades/new') do
   @skill_wanted = Skill.find(@skill_wanted_id)
   password = params.fetch('user_password')
   @user_offering = User.find_by({:password => password})
-  if @user_offering.skills.nil?
+  if @user_offering.skills == []
     erb(:no_skill_error)
   else
   erb(:trade_form)

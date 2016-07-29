@@ -1,4 +1,4 @@
-# Berter Bay
+# Barter Bay
 A site for barter commerce, for the week 5 group project (Ruby and CSS) at Epicodus, July 29, 2016
 
 By Terri Bradley, Kyle Helyar, Brett New and Julia Dickey
