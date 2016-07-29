@@ -19,11 +19,11 @@
   }
 }
 .signup-form {
+  @extend %buttons;
   width: 350px;
   height: 500px;
   display: flex;
   flex-direction: column;
-  // box-shadow: 10px 10px 5px #888888;
   border: 1px solid $color-one;
   margin-right: 30px;
   margin-bottom: 10px;
@@ -39,8 +39,7 @@
   }
   button {
     margin-top: 15px;
-      margin-right: 25px;
-    @extend %buttons;
+    margin-right: 25px;
     align-self: flex-end;
   }
 }
