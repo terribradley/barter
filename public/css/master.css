@@ -94,6 +94,21 @@ textarea {
   margin-bottom: 10px;
   padding: 2px 0; }
 
+.edit-info .add-tag-form select, .edit-info .delete-form select, .edit-info .column-two .add-user-interest select, .user .left-column select {
+  background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+  height: 29px;
+  overflow: hidden;
+  width: 240px;
+  background: transparent;
+  background-color: #fafdf9;
+  border: none;
+  font-size: 14px;
+  color: #001a54;
+  height: 29px;
+  padding: 5px;
+  width: 268px;
+  border-radius: 5px; }
+
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -914,7 +929,9 @@ body {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      height: 150px; }
+      height: 200px; }
+      .edit-info .add-tag-form .tag-options #tag-names {
+        font-size: 2rem; }
     .edit-info .add-tag-form .tag {
       display: flex;
       width: 100%;
@@ -981,6 +998,9 @@ body {
   .user .left-column {
     border-bottom: 0.3px solid #666666;
     margin-bottom: 5%; }
+    .user .left-column select {
+      width: 90px;
+      margin-right: 10px; }
     @media screen and (min-width: 700px) {
       .user .left-column {
         border-bottom: none; } }
@@ -1333,5 +1353,14 @@ li {
     margin-left: 10%;
     display: flex;
     flex-direction: column; }
+
+.no-account {
+  width: 50%;
+  margin: 5% auto; }
+  .no-account h1 {
+    font-size: 3rem;
+    margin-left: 0; }
+  .no-account p {
+    font-size: 2.5rem; }
 
 /*# sourceMappingURL=master.css.map */

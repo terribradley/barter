@@ -100,7 +100,7 @@
             <div class="tag-options">
             <% if @tags %>
             <% @tags.each do |tag| %>
-            <input type="checkbox" name="tag_id[]" id="tag_id[]" value="<%= tag.id %>"><label for="tag_id[]"><%= tag.name %></label>
+            <input type="checkbox" name="tag_id[]" id="tag_id[]" value="<%= tag.id %>"><label id="tag-names"><%= tag.name %></label>
             <% end %>
           </div>
             <span class="tag"><button type="submit">Update Tags</button></span>

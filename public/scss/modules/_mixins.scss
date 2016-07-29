@@ -46,3 +46,20 @@ textarea {
   margin-bottom: 10px;
   padding: 2px 0;
 }
+%select {
+  select {
+    background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+    height: 29px;
+    overflow: hidden;
+    width: 240px;
+    background: transparent;
+    background-color: $color-nine;
+    border: none;
+    font-size: 14px;
+    color: $color-one;
+    height: 29px;
+    padding: 5px;
+    width: 268px;
+    border-radius: 5px;
+  }
+}

@@ -10,6 +10,11 @@
   }
   .left-column {
     @extend %buttons;
+    @extend %select;
+    select {
+      width: 90px;
+      margin-right: 10px;
+    }
     border-bottom: .3px solid lighten($color-two, 40%);
     margin-bottom: 5%;
       @media screen and (min-width:$mediumbreak) {
