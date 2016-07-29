@@ -1,120 +1,1328 @@
-/*
-Error: Invalid CSS after "...f571d3a9ea2c5c4": expected "{", was "}"
-        on line 68 of scss/partials/_browse.scss
-        from line 15 of scss/partials/_index.scss
-        from line 2 of scss/master.scss
+html {
+  box-sizing: border-box; }
 
-63:       margin-left: 5px;
-64:       margin-right: 0px;
-65:       &:hover {
-66:         transform: scale(1.1);
-67: >>>>>>> 00e794e8da7f4e1a33bb7fe75f571d3a9ea2c5c4
-68:       }
-69:     }
-70:   }
-71: 
-72:   h1 {
-73:     margin-top: 2vh;
+*, *::after, *::before {
+  box-sizing: inherit; }
 
-Backtrace:
-scss/partials/_browse.scss:68
-scss/partials/_index.scss:15
-scss/master.scss:2
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1120:in `tok!'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:656:in `block'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:726:in `declaration_or_ruleset'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:726:in `declaration_or_ruleset'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:409:in `media_directive'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:222:in `special_directive'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:197:in `directive'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:726:in `declaration_or_ruleset'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:726:in `declaration_or_ruleset'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:409:in `media_directive'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:222:in `special_directive'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:197:in `directive'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:726:in `declaration_or_ruleset'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:649:in `ruleset'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:675:in `block_child'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:125:in `stylesheet'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:41:in `parse'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:312:in `to_tree'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `block in with_import'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `with_import'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block (2 levels) in visit_import'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `map'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block in visit_import'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `block in with_import'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `with_import'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...f571d3a9ea2c5c4\": expected \"{\", was \"}\"\A         on line 68 of scss/partials/_browse.scss\A         from line 15 of scss/partials/_index.scss\A         from line 2 of scss/master.scss\A \A 63:       margin-left: 5px;\A 64:       margin-right: 0px;\A 65:       &:hover {\A 66:         transform: scale(1.1);\A 67: >>>>>>> 00e794e8da7f4e1a33bb7fe75f571d3a9ea2c5c4\A 68:       }\A 69:     }\A 70:   }\A 71: \A 72:   h1 {\A 73:     margin-top: 2vh;"; }
+.head-one {
+  background-image: url(../img/market.jpg); }
+
+.head-two {
+  background-image: url(../img/street-market.jpeg); }
+
+.head-three {
+  background-image: url(../img/hands.jpg); }
+
+.head-four {
+  background-image: url(../img/food.jpg); }
+
+.head-five {
+  background-image: url(../img/bike.jpg); }
+
+.head-six {
+  background-image: url(../img/knitting.jpg); }
+
+.head-seven {
+  background-image: url(../img/woodworking.jpg); }
+
+.head-eight {
+  background-image: url(../img/gardener.jpg); }
+
+.head-nine {
+  background-image: url(../img/baking_trap.jpg); }
+
+.head-ten {
+  background-image: url(../img/boxing.jpg); }
+
+.head-eleven {
+  background-image: url(../img/tambourine.jpg); }
+
+.head-thirty {
+  background-image: url(../img/gears.jpg); }
+
+.head-thirtyone {
+  background-image: url(../img/lanterns.jpg); }
+
+.head-thirtytwo {
+  background-image: url(../img/neon.jpg); }
+
+.sidebar-list ul, .sidebar ul {
+  display: flex;
+  padding: 0; }
+  .sidebar-list ul li, .sidebar ul li {
+    list-style-type: none; }
+    .sidebar-list ul li a, .sidebar ul li a {
+      text-decoration: none;
+      font-size: 1.1em; }
+      .sidebar-list ul li a:hover, .sidebar ul li a:hover {
+        color: #8e1235; }
+
+.signup
+button, .signup-form
+button, .profile-row-two
+button, .edit-info
+button, .user .left-column
+button, #trades form
+button, .security-form .password-entry
+button, .admin
+button, .trade .trade-form
+button {
+  color: white;
+  background-color: #001a54;
+  border: 2px solid #001a54;
+  border-radius: 3px;
+  text-align: center;
+  width: 150px;
+  height: 40px; }
+
+.edit-info .profile-form
+textarea, .edit-info .skill-form input
+textarea, .edit-info .skill-form textarea
+textarea, .trade .trade-form
+textarea {
+  width: 100%; }
+
+.profile-row-one ul
+.tag-name, .edit .list-of-skills ul
+.tag-name, .edit-info .column-two ul
+.tag-name, .user .right-column ul
+.tag-name {
+  font-size: 1.7rem;
+  background-color: white;
+  border-radius: 2px;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 2px 0; }
+
+.edit-info .add-tag-form select, .edit-info .delete-form select, .edit-info .column-two .add-user-interest select, .user .left-column select {
+  background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+  height: 29px;
+  overflow: hidden;
+  width: 240px;
+  background: transparent;
+  background-color: #fafdf9;
+  border: none;
+  font-size: 14px;
+  color: #001a54;
+  height: 29px;
+  padding: 5px;
+  width: 268px;
+  border-radius: 5px; }
+
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+template,
+[hidden] {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+a:active,
+a:hover {
+  outline-width: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+optgroup {
+  font-weight: bold; }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+body {
+  background-color: #fafdf9;
+  color: #1c3873;
+  height: 100%; }
+
+.all-content {
+  position: relative;
+  z-index: 0;
+  transition: all .3s linear; }
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 5% auto; }
+  @media screen and (min-width: 700px) {
+    .main-content {
+      flex-direction: row;
+      flex-wrap: wrap; } }
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; }
+  .signup button:hover {
+    color: #001a54;
+    background-color: white; }
+
+#intro {
+  display: flex;
+  margin: 5% auto;
+  align-items: center; }
+  @media screen and (min-width: 700px) {
+    #intro h2 {
+      font-size: 3em;
+      text-align: center; } }
+
+.sidebar-list {
+  width: 100%; }
+  .sidebar-list ul {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    transition: transform 2s ease-in-out; }
+    .sidebar-list ul li {
+      border: 2px solid #610c24;
+      border-radius: 4px;
+      padding: 5px 20px;
+      margin-bottom: 5px; }
+      @media screen and (min-width: 700px) {
+        .sidebar-list ul li:hover {
+          transform: scale(1.1); } }
+    .sidebar-list ul a {
+      color: #610c24; }
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 45vh;
+  background-position: center;
+  background-size: cover; }
+  header h1 {
+    color: #fafdf9;
+    font-size: 4em;
+    text-decoration: overline;
+    text-shadow: 3px 0 0 black; }
+
+.footer-2 {
+  background: #1c3873;
+  display: inline-block;
+  padding: 1.5em;
+  width: 100%; }
+  .footer-2 .footer-logo {
+    margin-bottom: 1em;
+    margin-right: 1em; }
+    @media screen and (min-width: 53.75em) {
+      .footer-2 .footer-logo {
+        float: left;
+        margin-bottom: 0; } }
+  .footer-2 .footer-logo img {
+    height: 2.6em; }
+  .footer-2 ul {
+    line-height: 1.5em;
+    margin: 0 0 1em 0;
+    padding: 0; }
+    @media screen and (min-width: 53.75em) {
+      .footer-2 ul {
+        float: left;
+        line-height: 1.8em;
+        margin-bottom: 0;
+        margin-left: 1em; } }
+  .footer-2 ul li {
+    list-style: none;
+    padding-right: 1em; }
+    @media screen and (min-width: 53.75em) {
+      .footer-2 ul li {
+        display: inline;
+        text-align: left; } }
+  .footer-2 ul li a {
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: none; }
+    .footer-2 ul li a:focus, .footer-2 ul li a:hover {
+      color: white; }
+  @media screen and (min-width: 53.75em) {
+    .footer-2 .footer-secondary-links {
+      float: right; } }
+  .footer-2 .footer-secondary-links li {
+    font-size: 0.8em; }
+  .footer-2 .footer-secondary-links ul.footer-social {
+    margin: 1em 0 0 0; }
+    @media screen and (min-width: 53.75em) {
+      .footer-2 .footer-secondary-links ul.footer-social {
+        float: right;
+        margin-top: 0; } }
+    .footer-2 .footer-secondary-links ul.footer-social li {
+      float: left;
+      font-size: 1em;
+      line-height: 0;
+      margin: 0;
+      padding-right: 0.7em; }
+      .footer-2 .footer-secondary-links ul.footer-social li:last-child {
+        padding-right: 0; }
+    .footer-2 .footer-secondary-links ul.footer-social img {
+      height: 1.6em;
+      opacity: 0.7;
+      padding: 1px; }
+      .footer-2 .footer-secondary-links ul.footer-social img:focus, .footer-2 .footer-secondary-links ul.footer-social img:hover {
+        opacity: 1; }
+
+#featured {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto; }
+  #featured h2 {
+    width: 100%;
+    margin: 2% auto; }
+  @media screen and (min-width: 700px) {
+    #featured {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center; } }
+
+.featured-image {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 15%;
+  position: relative;
+  background-position: center;
+  background-size: cover; }
+  .featured-image .browse_img {
+    height: 250px;
+    width: 250px; }
+  .featured-image .overlay {
+    position: absolute;
+    bottom: -45px;
+    font-size: 2.1rem; }
+  @media screen and (min-width: 700px) {
+    .featured-image {
+      overflow: hidden;
+      margin-bottom: 5%;
+      margin: 2%; }
+      .featured-image .overlay {
+        top: -300px;
+        width: 250px;
+        height: 250px;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        transition: transform .2s linear; }
+      .featured-image:hover .overlay {
+        display: flex;
+        transform: translateY(300px); }
+      .featured-image .overlay {
+        align-items: center;
+        justify-content: center; } }
+  @media screen and (min-width: 1024px) {
+    .featured-image {
+      margin-left: 2.5%;
+      margin-right: 2.5%; } }
+
+.head-three {
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-color: white; }
+
+.form-intro {
+  padding: 5% 20%; }
+
+.form-content {
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 900px; }
+  @media screen and (min-width: 700px) {
+    .form-content {
+      flex-direction: row; } }
+
+.signup-form {
+  width: 350px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #001a54;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  border-radius: 5px; }
+  .signup-form input {
+    width: 300px;
+    height: 30px;
+    margin: 0 auto; }
+  .signup-form label, .signup-form h4 {
+    margin-top: 8px;
+    margin-left: 25px; }
+  .signup-form button {
+    margin-top: 15px;
+    margin-right: 25px;
+    align-self: flex-end; }
+
+.error-message {
+  padding: 0;
+  height: 250px;
+  background-color: rgba(97, 12, 36, 0.1);
+  box-shadow: 10px 10px 5px #888888;
+  border-radius: 5px; }
+  .error-message ul, .error-message h3 {
+    margin: 10px; }
+
+.form-header {
+  height: 30vh; }
+
+nav h1 a {
+  color: #1c3873; }
+  nav h1 a:hover {
+    text-decoration: none; }
+  @media screen and (min-width: 1024px) {
+    nav h1 a {
+      color: white; } }
+
+body {
+  background-color: #efeff4; }
+
+.profile-content {
+  width: 95vw;
+  margin: 5% auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #efeff4;
+  padding: 2%; }
+  .profile-content .interest, .profile-content .list-of-skills, .profile-content .edit-info, .profile-content .skill-form {
+    margin: 2% 0; }
+    .profile-content .interest h4, .profile-content .list-of-skills h4, .profile-content .edit-info h4, .profile-content .skill-form h4 {
+      font-size: 2.5rem; }
+    .profile-content .interest p, .profile-content .list-of-skills p, .profile-content .edit-info p, .profile-content .skill-form p {
+      font-size: 1.9rem; }
+  @media screen and (min-width: 700px) {
+    .profile-content {
+      max-width: 60vw;
+      margin: 5% auto; } }
+  @media screen and (min-width: 1024px) {
+    .profile-content {
+      max-width: 70vw;
+      margin: 5% auto; } }
+
+.avatar {
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+  .avatar h1 {
+    margin: 10px 0; }
+  .avatar a {
+    border: 1px solid #610c24;
+    background-color: white;
+    border-radius: 4px;
+    padding: 3px 4px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    color: #610c24;
+    display: block;
+    width: 13rem;
+    text-align: center;
+    align-self: center; }
+    @media screen and (min-width: 700px) {
+      .avatar a {
+        align-self: flex-start; }
+        .avatar a:hover {
+          transform: scale(1.1);
+          text-decoration: none; } }
+  .avatar p {
+    width: 40%; }
+  .avatar img {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto; }
+    @media screen and (min-width: 700px) {
+      .avatar img {
+        margin: 0; } }
+  .avatar .stars {
+    display: flex;
+    align-items: center; }
+    .avatar .stars h4 {
+      margin-right: 10px; }
+
+.profile-row-one {
+  border-top: 1px solid #666666; }
+  .profile-row-one h4 {
+    margin-bottom: 5%; }
+  .profile-row-one ul {
+    display: flex;
+    flex-direction: column; }
+    .profile-row-one ul li {
+      list-style-type: none;
+      font-size: 2.5rem;
+      width: 140px; }
+  @media screen and (min-width: 1024px) {
+    .profile-row-one .interest {
+      margin-left: 10%; } }
+  @media screen and (min-width: 1024px) {
+    .profile-row-one {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1000px; } }
+
+.profile-row-two {
+  border-top: 1px solid #666666; }
+  .profile-row-two h4 {
+    font-size: 2.5rem;
+    margin-bottom: 5%; }
+  .profile-row-two h4 {
+    font-size: 2.1rem; }
+  .profile-row-two p {
+    font-size: 1.9rem; }
+  .profile-row-two li {
+    font-size: 1.9rem;
+    width: 140px; }
+  .profile-row-two button {
+    margin: 2%; }
+  .profile-row-two .trade-offer {
+    border: 0.3px solid #666666;
+    border-radius: 3px;
+    background-color: #fafdf9;
+    margin-bottom: 2%; }
+
+.edit-info .profile-form {
+  width: 100%;
+  margin: 2% auto;
+  background-color: none; }
+
+.edit p {
+  width: 90%; }
+.edit h4 {
+  margin-bottom: 5%; }
+.edit .list-of-skills ul {
+  display: flex;
+  flex-direction: column; }
+  .edit .list-of-skills ul li {
+    list-style-type: none;
+    font-size: 2.5rem;
+    width: 140px; }
+@media screen and (min-width: 700px) {
+  .edit {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .edit .right-column {
+      margin-left: 10%; }
+      .edit .right-column h4 {
+        font-size: 2.5rem; } }
+
+.edit-info {
+  border-top: 1px solid #666666; }
+  .edit-info h1 {
+    margin-left: 0; }
+  .edit-info button {
+    align-self: flex-end;
+    margin-top: 1rem; }
+  .edit-info .profile-form {
+    display: flex;
+    flex-direction: column; }
+  .edit-info .skill-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%; }
+    .edit-info .skill-form #skill_title {
+      width: 50%; }
+    .edit-info .skill-form label:nth-of-type(2) {
+      display: block; }
+    .edit-info .skill-form label {
+      margin: .5rem;
+      font-size: 2.5rem;
+      font-weight: 500; }
+    .edit-info .skill-form input, .edit-info .skill-form textarea {
+      margin-top: 5px; }
+  .edit-info .row-two {
+    border-top: 1px solid #666666; }
+  .edit-info .add-tag-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; }
+    .edit-info .add-tag-form .tag-options {
+      margin-top: 2%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 200px; }
+      .edit-info .add-tag-form .tag-options #tag-names {
+        font-size: 2rem; }
+    .edit-info .add-tag-form .tag {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end; }
+  .edit-info .delete-form {
+    display: flex;
+    justify-content: space-around;
+    width: 100%; }
+    .edit-info .delete-form .form-button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+  .edit-info .column-two ul {
+    display: flex;
+    flex-direction: column; }
+    .edit-info .column-two ul li {
+      list-style-type: none;
+      font-size: 1.5rem;
+      width: 140px; }
+
+@media screen and (min-width: 1024px) {
+  .row-one {
+    width: 100%;
+    display: flex;
+    flex-direction: row; }
+    .row-one .skill-form {
+      margin: 0;
+      margin-left: 5%; }
+    .row-one .profile-form {
+      margin: 0;
+      margin-right: 0;
+      width: 100%; }
+
+  .row-two {
+    margin-top: 5%;
+    display: flex; }
+    .row-two .column-one {
+      display: flex;
+      flex-direction: column;
+      margin-right: 2.5%;
+      width: 50%; }
+    .row-two .column-two {
+      display: flex;
+      flex-direction: column;
+      margin-left: 2.5%;
+      width: 50%; } }
+.add-user-interest, .delete-form {
+  display: flex;
+  flex-direction: column; }
+  .add-user-interest label, .delete-form label {
+    font-size: 2.5rem; }
+  .add-user-interest .form-button, .delete-form .form-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+
+.user {
+  display: flex; }
+  @media screen and (min-width: 700px) {
+    .user {
+      margin: 0; } }
+  .user h4 {
+    font-size: 2.5rem; }
+  .user .left-column {
+    border-bottom: 0.3px solid #666666;
+    margin-bottom: 5%; }
+    .user .left-column select {
+      width: 90px;
+      margin-right: 10px; }
+    @media screen and (min-width: 700px) {
+      .user .left-column {
+        border-bottom: none; } }
+    .user .left-column img {
+      margin: 10%; }
+      @media screen and (min-width: 700px) {
+        .user .left-column img {
+          margin: 0; } }
+    .user .left-column p {
+      font-size: 1.9rem; }
+    .user .left-column .bio {
+      margin-top: 8%; }
+      .user .left-column .bio h4 {
+        margin: 0; }
+    .user .left-column form {
+      margin-top: 5%; }
+  .user .right-column {
+    width: 50%; }
+    .user .right-column h5 {
+      font-size: 1.9rem; }
+    .user .right-column .skills {
+      margin-top: 5%;
+      padding: 2%; }
+      @media screen and (min-width: 1024px) {
+        .user .right-column .skills {
+          border: 0.3px solid #666666; } }
+    .user .right-column #description {
+      font-size: 1.5rem;
+      margin-left: 10px;
+      width: 180%; }
+      @media screen and (min-width: 1024px) {
+        .user .right-column #description {
+          width: 90%; } }
+    .user .right-column ul {
+      display: flex;
+      flex-direction: column;
+      padding-right: 5%; }
+      .user .right-column ul li {
+        list-style-type: none;
+        font-size: 2.3rem;
+        width: 140px; }
+    .user .right-column h4 {
+      margin: 0; }
+
+#trades {
+  margin-top: 5%;
+  padding-top: 2%;
+  border-top: 1px solid #666666; }
+  #trades form button {
+    margin-bottom: 10px; }
+  #trades form h4 {
+    font-size: 2.5rem;
+    margin: 0; }
+  #trades form p {
+    font-size: 2rem; }
+  #trades .featured-image {
+    margin: 0; }
+
+.security-form {
+  width: 98%;
+  height: 53vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem; }
+  .security-form h4 {
+    font-size: 2.5rem;
+    margin: 5%; }
+  .security-form .password-entry {
+    margin-top: 1rem; }
+  .security-form button {
+    margin-left: 1rem; }
+  @media screen and (min-width: 700px) {
+    .security-form {
+      width: 60rem; } }
+
+h3 {
+  padding-bottom: 5%;
+  border-bottom: 1px solid #666666; }
+
+.admin {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .admin .tags-created {
+    padding-right: 10%; }
+    .admin .tags-created h4 {
+      font-size: 2.5rem; }
+    .admin .tags-created input {
+      margin: 2% auto;
+      width: 60%;
+      margin-right: 40%; }
+    .admin .tags-created button {
+      margin-left: 2px;
+      font-size: 1.9rem; }
+    .admin .tags-created ul {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 30vh;
+      padding-left: 0; }
+      @media screen and (min-width: 700px) {
+        .admin .tags-created ul {
+          height: 40vh; } }
+      @media screen and (min-width: 1024px) {
+        .admin .tags-created ul {
+          height: 100%; } }
+      .admin .tags-created ul .tag-name {
+        list-style-type: none;
+        width: 140px;
+        font-size: 1.7rem;
+        background-color: white;
+        border-radius: 2px;
+        text-align: center;
+        margin-bottom: 10px;
+        padding: 5px 0;
+        margin-left: 2px; }
+  .admin .delete {
+    border-top: 1px solid #666666;
+    display: flex;
+    flex-direction: column; }
+    .admin .delete h4 {
+      font-size: 2.5rem; }
+    .admin .delete label {
+      margin-right: 5%;
+      font-size: 2rem; }
+    .admin .delete button {
+      margin-right: 50%;
+      margin-top: 3%; }
+  @media screen and (min-width: 1024px) {
+    .admin {
+      flex-direction: row;
+      justify-content: space-between; }
+      .admin .delete {
+        border-top: none; } }
+
+.toggle {
+  text-decoration: none;
+  font-size: 2em;
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  transition: all .3s linear;
+  z-index: 1;
+  color: #610c24; }
+  @media screen and (min-width: 700px) {
+    .toggle {
+      display: none; } }
+
+.sidebar {
+  z-index: 0;
+  position: fixed;
+  top: 0px;
+  right: -190px;
+  bottom: 0px;
+  transition: all .3s linear;
+  width: 180px;
+  background: #001a54; }
+  .sidebar ul {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin: 20px 10px 0 10px; }
+    .sidebar ul li {
+      margin-top: 10%;
+      padding: 5px 0 5px 30px; }
+    .sidebar ul a {
+      color: #fafdf9; }
+      .sidebar ul a:hover {
+        border-bottom: 1px solid #8e1235; }
+  @media screen and (min-width: 700px) {
+    .sidebar {
+      display: none; } }
+
+#sidebar-toggler {
+  display: none; }
+  #sidebar-toggler:checked + .wrapper .sidebar {
+    right: 0px; }
+  #sidebar-toggler:checked + .wrapper .toggle {
+    right: 190px; }
+  #sidebar-toggler:checked + .wrapper .all-content {
+    padding-right: 100px; }
+
+nav {
+  display: none;
+  position: relative; }
+  nav .nav-links {
+    display: none; }
+  @media screen and (min-width: 700px) {
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 200px;
+      padding: 0 2%; }
+      nav img {
+        height: 5rem;
+        margin-top: 2%; }
+      nav .nav-links {
+        display: flex;
+        width: 40%;
+        justify-content: space-between; }
+        nav .nav-links a {
+          text-decoration: none;
+          color: #001a54;
+          font-size: 1.1em;
+          margin: 1% 0; }
+          nav .nav-links a:hover {
+            border-bottom: 1px solid #610c24; } }
+  @media screen and (min-width: 1024px) {
+    nav {
+      flex-direction: row;
+      justify-content: space-between;
+      height: 8vh;
+      background-color: #1c3873;
+      position: relative;
+      padding: 0% 2%; }
+      nav img {
+        margin: 0; }
+      nav h1 {
+        margin-right: auto;
+        padding-left: 10px;
+        color: #fafdf9; }
+      nav .nav-links {
+        width: 30%; }
+        nav .nav-links a {
+          color: white; } }
+
+.login-form-side {
+  color: white;
+  display: none; }
+  .login-form-side label, .login-form-side button, .login-form-side p {
+    margin-top: .8rem; }
+  .login-form-side button {
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 3px;
+    width: 5rem;
+    height: 3rem;
+    color: #1c3873; }
+  .login-form-side p a {
+    color: #b78f44; }
+
+.login-form {
+  display: none; }
+  @media screen and (min-width: 700px) {
+    .login-form {
+      height: 9rem;
+      width: 55rem;
+      border-radius: 2%;
+      position: absolute;
+      top: 199px;
+      right: 18vw;
+      background-color: rgba(255, 255, 255, 0.8);
+      color: #1c3873; }
+      .login-form button {
+        background-color: #1c3873;
+        border: 2px solid #1c3873;
+        border-radius: 3px;
+        width: 5rem;
+        height: 3rem;
+        color: white; }
+      .login-form input {
+        margin: 0 .7rem .7rem .7rem; }
+      .login-form a {
+        color: #b78f44; }
+      .login-form .login-form-content {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 9rem;
+        width: 55rem; } }
+  @media screen and (min-width: 1024px) {
+    .login-form {
+      top: 7.9vh;
+      right: 1rem;
+      height: 9rem;
+      width: 55rem;
+      background-color: rgba(28, 56, 115, 0.8);
+      color: white; }
+      .login-form input {
+        color: #1c3873; }
+      .login-form button {
+        background-color: white;
+        border-color: white;
+        color: #1c3873; }
+      .login-form a {
+        color: #b78f44; } }
+
+.browse-page h1 {
+  text-align: center;
+  margin-top: 10%;
+  font-size: 3.5rem; }
+  .browse-page h1 h1, .browse-page h1 ul, .browse-page h1 h5 {
+    margin-left: 1rem; }
+  .browse-page h1 ul {
+    padding: 0; }
+  .browse-page h1 li {
+    list-style-type: none; }
+
+.browse-content {
+  display: flex;
+  margin-top: 5%; }
+  .browse-content .browse-tag {
+    border: 2px solid #610c24;
+    background-color: white;
+    font-weight: 500;
+    border-radius: 4px;
+    padding: 5px 4px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    color: #610c24;
+    display: block;
+    width: 13rem;
+    text-align: center;
+    align-self: center; }
+    .browse-content .browse-tag a {
+      color: #610c24; }
+    @media screen and (min-width: 700px) {
+      .browse-content .browse-tag {
+        align-self: flex-start; }
+        .browse-content .browse-tag:hover {
+          transform: scale(1.1);
+          text-decoration: none; } }
+
+.pic-flex {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  @media screen and (min-width: 700px) {
+    .pic-flex {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 56rem; } }
+  @media screen and (min-width: 1404px) {
+    .pic-flex {
+      width: 125rem; } }
+
+.trade .headline {
+  margin-bottom: 10%; }
+  .trade .headline h4 {
+    font-size: 2.5rem;
+    margin: 0;
+    text-align: center; }
+.trade .trade-form {
+  border: 0.4px solid #666666;
+  padding: 5%;
+  display: flex; }
+  .trade .trade-form .column-one h5 {
+    font-size: 2.5rem;
+    margin: 2% 0; }
+  .trade .trade-form .column-one p {
+    font-size: 1.7rem; }
+  .trade .trade-form .column-two {
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column; }
+
+.no-account {
+  width: 50%;
+  margin: 5% auto; }
+  .no-account h1 {
+    font-size: 3rem;
+    margin-left: 0; }
+  .no-account p {
+    font-size: 2.5rem; }
+
+/*# sourceMappingURL=master.css.map */
