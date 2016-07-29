@@ -1,49 +1,52 @@
-h1 {
-  text-align: center;
-  margin-top: 20%;
-}
-.browse-content {
-  display: flex;
-  margin-top: 5%;
-  .browse-tag {
-    border:2px solid $color-eight;
-    background-color: $color-three;
-    font-weight: 500;
-    border-radius: 4px;
-    padding: 5px 4px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    margin-left: 5px;
-    color: $color-eight;
-    display: block;
-    width: 13rem;
+.browse-page {
+  h1 {
     text-align: center;
-    align-self: center;
-    @media screen and (min-width: $mediumbreak) {
-      align-self: flex-start;
-      &:hover {
-        transform: scale(1.1);
-        text-decoration: none;
-      }
-      a {
-        color: $color-eight;
+    margin-top: 10%;
+    font-size: $medium-font + 1rem;
+  }
+}
+  .browse-content {
+    display: flex;
+    margin-top: 5%;
+    .browse-tag {
+      border:2px solid $color-eight;
+      background-color: $color-three;
+      font-weight: 500;
+      border-radius: 4px;
+      padding: 5px 4px;
+      margin-bottom: 5px;
+      margin-top: 5px;
+      margin-left: 5px;
+      color: $color-eight;
+      display: block;
+      width: 13rem;
+      text-align: center;
+      align-self: center;
+      @media screen and (min-width: $mediumbreak) {
+        align-self: flex-start;
+        &:hover {
+          transform: scale(1.1);
+          text-decoration: none;
+        }
+        a {
+          color: $color-eight;
+        }
       }
     }
   }
-}
 
-h1 {
-  margin-top: 2vh;
-}
+  h1 {
+    margin-top: 2vh;
+  }
 
-h1, ul, h5 {
-  margin-left: 1rem;
-}
+  h1, ul, h5 {
+    margin-left: 1rem;
+  }
 
-ul {
-  padding: 0;
-}
+  ul {
+    padding: 0;
+  }
 
-li {
-  list-style-type: none;
-}
+  li {
+    list-style-type: none;
+  }

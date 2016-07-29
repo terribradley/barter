@@ -1,7 +1,7 @@
 
 .user {
   display: flex;
-  margin: 0 5%;
+
   @media screen and (min-width:$mediumbreak){
     margin: 0;
   }
@@ -24,6 +24,15 @@
     p {
       font-size: 1.9rem;
     }
+    .bio {
+      margin-top: 8%;
+      h4 {
+        margin: 0;
+      }
+    }
+    form {
+      margin-top: 5%;
+    }
   }
   .right-column {
     width: 50%;
@@ -41,6 +50,9 @@
       font-size: 1.5rem;
       margin-left: 10px;
       width: 180%;
+      @media screen and (min-width:$largebreak) {
+        width: 90%;
+      }
 
     }
     ul {

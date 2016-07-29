@@ -63,7 +63,7 @@ button, .profile-row-two
 button, .edit-info
 button, .user .left-column
 button, #trades form
-button, .security-form button
+button, .security-form .password-entry
 button, .admin
 button, .trade .trade-form
 button {
@@ -881,6 +881,8 @@ body {
 
 .edit-info {
   border-top: 1px solid #666666; }
+  .edit-info h1 {
+    margin-left: 0; }
   .edit-info button {
     align-self: flex-end;
     margin-top: 1rem; }
@@ -889,7 +891,8 @@ body {
     flex-direction: column; }
   .edit-info .skill-form {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    margin-bottom: 5%; }
     .edit-info .skill-form #skill_title {
       width: 50%; }
     .edit-info .skill-form label:nth-of-type(2) {
@@ -904,10 +907,14 @@ body {
     border-top: 1px solid #666666; }
   .edit-info .add-tag-form {
     display: flex;
-    flex-wrap: wrap; }
-    .edit-info .add-tag-form span {
-      width: 100%;
-      margin: 5% 0; }
+    flex-wrap: wrap;
+    flex-direction: column; }
+    .edit-info .add-tag-form .tag-options {
+      margin-top: 2%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 150px; }
     .edit-info .add-tag-form .tag {
       display: flex;
       width: 100%;
@@ -965,8 +972,7 @@ body {
     align-items: center; }
 
 .user {
-  display: flex;
-  margin: 0 5%; }
+  display: flex; }
   @media screen and (min-width: 700px) {
     .user {
       margin: 0; } }
@@ -985,6 +991,12 @@ body {
           margin: 0; } }
     .user .left-column p {
       font-size: 1.9rem; }
+    .user .left-column .bio {
+      margin-top: 8%; }
+      .user .left-column .bio h4 {
+        margin: 0; }
+    .user .left-column form {
+      margin-top: 5%; }
   .user .right-column {
     width: 50%; }
     .user .right-column h5 {
@@ -999,6 +1011,9 @@ body {
       font-size: 1.5rem;
       margin-left: 10px;
       width: 180%; }
+      @media screen and (min-width: 1024px) {
+        .user .right-column #description {
+          width: 90%; } }
     .user .right-column ul {
       display: flex;
       flex-direction: column;
@@ -1031,6 +1046,9 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 3rem; }
+  .security-form h4 {
+    font-size: 2.5rem;
+    margin: 5%; }
   .security-form .password-entry {
     margin-top: 1rem; }
   .security-form button {
@@ -1253,9 +1271,10 @@ nav {
       .login-form a {
         color: #b78f44; } }
 
-h1 {
+.browse-page h1 {
   text-align: center;
-  margin-top: 20%; }
+  margin-top: 10%;
+  font-size: 3.5rem; }
 
 .browse-content {
   display: flex;
