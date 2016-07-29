@@ -18,8 +18,8 @@ end
 post('/users/new') do
   first_name = params.fetch('first_name')
   last_name = params.fetch('last_name')
-  email = params.fetch('email')
-  password = params.fetch('password')
+  email = params.fetch('email_form')
+  password = params.fetch('password_form')
   zipcode = params.fetch('zipcode')
   @user = User.new({:first_name => first_name, :last_name => last_name, :email => email, :password => password, :zipcode => zipcode})
   if @user.save
@@ -104,7 +104,7 @@ end
 
 # LOGIN
 post('/users/login') do
-  password = params.fetch('password')
+  password = params.fetch('password_main')
   @user = User.find_by({:password => password})
   if @user.nil?
     erb(:no_account)
@@ -168,14 +168,20 @@ get('/trades/verify') do
   @skill_wanted_id = params.fetch('skill_id').to_i
   erb(:trade_password)
 end
+
 # SUBMITS PASSWORD VERIFICATION
 get('/trades/new') do
   @skill_wanted_id = params.fetch('skill_id').to_i
   @skill_wanted = Skill.find(@skill_wanted_id)
   password = params.fetch('user_password')
   @user_offering = User.find_by({:password => password})
+  if @user_offering.skills.nil?
+    erb(:no_skill_error)
+  else
   erb(:trade_form)
+  end
 end
+
 # SUBMITS A NEW TRADE
 post('/trades/new') do
   @skill_wanted = Skill.find(params.fetch('skill_wanted_id').to_i)
