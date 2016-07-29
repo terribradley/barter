@@ -74,15 +74,15 @@
 <section id="trades">
   <% if @user.skills.any? %>
       <% @user.skills.each do |skill| %>
+      <form class="" action="/trades/verify" method="get">
+        <h4><%= skill.title %></h4>
+        <p><%= skill.description %></p>
+        <input type="hidden" name="skill_id" value="<%= skill.id %>">
+        <button type="submit">Propose Trade</button>
+      </form>
       <div class="featured-image main">
         <img class="browse_img" src="/img/<%=skill.id%>.jpg" alt="<%=skill.id%>"/>
       </div>
-        <form class="" action="/trades/verify" method="get">
-          <h4><%= skill.title %></h4>
-          <p><%= skill.description %></p>
-            <input type="hidden" name="skill_id" value="<%= skill.id %>">
-            <button type="submit">Propose Trade</button>
-        </form>
       <% end %>
   <% end %>
 </section>
