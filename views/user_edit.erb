@@ -91,16 +91,18 @@
           <input type="hidden" name="_method" value="patch">
           <input type="hidden" name="user_id" value="<%= @user.id %>">
             <% if @user.skills.any? %>
-            <span><select class="" name="skill_tag">
+            <select class="" name="skill_tag">
               <% @user.skills.each do |skill| %>
-              <option value="<%= skill.id %>"><%= skill.title %></option>
-              <% end %>
-            </select></span>
+                <option value="<%= skill.id %>"><%= skill.title %></option>
+                <% end %>
+            </select>
             <% end %>
+            <div class="tag-options">
             <% if @tags %>
             <% @tags.each do |tag| %>
-            <input type="checkbox" name="tag_id[]" id="tag_id[]" value="<%= tag.id %>"><%= tag.name %>
+            <input type="checkbox" name="tag_id[]" id="tag_id[]" value="<%= tag.id %>"><label id="tag-names"><%= tag.name %></label>
             <% end %>
+          </div>
             <span class="tag"><button type="submit">Update Tags</button></span>
             <% end %>
           </form>

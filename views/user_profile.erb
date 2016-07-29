@@ -36,18 +36,18 @@
           <option value="5">5</option>
         </select>
         <button type="submit">Rate this User</button>
-
       </form>
-
+<section class="bio">
+  <h4>Bio:</h4>
+  <% if @user.bio %>
+  <p><%= @user.bio %></p>
+  <% end %>
+</section>
       <!-- USER BIO -->
-      <h4>Bio:</h4>
-      <% if @user.bio %>
-        <p><%= @user.bio %></p>
-      <% end %>
     </section>
     <section class="right-column">
 <!-- USER TRADE TAGS -->
-      <h4><%= @user.first_name %>'s skills</h4>
+      <h4><%= @user.first_name %>'s skills:</h4>
       <% if @user.skills.any? %>
       <div class="skills">
 

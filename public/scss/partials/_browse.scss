@@ -1,3 +1,38 @@
+<<<<<<< HEAD
+.browse-page {
+  h1 {
+    text-align: center;
+    margin-top: 10%;
+    font-size: $medium-font + 1rem;
+  }
+}
+  .browse-content {
+    display: flex;
+    margin-top: 5%;
+    .browse-tag {
+      border:2px solid $color-eight;
+      background-color: $color-three;
+      font-weight: 500;
+      border-radius: 4px;
+      padding: 5px 4px;
+      margin-bottom: 5px;
+      margin-top: 5px;
+      margin-left: 5px;
+      color: $color-eight;
+      display: block;
+      width: 13rem;
+      text-align: center;
+      align-self: center;
+      @media screen and (min-width: $mediumbreak) {
+        align-self: flex-start;
+        &:hover {
+          transform: scale(1.1);
+          text-decoration: none;
+        }
+        a {
+          color: $color-eight;
+        }
+=======
 h1 {
   text-align: center;
   margin-top: 20%;
@@ -29,23 +64,28 @@ h1 {
       margin-right: 0px;
       &:hover {
         transform: scale(1.1);
+>>>>>>> 00e794e8da7f4e1a33bb7fe75f571d3a9ea2c5c4
       }
     }
   }
-}
 
-h1 {
-  margin-top: 2vh;
-}
+  h1 {
+    margin-top: 2vh;
+  }
 
-h1, ul, h5 {
-  margin-left: 1rem;
-}
+  h1, ul, h5 {
+    margin-left: 1rem;
+  }
 
-ul {
-  padding: 0;
-}
+  ul {
+    padding: 0;
+  }
 
+<<<<<<< HEAD
+  li {
+    list-style-type: none;
+  }
+=======
 li {
   list-style-type: none;
 }
@@ -64,3 +104,4 @@ li {
     width: 125rem;
   }
 }
+>>>>>>> 00e794e8da7f4e1a33bb7fe75f571d3a9ea2c5c4
