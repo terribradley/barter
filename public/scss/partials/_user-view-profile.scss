@@ -2,13 +2,19 @@
 .user {
   display: flex;
   margin: 0 5%;
-
+  @media screen and (min-width:$mediumbreak){
+    margin: 0;
+  }
   h4 {
     font-size: $medium-font;
-
   }
   .left-column {
     @extend %buttons;
+    border-bottom: .3px solid lighten($color-two, 40%);
+    margin-bottom: 5%;
+      @media screen and (min-width:$mediumbreak) {
+        border-bottom: none;
+      }
     img {
       margin: 10%;
       @media screen and (min-width:$mediumbreak) {
@@ -26,25 +32,28 @@
     }
     .skills {
       margin-top: 5%;
+      padding: 2%;
       @media screen and (min-width:$largebreak)  {
         border: .3px solid lighten($color-two, 40%);
       }
     }
-      ul {
-        display: flex;
-        flex-direction: column;
-        #description {
-          font-size: 1.5rem;
-          margin-left: 10px;
+    #description {
+      font-size: 1.5rem;
+      margin-left: 10px;
+      width: 180%;
 
-        }
-        li {
-          list-style-type: none;
-          font-size: 2.3rem;
-          width: 140px;
-        }
-        @extend %tags;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      padding-right: 5%;
+      li {
+        list-style-type: none;
+        font-size: 2.3rem;
+        width: 140px;
       }
+      @extend %tags;
+    }
     h4 {
       margin: 0;
     }
@@ -52,12 +61,16 @@
 }
 #trades {
   margin-top: 5%;
+  padding-top: 2%;
   border-top: 1px solid lighten($color-two, 40%);
   form {
-    margin: 10px;
     @extend %buttons;
+    button {
+      margin-bottom: 10px;
+    }
     h4 {
       font-size: $medium-font;
+      margin: 0;
     }
     p {
       font-size: 2rem;

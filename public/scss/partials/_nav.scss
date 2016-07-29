@@ -75,7 +75,6 @@ nav {
       .nav-links {
         display: flex;
         width: 40%;
-        // margin: 0 auto;
         justify-content: space-between;
         a {
           text-decoration: none;
@@ -126,7 +125,7 @@ nav {
     height: 3rem;
     color: $color-four;
   }
-  p>a {
+  p a {
     color: $color-five;
   }
 }

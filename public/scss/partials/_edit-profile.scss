@@ -1,21 +1,20 @@
 
-  .edit {
-
-    p {
-      width: 90%;
-    }
-    h4 {
-      margin-bottom: 5%;
-    }
-    .list-of-skills {
-      ul {
-        display: flex;
-        flex-direction: column;
-        li {
-          list-style-type: none;
-          font-size: 2.5rem;
-          width: 140px;
-          @extend %tags;
+.edit {
+  p {
+    width: 90%;
+  }
+  h4 {
+    margin-bottom: 5%;
+  }
+  .list-of-skills {
+    ul {
+      display: flex;
+      flex-direction: column;
+      @extend %tags;
+      li {
+        list-style-type: none;
+        font-size: 2.5rem;
+        width: 140px;
         }
       }
     }
@@ -27,15 +26,10 @@
       margin-left: 10%;
     h4 {
       font-size: $medium-font;
-    }
+      }
     }
   }
-  // @media screen and (min-width: $largebreak) {
-  //   max-width: 50%;
-  // }
 }
-
-
 .edit-info {
   border-top: 1px solid lighten($color-two, 40%);
     @extend %buttons;
@@ -49,7 +43,6 @@
     flex-direction: column;
     @extend %textarea;
   }
-
   .skill-form {
     display: flex;
     flex-direction: column;
@@ -64,7 +57,6 @@
       font-size: 2.5rem;
       font-weight: 500;
     }
-
     input, textarea {
       margin-top: 5px;
       @extend %textarea;
@@ -75,7 +67,6 @@
   }
   .add-tag-form {
     display: flex;
-    // flex-direction: column;
     flex-wrap: wrap;
     span {
       width: 100%;
@@ -98,7 +89,6 @@
     }
   }
   .column-two {
-
     ul {
       display: flex;
       flex-direction: column;
@@ -112,7 +102,6 @@
       }
   }
   @media screen and (min-width: $largebreak) {
-
     .row-one {
       width: 100%;
       display: flex;
@@ -124,9 +113,8 @@
       .profile-form {
         margin: 0;
         margin-right: 0;
-        width: 100%
+        width: 100%;
       }
-
     }
     .row-two {
       margin-top: 5%;
@@ -142,10 +130,9 @@
         flex-direction: column;
         margin-left: 2.5%;
         width: 50%;
-        }
+      }
     }
   }
-
 
 .add-user-interest, .delete-form {
   display: flex;
