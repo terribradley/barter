@@ -52,7 +52,7 @@
           <li class="tag-name"><%= tag.name %></li>
           <% end %>
         </ul>
-  
+
       <% end %>
     </ul>
     <% else %>
@@ -89,6 +89,7 @@
         <input type="hidden" name="trade_id" value="<%= trade.id %>">
         <input type="hidden" name="user_id" value="<%= @user.id %>">
         <ol>
+          <p><strong>Trade details:</strong></p>
           <h5>Terms: <%= trade.terms%></h5>
           <h5>Deadline: <%= trade.deadline%></h5>
           <h5>Skills being swapped:</h5>
