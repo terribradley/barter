@@ -1,14 +1,16 @@
 <header class="head-two form-header">
 </header>
 <h1>Browse skills by subject</h1>
-  <% if @tags %>
-    <ul>
-      <% @tags.each do |tag| %>
-      <li><a href="/tags/<%= tag.id %>"><%= tag.name %></a></li>
-      <% end %>
-    </ul>
-  <% end %>
-
+<div class="browse-content">
+  <div class="browse-tags">
+    <% if @tags %>
+      <ul>
+        <% @tags.each do |tag| %>
+        <li class="browse-tag"><a href="/tags/<%= tag.id %>"><%= tag.name %></a></li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
 <!-- GRIDDED SKILLS -->
 <section id="featured">
   <% if @skills.any? %>

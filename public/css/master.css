@@ -1234,6 +1234,40 @@ nav {
       .login-form a {
         color: #b78f44; } }
 
+.browse-content {
+  display: flex; }
+  .browse-content .browse-tag {
+    border: 1px solid #610c24;
+    background-color: white;
+    border-radius: 4px;
+    padding: 3px 4px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    color: #610c24;
+    display: block;
+    width: 13rem;
+    text-align: center;
+    align-self: center; }
+    @media screen and (min-width: 700px) {
+      .browse-content .browse-tag {
+        align-self: flex-start; }
+        .browse-content .browse-tag:hover {
+          transform: scale(1.1);
+          text-decoration: none; } }
+
+h1 {
+  margin-top: 2vh; }
+
+h1, ul, h5 {
+  margin-left: 1rem; }
+
+ul {
+  padding: 0; }
+
+li {
+  list-style-type: none; }
+
 .trade .headline {
   margin-bottom: 10%; }
   .trade .headline h4 {
