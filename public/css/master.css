@@ -594,7 +594,8 @@ header {
 #featured {
   display: flex;
   flex-direction: column;
-  text-align: center; }
+  text-align: center;
+  margin: 0 auto; }
   #featured h2 {
     width: 100%;
     margin: 2% auto; }
@@ -622,7 +623,8 @@ header {
     .featured-image {
       width: 45%;
       overflow: hidden;
-      margin-bottom: 5%; }
+      margin-bottom: 5%;
+      margin: 2%; }
       .featured-image .overlay {
         top: -300px;
         left: 0;
