@@ -26,10 +26,10 @@
        </nav>
        <form class="login-form" action="/users/login" method="post">
          <div class="login-form-content">
-           <label for="email">Email:</label>
-           <input type="text" name="email" id="email">
-           <label for="password">Password:</label>
-           <input type="password" name="password" id="password">
+           <label for="email_main">Email:</label>
+           <input type="text" name="email_main" id="email_main">
+           <label for="password_main">Password:</label>
+           <input type="password" name="password_main" id="password_main">
            <button type="submit" name="button">Login</button>
            <p>Don't have an Account? Create one <a href="/users/new">here</a></p>
          </div>
@@ -39,18 +39,48 @@
         <ul>
           <li><a href="/tags">Browse Market</a></li>
           <li><a href="/users/new">Create account</a></li>
-          <li><a id="login-link-side" href="#">Login</a></li>
+          <li><a id="login-link-side" href="#">Log in</a></li>
           <li><form class="login-form-side" action="/users/login" method="post">
               <label for="email">Email:</label>
               <input type="text" name="email" id="email">
               <label for="password">Password:</label>
               <input type="password" name="password" id="password">
-              <button type="submit" name="button">Login</button>
+              <button type="submit" name="button">Log in</button>
               <p>Don't have an Account? Create one <a href="/users/new">here</a></p>
             </form>
           </li>
         </ul>
+       </div>
       </div>
     </div>
+    <footer class="footer-2" role="contentinfo">
+     <div class="footer-logo">
+       <a href="/"><img src="/img/logo.png" alt="Logo image"></a>
+     </div>
+       <ul>
+         <!-- <li><a href="javascript:void(0)">About</a></li>
+         <li><a href="javascript:void(0)">Contact</a></li>
+         <li><a href="javascript:void(0)">Products</a></li> -->
+       </ul>
+       <div class="footer-secondary-links">
+         <ul>
+           <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+           <li><a href="javascript:void(0)">Privacy Policy</a></li>
+         </ul>
+
+         <ul class="footer-social">
+           <li><a href="javascript:void(0)">
+             <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/facebook-logo-circle.png" alt="Facebook">
+             </a></li>
+           <li><a href="javascript:void(0)">
+             <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/twitter-logo-circle.png" alt="Twitter">
+           </a></li>
+           <li><a href="javascript:void(0)">
+             <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/youtube-logo-circle.png" alt="YouTube">
+           </a></li>
+         </ul>
+       </div>
+   </footer>
+
   </body>
 </html>
