@@ -26,10 +26,10 @@
        </nav>
        <form class="login-form" action="/users/login" method="post">
          <div class="login-form-content">
-           <label for="email">Email:</label>
-           <input type="text" name="email" id="email">
-           <label for="password">Password:</label>
-           <input type="password" name="password" id="password">
+           <label for="email_main">Email:</label>
+           <input type="text" name="email_main" id="email_main">
+           <label for="password_main">Password:</label>
+           <input type="password" name="password_main" id="password_main">
            <button type="submit" name="button">Login</button>
            <p>Don't have an Account? Create one <a href="/users/new">here</a></p>
          </div>
@@ -39,13 +39,13 @@
         <ul>
           <li><a href="/tags">Browse Market</a></li>
           <li><a href="/users/new">Create account</a></li>
-          <li><a id="login-link-side" href="#">Login</a></li>
+          <li><a id="login-link-side" href="#">Log in</a></li>
           <li><form class="login-form-side" action="/users/login" method="post">
               <label for="email">Email:</label>
               <input type="text" name="email" id="email">
               <label for="password">Password:</label>
               <input type="password" name="password" id="password">
-              <button type="submit" name="button">Login</button>
+              <button type="submit" name="button">Log in</button>
               <p>Don't have an Account? Create one <a href="/users/new">here</a></p>
             </form>
           </li>
