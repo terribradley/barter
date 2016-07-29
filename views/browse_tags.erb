@@ -1,11 +1,12 @@
 <header class="head-two form-header">
 </header>
 <h1>Browse <%= @tag.name %></h1>
-  <h5>Explore Other Categories</h5>
+<h5>Explore Other Categories</h5>
+<div class="browse-content">
   <% if @tags %>
     <ul>
       <% @tags.each do |tag| %>
-      <li><a href="/tags/<%= tag.id %>"><%= tag.name %></a></li>
+      <li class="browse-tag"><a href="/tags/<%= tag.id %>"><%= tag.name %></a></li>
       <% end %>
     </ul>
   <% end %>
